@@ -6,6 +6,7 @@
             {
                 "languageId": "html",
                 "scopes": ["text.html.basic", "text.html.twig"],
+                "syntaxes": ["Packages/HTML/HTML.sublime-syntax"],
             },
         ],
         "initializationOptions": {},

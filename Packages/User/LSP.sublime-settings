@@ -14,8 +14,9 @@
                 "bash-language-server",
                 "start",
             ],
-            "scopes": ["source.shell.bash"],
             "languageId": "bash",
+            "scopes": ["source.shell.bash"],
+            "syntaxes": ["Packages/ShellScript/Bash.sublime-syntax"],
         },
         "clangd": {
             "enabled": true,
@@ -27,17 +28,21 @@
                 "--suggest-missing-includes",
             ],
             "languages": [{
-                "scopes": ["source.c"],
                 "languageId": "c",
+                "scopes": ["source.c"],
+                "syntaxes": ["Packages/C++/C.sublime-syntax"],
             }, {
-                "scopes": ["source.c++"],
                 "languageId": "cpp",
+                "scopes": ["source.c++"],
+                "syntaxes": ["Packages/C++/C++.sublime-syntax"],
             }, {
-                "scopes": ["source.objc"],
                 "languageId": "objective-c",
+                "scopes": ["source.objc"],
+                "syntaxes": ["Packages/Objective-C/Objective-C.sublime-syntax"],
             }, {
-                "scopes": ["source.objc++"],
                 "languageId": "objective-cpp",
+                "scopes": ["source.objc++"],
+                "syntaxes": ["Packages/Objective-C/Objective-C++.sublime-syntax"],
             }],
         },
         "py-lsp": {
@@ -81,8 +86,9 @@
                     },
                 },
             },
-            "scopes": ["source.python"],
             "languageId": "python",
+            "scopes": ["source.python"],
+            "syntaxes": ["Packages/Python/Python.sublime-syntax"],
         },
         "yaml-lsp": {
             // https://github.com/redhat-developer/yaml-language-server
@@ -92,11 +98,15 @@
                 "yaml-language-server",
                 "--stdio",
             ],
+            "languageId": "yaml",
             "scopes": [
                 "source.yaml",
                 "source.yaml.sublime.syntax",
             ],
-            "languageId": "yaml",
+            "syntaxes": [
+                "Packages/PackageDev/Package/Sublime Text Syntax Definition/Sublime Text Syntax Definition.sublime-syntax",
+                "Packages/YAML/YAML.sublime-syntax",
+            ],
         },
         "js-ts-lsp": {
             // https://github.com/sourcegraph/javascript-typescript-langserver
@@ -106,6 +116,7 @@
                 "javascript-typescript-stdio",
             ],
             "languages": [{
+                "languageId": "javascript",
                 "scopes": [
                     "source.js",
                     "source.js.eslint",
@@ -116,10 +127,24 @@
                     "source.js.webpack",
                     "source.jsx",
                 ],
-                "languageId": "javascript",
+                "syntaxes": [
+                    "Packages/JavaScript/JavaScript.sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (ESLint).sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (Gruntfile).sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (Gulpfile).sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (PostCSS).sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (Stylelint).sublime-syntax",
+                    "Packages/my_language/aliases/JavaScript (Webpack).sublime-syntax",
+                ],
             }, {
-                "scopes": ["source.ts", "source.tsx"],
                 "languageId": "typescript",
+                "scopes": ["source.ts", "source.tsx"],
+                "syntaxes": [
+                    "Packages/TypeScript/TypeScript.sublime-syntax",
+                    "Packages/TypeScript/TypeScript.tmLanguage",
+                    "Packages/TypeScript/TypeScriptReact.sublime-syntax",
+                    "Packages/TypeScript/TypeScriptReact.tmLanguage",
+                ],
             }],
         },
     },

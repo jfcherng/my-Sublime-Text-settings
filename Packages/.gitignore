@@ -37,6 +37,7 @@ SublimeAStyleFormatter/
 SublimeHighlight/
 SublimeLinter*/
 SublimeREPL/
+TypeScript/
 
 Terminal/*
 !Terminal/PS.ps1
