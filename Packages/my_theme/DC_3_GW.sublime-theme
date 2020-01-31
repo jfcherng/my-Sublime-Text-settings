@@ -134,11 +134,16 @@
 // STATUS BAR
 //
     {
+        "class": "status_container",
+        "content_margin": [8, 0, 0, 0],
+    },
+    {
         "class": "status_bar",
         "content_margin": [6, 2, 6, 2], // make bar thinner
         // change the bg color
         "layer1.tint": "color(#00f)",
         "layer1.opacity": 0.2,
+        "content_margin": [8, 2],
     },
     {
         "class": "label_control",
@@ -151,10 +156,23 @@
         "class": "panel_button_control",
         "layer0.texture": "Theme - Default/common/dark/panels_button.png",
         "layer0.opacity": { "target": 0.4, "speed": 4.0, "interpolation": "smoothstep" },
-        "content_margin": [12, 11]
+        "layer0.tint": "#fff",
+        "content_margin": [10, 11],
     },
     {
         "class": "panel_button_control",
+        "attributes": ["hover"],
+        "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" },
+    },
+    {
+        "class": "sidebar_button_control",
+        "layer0.texture": "Theme - Default/common/sidebar_button.png",
+        "layer0.opacity": { "target": 0.4, "speed": 4.0, "interpolation": "smoothstep" },
+        "layer0.tint": "#fff",
+        "content_margin": [10, 11],
+    },
+    {
+        "class": "sidebar_button_control",
         "attributes": ["hover"],
         "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" },
     },
