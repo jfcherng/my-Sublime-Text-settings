@@ -393,7 +393,7 @@
     ],
 
     // Define region highlight styles
-    "bracket_styles": {
+    "user_bracket_styles": {
         // "default" and "unmatched" styles are special
         // styles. If they are not defined here,
         // they will be generated internally with
