@@ -385,9 +385,8 @@ contexts:
           SplFixedArray | SplFloat | SplHeap | SplInt | SplMaxHeap | SplMinHeap | SplObjectStorage | SplObserver |
           SplPriorityQueue | SplQueue | SplStack | SplString | SplSubject | SplTempFileObject | Swish | SwishResult |
           SwishResults | SwishSearch | TokyoTyrant | TokyoTyrantQuery | TokyoTyrantTable | Transliterator | Traversable | UnderflowException |
-          UnexpectedValueException | V8Js | V8JsException | XMLReader | XMLWriter | XSLTProcessor | ZipArchive | finfo |
-          mysqli | mysqli_driver | mysqli_result | mysqli_stmt | mysqli_warning | stdClass | streamWrapper | tidy |
-          tidyNode
+          UnexpectedValueException | V8Js | V8JsException | WeakMap | WeakReference | XMLReader | XMLWriter | XSLTProcessor | ZipArchive |
+          finfo | mysqli | mysqli_driver | mysqli_result | mysqli_stmt | mysqli_warning | stdClass | streamWrapper | tidy | tidyNode
         )\b
       captures:
         1: punctuation.separator.namespace.php
