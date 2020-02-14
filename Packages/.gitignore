@@ -1,44 +1,43 @@
 # dependencies will be downloaded by Package Control automatically
-backrefs/
-bz2/
-jsonschema/
-markupsafe/
-mdpopups/
-package_setting_context/
-pathlib/
-pygments/
-pymdownx/
-python-jinja2/
-python-markdown/
-python-toml/
-PyV8/
-pyyaml/
-regex/
-requests/
-ssl-linux/
-sublime_lib/
-typing/
+/backrefs/
+/bz2/
+/jsonschema/
+/markupsafe/
+/mdpopups/
+/package_setting_context/
+/pathlib/
+/pygments/
+/pymdownx/
+/python-jinja2/
+/python-markdown/
+/python-toml/
+/PyV8/
+/pyyaml/
+/regex/
+/requests/
+/ssl-linux/
+/sublime_lib/
+/typing/
 
 # packages
-AutomaticPackageReloader*/
-AutoSetIndentation/
-Bootstrap 4x Autocomplete/
-Codecs33/
-ConvertToUTF8/
-CTags/
-HTML-CSS-JS Prettify/
-IntelliDocs/
-LaTeXTools/
-LSP-*/
-OmniMarkupPreviewer/
-Pretty JSON/
-Quokka/
-SublimeAStyleFormatter/
-SublimeHighlight/
-SublimeLinter*/
-SublimeREPL/
-TypeScript/
+/AutomaticPackageReloader*/
+/AutoSetIndentation/
+/Bootstrap 4x Autocomplete/
+/Codecs33/
+/ConvertToUTF8/
+/CTags/
+/HTML-CSS-JS Prettify/
+/IntelliDocs/
+/LaTeXTools/
+/LSP-*/
+/OmniMarkupPreviewer/
+/Pretty JSON/
+/Quokka/
+/SublimeAStyleFormatter/
+/SublimeLinter*/
+/SublimeREPL/
+/TypeScript/
 
-Terminal/*
-!Terminal/PS.ps1
-!Terminal/Terminal.py
+/Terminal/*
+!/Terminal/PS.ps1
+!/Terminal/Terminal.py
