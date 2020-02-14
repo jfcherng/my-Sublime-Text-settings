@@ -78,8 +78,9 @@
 		"*.swf",
 		"*.jar",
 		"*.zip",
-		"public/build/*",
-		"branch-build/*"
+		"//branch-*/",
+		"branch-build/",
+		"public/build/"
 	],
 	"caret_extra_width": 2,
 	"caret_style": "blink",
@@ -246,8 +247,9 @@
 	"index_exclude_patterns":
 	[
 		"*.log",
-		"public/build/*",
-		"branch-build/*"
+		"//branch-*/",
+		"public/build/",
+		"branch-build/"
 	],
 	"line_numbers": true,
 	"match_brackets": false,
