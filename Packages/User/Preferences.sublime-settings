@@ -42,6 +42,7 @@
 	],
 	"atomic_save": false,
 	"auto_complete_cycle": true,
+	"auto_complete_preserve_order": "none",
 	"auto_complete_selector": "source, meta.tag - punctuation.definition.tag.begin, text",
 	"auto_complete_triggers":
 	[
