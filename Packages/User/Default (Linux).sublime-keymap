@@ -573,23 +573,22 @@
         },
         "context": [ { "key": "selector", "operator": "equal", "operand": "text.html.markdown" } ],
     },
-    // get 8 chars hash
+    // get an 8-char fingerprint of the current content
     {
         "keys": ["ctrl+shift+,"],
         "command": "chain",
         "args": {
             "commands": [
+                // copy text to a new view
+                [ "select_all" ],
+                [ "copy" ],
+                [ "deselect" ],
+                [ "new_file" ],
+                [ "paste" ],
+                [ "set_file_type", { "syntax": "Packages/Text/Plain text.tmLanguage" } ],
                 // md5 is 32-char
                 [ "secure_hash", { "secure_hash_type": "md5" } ],
-                [ "move", { "by": "characters", "forward": true } ],
-                // remove 24 words
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                ["left_delete"], ["left_delete"], ["left_delete"], ["left_delete"],
-                // move 8-chars before
+                // select last 8 chars
                 [ "move", { "by": "characters", "forward": false } ],
                 [ "move", { "by": "characters", "forward": false } ],
                 [ "move", { "by": "characters", "forward": false } ],
@@ -598,15 +597,9 @@
                 [ "move", { "by": "characters", "forward": false } ],
                 [ "move", { "by": "characters", "forward": false } ],
                 [ "move", { "by": "characters", "forward": false } ],
-                // select 8 chars after
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
-                [ "move", { "by": "characters", "extend": true, "forward": true } ],
+                [ "move_to", { "extend": true, "to": "bof" } ],
+                [ "left_delete" ],
+                [ "select_all" ],
             ],
         },
     },
