@@ -27,7 +27,24 @@
             },
             "files": {
                 "exclude": [
+                    // default
+                    "**/.git/**",
+                    "**/.svn/**",
+                    "**/.hg/**",
+                    "**/CVS/**",
+                    "**/.DS_Store/**",
+                    "**/node_modules/**",
+                    "**/bower_components/**",
+                    "**/vendor/**/{Tests,tests}/**",
+                    // my own
                     "**/branch-*/**",
+                ],
+                "associations": [
+                    // default
+                    "*.php",
+                    "*.phtml",
+                    // my own
+                    "*.inc",
                 ],
             },
         },
