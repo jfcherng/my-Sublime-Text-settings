@@ -98,6 +98,23 @@
                 "yaml-language-server",
                 "--stdio",
             ],
+            "settings": {
+                "format": {
+                    "enable": true,
+                    "singleQuote": true,
+                    "bracketSpacing": true,
+                    "proseWrap": true,
+                    "printWidth": 120,
+                },
+                "validate": true,
+                "hover": true,
+                "completion": true,
+                // "schemas": "Helps you associate schemas with files in a glob pattern",
+                "schemaStore": {
+                    "enable": true,
+                },
+                // "customTags": "Array of custom tags that the parser will validate against. It has two ways to be used. Either an item in the array is a custom tag such as "!Ref" and it will automatically map !Ref to scalar or you can specify the type of the object !Ref should be e.g. "!Ref sequence". The type of object can be either scalar (for strings and booleans), sequence (for arrays), map (for objects).",
+            },
             "languageId": "yaml",
             "scopes": [
                 "source.yaml",
@@ -163,7 +180,7 @@
     "show_references_in_quick_panel": false,
     "show_symbol_action_links": true,
     "show_view_status": true,
-    "log_payloads": false,
+    "log_payloads": true,
     "log_debug": true,
     "log_server": true,
     "log_stderr": true,
