@@ -1,0 +1,19 @@
+{
+    "toggle_words_dict": [
+        ["0", "1"],
+        ["forward", "backward"],
+        ["high", "low"],
+        ["in", "out"],
+        ["input", "output"],
+        ["inside", "outside"],
+        ["left", "right"],
+        ["on", "off"],
+        ["start", "end"],
+        ["top", "bottom"],
+        ["true", "false"],
+        ["up", "down"],
+        ["upward", "downward"],
+        ["width", "height"],
+        ["yes", "no"],
+    ],
+}
