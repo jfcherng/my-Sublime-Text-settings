@@ -23,7 +23,7 @@
 		"BBCode Syntax",
 		"BetterFindBuffer",
 		"Bootstrap 4 Autocomplete",
-		"Bootstrap 4x Snippets",
+		"Bootstrap 4 Snippets",
 		"BracketHighlighter",
 		"BracketSpacer",
 		"Case Conversion",
@@ -120,12 +120,14 @@
 	"package_name_map":
 	{
 		"Sublime-Bootstrap-4-Autocomplete": "Bootstrap 4 Autocomplete",
+		"Sublime-Bootstrap-4-Snippets": "Bootstrap 4 Snippets",
 		"Sublime-IntelliDocs": "IntelliDocs"
 	},
 	"repositories":
 	[
 		"https://github.com/evandrocoan/AutoFileName",
 		"https://github.com/jfcherng/Sublime-Bootstrap-4-Autocomplete",
+		"https://github.com/jfcherng/Sublime-Bootstrap-4-Snippets",
 		"https://github.com/jfcherng/Sublime-IntelliDocs"
 	]
 }
