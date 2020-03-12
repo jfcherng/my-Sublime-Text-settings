@@ -180,6 +180,11 @@
         "stack_guide": "color(White alpha(0.2))",
         "tags_foreground": "var(LightGreen300)",
         "tags_options": "stippled_underline",
+        // incremental diff
+        "line_diff_width": "3",
+        "line_diff_added": "var(Green700)",
+        "line_diff_deleted": "var(Red700)",
+        "line_diff_modified": "var(Yellow700)",
     },
     "rules": [
         // hash style syntax highlight
