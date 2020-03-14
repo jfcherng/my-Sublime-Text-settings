@@ -240,6 +240,7 @@
     { "keys": ["alt+i"], "command": "noop", "context": [{ "key": "lsp.signature_help", "operator": "equal", "operand": -1 }] },
     { "keys": ["alt+k"], "command": "noop", "context": [{ "key": "lsp.signature_help", "operator": "equal", "operand": 1 }] },
     { "keys": ["alt+f", "alt+d"], "command": "lsp_format_document", "context": [{ "key": "setting.lsp_active" }] },
+    { "keys": ["alt+f", "alt+s"], "command": "lsp_format_document_range", "context": [{ "key": "setting.lsp_active" }] },
     // plugin: MultiEditUtils
     { "keys": ["shift+escape"], "command": "jump_to_last_region" },
     { "keys": ["alt+r", "alt+e"], "command": "remove_empty_regions", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },

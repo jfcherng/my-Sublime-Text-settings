@@ -1,6 +1,7 @@
 # dependencies will be downloaded by Package Control automatically
 /backrefs/
 /bz2/
+/coverage/
 /jsonschema/
 /markupsafe/
 /mdpopups/
@@ -37,6 +38,7 @@
 /SublimeLinter*/
 /SublimeREPL/
 /TypeScript/
+/UnitTesting/
 
 /Terminal/*
 !/Terminal/PS.ps1
