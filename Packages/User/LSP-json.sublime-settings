@@ -1,77 +1,47 @@
 {
     // @see https://www.npmjs.com/package/vscode-json-languageserver
-    "client": {
-        "enabled": true,
-        "languages": [
-            {
-                "languageId": "json",
-                "scopes": [
-                    "source.json",
-                    "source.json.babel",
-                    "source.json.bower",
-                    "source.json.composer",
-                    "source.json.eslint",
-                    "source.json.npm",
-                    "source.json.postcss",
-                    "source.json.stylelint",
-                    "source.json.tern",
-                ],
-                "syntaxes": [
-                    "Packages/JavaScript/JSON.sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Babel).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Bower).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Composer).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (ESLint).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (NPM).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (PostCSS).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Settings).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Stylelint).sublime-syntax",
-                    "Packages/my_language/aliases/JSON (Tern JS).sublime-syntax",
-                ],
-            },
-            {
-                "languageId": "jsonc",
-                "scopes": [
-                    "source.json.settings",
-                    "source.json.sublime",
-                    "source.json.sublime.build",
-                    "source.json.sublime.color",
-                    "source.json.sublime.commands",
-                    "source.json.sublime.completions",
-                    "source.json.sublime.keymap",
-                    "source.json.sublime.macro",
-                    "source.json.sublime.menu",
-                    "source.json.sublime.mousemap",
-                    "source.json.sublime.project",
-                    "source.json.sublime.settings",
-                    "source.json.sublime.theme",
-                    "source.jsonc",
-                ],
-                "syntaxes": [
-                    "Packages/PackageDev/Package/Sublime JSON/Sublime JSON.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Build System/Sublime Text Build System.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Color Scheme/Sublime Text Color Scheme.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Commands/Sublime Text Commands.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Completions/Sublime Text Completions.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Keymap/Sublime Text Keymap.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Macro/Sublime Text Macro.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Menu/Sublime Text Menu.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Mousemap/Sublime Text Mousemap.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Project/Sublime Text Project.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Settings/Sublime Text Settings.sublime-syntax",
-                    "Packages/PackageDev/Package/Sublime Text Theme/Sublime Text Theme.sublime-syntax",
-                    "Packages/PackageDev/Package/TextMate Syntax Definition (JSON)/TextMate Syntax Definition (JSON).sublime-syntax",
-                ],
-            },
-        ],
-        "initializationOptions": {
-            "provideFormatter": true,
+    "enabled": true,
+    "languages": [
+        {
+            "languageId": "json",
+            "scopes": [
+                "source.json",
+            ],
+            "syntaxes": [
+                "Packages/JavaScript/JSON.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime JSON/Sublime JSON.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Build System/Sublime Text Build System.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Color Scheme/Sublime Text Color Scheme.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Commands/Sublime Text Commands.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Completions/Sublime Text Completions.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Keymap/Sublime Text Keymap.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Macro/Sublime Text Macro.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Menu/Sublime Text Menu.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Mousemap/Sublime Text Mousemap.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Project/Sublime Text Project.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Settings/Sublime Text Settings.sublime-syntax",
+                "Packages/PackageDev/Package/Sublime Text Theme/Sublime Text Theme.sublime-syntax",
+                "Packages/PackageDev/Package/TextMate Syntax Definition (JSON)/TextMate Syntax Definition (JSON).sublime-syntax",
+                // my own
+                "Packages/my_language/aliases/JSON (Babel).sublime-syntax",
+                "Packages/my_language/aliases/JSON (Bower).sublime-syntax",
+                "Packages/my_language/aliases/JSON (Composer).sublime-syntax",
+                "Packages/my_language/aliases/JSON (ESLint).sublime-syntax",
+                "Packages/my_language/aliases/JSON (NPM).sublime-syntax",
+                "Packages/my_language/aliases/JSON (PostCSS).sublime-syntax",
+                "Packages/my_language/aliases/JSON (Settings).sublime-syntax",
+                "Packages/my_language/aliases/JSON (Stylelint).sublime-syntax",
+                "Packages/my_language/aliases/JSON (Tern JS).sublime-syntax",
+            ],
         },
-        "settings": {
-            "json": {
-                "format": {
-                    "enable": true,
-                },
+    ],
+    "initializationOptions": {
+        "provideFormatter": true,
+    },
+    "settings": {
+        "json": {
+            "format": {
+                "enable": true,
             },
         },
     },
