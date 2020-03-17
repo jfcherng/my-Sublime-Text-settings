@@ -38,6 +38,7 @@
                     "**/vendor/**/{Tests,tests}/**",
                     // my own
                     "**/branch-*/**",
+                    "**/vendor/**/{Example,example,Examples,examples}/**",
                 ],
                 "associations": [
                     // default
