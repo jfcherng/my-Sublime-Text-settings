@@ -1,0 +1,1 @@
+{"version": "0.0.9", "url": "https://github.com/sublimelsp/LSP-html", "platforms": ["*"], "dependencies": [], "sublime_text": ">=3092", "description": "HTML support for Sublime's LSP plugin "}

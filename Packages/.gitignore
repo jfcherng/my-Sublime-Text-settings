@@ -3,7 +3,7 @@
 /bz2/
 /coverage/
 /jsonschema/
-/lsp_utils/
+# /lsp_utils/
 /markupsafe/
 /mdpopups/
 /package_setting_context/
@@ -32,6 +32,9 @@
 /IntelliDocs/
 /LaTeXTools/
 /LSP-*/
+!/LSP-css/
+!/LSP-html/
+!/LSP-json/
 /OmniMarkupPreviewer/
 /Pretty JSON/
 /Quokka/

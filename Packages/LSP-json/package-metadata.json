@@ -1,0 +1,1 @@
+{"description": "JSON support for Sublime's LSP plugin ", "sublime_text": ">=3092", "dependencies": [], "platforms": ["*"], "url": "https://github.com/sublimelsp/LSP-json", "version": "0.0.8"}
