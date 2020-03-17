@@ -9,7 +9,20 @@
                 "syntaxes": ["Packages/HTML/HTML.sublime-syntax"],
             },
         ],
-        "initializationOptions": {},
-        "settings": {},
+        "initializationOptions": {
+            "provideFormatter": true,
+            "embeddedLanguages": {
+                "css": true,
+                "html": true,
+                "javascript": true,
+            },
+        },
+        "settings": {
+            "html": {
+                "format": {
+                    "enable": true,
+                },
+            },
+        },
     },
 }

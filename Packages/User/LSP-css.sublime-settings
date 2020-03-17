@@ -4,15 +4,6 @@
         "enabled": true,
         "languages": [
             {
-                "settings": {
-                    "css": {
-                        "validate": true,
-                        "lint": {
-                            "duplicateProperties": "warning",
-                            "unknownVendorSpecificProperties": "warning",
-                        },
-                    },
-                },
                 "languageId": "css",
                 "scopes": ["source.css"],
                 "syntaxes": [
@@ -21,49 +12,116 @@
                 ],
             },
             {
-                "settings": {
-                    "sass": {
-                        "validate": true,
-                        "lint": {
-                            "duplicateProperties": "warning",
-                            "unknownVendorSpecificProperties": "warning",
-                        },
-                    },
-                },
                 "languageId": "sass",
                 "scopes": ["source.sass"],
                 "syntaxes": ["Packages/Sass/Syntaxes/Sass.sublime-syntax"],
             },
             {
-                "settings": {
-                    "scss": {
-                        "validate": true,
-                        "lint": {
-                            "duplicateProperties": "warning",
-                            "unknownVendorSpecificProperties": "warning",
-                        },
-                    },
-                },
                 "languageId": "scss",
                 "scopes": ["source.scss"],
                 "syntaxes": ["Packages/Sass/Syntaxes/SCSS.sublime-syntax"],
             },
             {
-                "settings": {
-                    "less": {
-                        "validate": true,
-                        "lint": {
-                            "duplicateProperties": "warning",
-                            "unknownVendorSpecificProperties": "warning",
-                        },
-                    },
-                },
                 "languageId": "less",
                 "scopes": ["source.less"],
                 "syntaxes": ["Packages/LESS/Syntaxes/LESS.sublime-syntax"],
             },
         ],
-        "initializationOptions": {},
-        "settings": {},
+        "initializationOptions": {
+            "dataPaths": [],
+        },
+        "settings": {
+            "css": {
+                "customData": [],
+                "completion": {
+                    "triggerPropertyValueCompletion": true,
+                    "completePropertyWithSemicolon": true,
+                },
+                "validate": true,
+                "lint": {
+                    "compatibleVendorPrefixes": "ignore",
+                    "vendorPrefix": "warning",
+                    "duplicateProperties": "ignore",
+                    "emptyRules": "warning",
+                    "importStatement": "ignore",
+                    "boxModel": "ignore",
+                    "universalSelector": "ignore",
+                    "zeroUnits": "ignore",
+                    "fontFaceProperties": "warning",
+                    "hexColorLength": "error",
+                    "argumentsInColorFunction": "error",
+                    "unknownProperties": "warning",
+                    "validProperties": [],
+                    "ieHack": "ignore",
+                    "unknownVendorSpecificProperties": "ignore",
+                    "propertyIgnoredDueToDisplay": "warning",
+                    "important": "ignore",
+                    "float": "ignore",
+                    "idSelector": "ignore",
+                    "unknownAtRules": "warning",
+                },
+                "trace": {
+                    "server": "verbose",
+                },
+            },
+            "scss": {
+                "completion": {
+                    "triggerPropertyValueCompletion": true,
+                    "completePropertyWithSemicolon": true,
+                },
+                "validate": true,
+                "lint": {
+                    "compatibleVendorPrefixes": "ignore",
+                    "vendorPrefix": "warning",
+                    "duplicateProperties": "ignore",
+                    "emptyRules": "warning",
+                    "importStatement": "ignore",
+                    "boxModel": "ignore",
+                    "universalSelector": "ignore",
+                    "zeroUnits": "ignore",
+                    "fontFaceProperties": "warning",
+                    "hexColorLength": "error",
+                    "argumentsInColorFunction": "error",
+                    "unknownProperties": "warning",
+                    "validProperties": [],
+                    "ieHack": "ignore",
+                    "unknownVendorSpecificProperties": "ignore",
+                    "propertyIgnoredDueToDisplay": "warning",
+                    "important": "ignore",
+                    "float": "ignore",
+                    "idSelector": "ignore",
+                    "unknownAtRules": "warning",
+                },
+            },
+            "less": {
+                "completion": {
+                    "triggerPropertyValueCompletion": true,
+                    "completePropertyWithSemicolon": true,
+                },
+                "validate": true,
+                "lint": {
+                    "compatibleVendorPrefixes": "ignore",
+                    "vendorPrefix": "warning",
+                    "duplicateProperties": "ignore",
+                    "emptyRules": "warning",
+                    "importStatement": "ignore",
+                    "boxModel": "ignore",
+                    "universalSelector": "ignore",
+                    "zeroUnits": "ignore",
+                    "fontFaceProperties": "warning",
+                    "hexColorLength": "error",
+                    "argumentsInColorFunction": "error",
+                    "unknownProperties": "warning",
+                    "validProperties": [],
+                    "ieHack": "ignore",
+                    "unknownVendorSpecificProperties": "ignore",
+                    "propertyIgnoredDueToDisplay": "warning",
+                    "important": "ignore",
+                    "float": "ignore",
+                    "idSelector": "ignore",
+                    "unknownAtRules": "warning",
+                },
+            },
+        },
     },
 }
