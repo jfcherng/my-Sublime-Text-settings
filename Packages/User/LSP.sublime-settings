@@ -1,7 +1,9 @@
 {
     // Disable language client capabilities. Supported values:
     // "hover", "completion", "colorProvider", "documentHighlight", "signatureHelp"
-    "disabled_capabilities": ["colorProvider"],
+    "disabled_capabilities": [
+        "colorProvider",
+    ],
     // LSP servers configurations
     "clients": {
         "bash-lsp": {
@@ -9,14 +11,17 @@
             // npm -g i bash-language-server
             // yarn global add bash-language-server
             "enabled": true,
-            "command":
-            [
+            "command": [
                 "bash-language-server",
                 "start",
             ],
             "languageId": "bash",
-            "scopes": ["source.shell.bash"],
-            "syntaxes": ["Packages/ShellScript/Bash.sublime-syntax"],
+            "scopes": [
+                "source.shell.bash",
+            ],
+            "syntaxes": [
+                "Packages/ShellScript/Bash.sublime-syntax",
+            ],
         },
         "clangd": {
             "enabled": true,
@@ -27,28 +32,51 @@
                 "-index",
                 "--suggest-missing-includes",
             ],
-            "languages": [{
-                "languageId": "c",
-                "scopes": ["source.c"],
-                "syntaxes": ["Packages/C++/C.sublime-syntax"],
-            }, {
-                "languageId": "cpp",
-                "scopes": ["source.c++"],
-                "syntaxes": ["Packages/C++/C++.sublime-syntax"],
-            }, {
-                "languageId": "objective-c",
-                "scopes": ["source.objc"],
-                "syntaxes": ["Packages/Objective-C/Objective-C.sublime-syntax"],
-            }, {
-                "languageId": "objective-cpp",
-                "scopes": ["source.objc++"],
-                "syntaxes": ["Packages/Objective-C/Objective-C++.sublime-syntax"],
-            }],
+            "languages": [
+                {
+                    "languageId": "c",
+                    "scopes": [
+                        "source.c",
+                    ],
+                    "syntaxes": [
+                        "Packages/C++/C.sublime-syntax",
+                    ],
+                },
+                {
+                    "languageId": "cpp",
+                    "scopes": [
+                        "source.c++",
+                    ],
+                    "syntaxes": [
+                        "Packages/C++/C++.sublime-syntax",
+                    ],
+                },
+                {
+                    "languageId": "objective-c",
+                    "scopes": [
+                        "source.objc",
+                    ],
+                    "syntaxes": [
+                        "Packages/Objective-C/Objective-C.sublime-syntax",
+                    ],
+                },
+                {
+                    "languageId": "objective-cpp",
+                    "scopes": [
+                        "source.objc++",
+                    ],
+                    "syntaxes": [
+                        "Packages/Objective-C/Objective-C++.sublime-syntax",
+                    ],
+                },
+            ],
         },
-        "py-lsp": {
-            // pip install -U python-language-server[all]
+        "pyls": {
+            // pip install -U python-language-server[all] pyls-mypy
             "enabled": true,
-            "command": ["pyls"],
+            "command": [
+                "pyls",
+            ],
             "settings": {
                 "pyls": {
                     "env": {
@@ -74,7 +102,11 @@
                         },
                         "pydocstyle": {
                             "enabled": true,
-                            "ignore": ["D1", "D2", "D4"],
+                            "ignore": [
+                                "D1",
+                                "D2",
+                                "D4",
+                            ],
                         },
                         "pyflakes": {
                             "enabled": true,
@@ -83,12 +115,20 @@
                             "enabled": false,
                             "ignore": [],
                         },
+                        "pyls_mypy": {
+                            "enabled": false,
+                            "live_mode": true,
+                        },
                     },
                 },
             },
             "languageId": "python",
-            "scopes": ["source.python"],
-            "syntaxes": ["Packages/Python/Python.sublime-syntax"],
+            "scopes": [
+                "source.python",
+            ],
+            "syntaxes": [
+                "Packages/Python/Python.sublime-syntax",
+            ],
         },
         "yaml-lsp": {
             // https://github.com/redhat-developer/yaml-language-server
@@ -132,37 +172,43 @@
             "command": [
                 "javascript-typescript-stdio",
             ],
-            "languages": [{
-                "languageId": "javascript",
-                "scopes": [
-                    "source.js",
-                    "source.js.eslint",
-                    "source.js.gruntfile",
-                    "source.js.gulpfile",
-                    "source.js.postcss",
-                    "source.js.stylelint",
-                    "source.js.webpack",
-                    "source.jsx",
-                ],
-                "syntaxes": [
-                    "Packages/JavaScript/JavaScript.sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (ESLint).sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (Gruntfile).sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (Gulpfile).sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (PostCSS).sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (Stylelint).sublime-syntax",
-                    "Packages/my_language/aliases/JavaScript (Webpack).sublime-syntax",
-                ],
-            }, {
-                "languageId": "typescript",
-                "scopes": ["source.ts", "source.tsx"],
-                "syntaxes": [
-                    "Packages/TypeScript/TypeScript.sublime-syntax",
-                    "Packages/TypeScript/TypeScript.tmLanguage",
-                    "Packages/TypeScript/TypeScriptReact.sublime-syntax",
-                    "Packages/TypeScript/TypeScriptReact.tmLanguage",
-                ],
-            }],
+            "languages": [
+                {
+                    "languageId": "javascript",
+                    "scopes": [
+                        "source.js",
+                        "source.js.eslint",
+                        "source.js.gruntfile",
+                        "source.js.gulpfile",
+                        "source.js.postcss",
+                        "source.js.stylelint",
+                        "source.js.webpack",
+                        "source.jsx",
+                    ],
+                    "syntaxes": [
+                        "Packages/JavaScript/JavaScript.sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (ESLint).sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (Gruntfile).sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (Gulpfile).sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (PostCSS).sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (Stylelint).sublime-syntax",
+                        "Packages/my_language/aliases/JavaScript (Webpack).sublime-syntax",
+                    ],
+                },
+                {
+                    "languageId": "typescript",
+                    "scopes": [
+                        "source.ts",
+                        "source.tsx",
+                    ],
+                    "syntaxes": [
+                        "Packages/TypeScript/TypeScript.sublime-syntax",
+                        "Packages/TypeScript/TypeScript.tmLanguage",
+                        "Packages/TypeScript/TypeScriptReact.sublime-syntax",
+                        "Packages/TypeScript/TypeScriptReact.tmLanguage",
+                    ],
+                }
+            ],
         },
     },
     "auto_show_diagnostics_panel": false,
