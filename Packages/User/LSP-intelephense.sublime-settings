@@ -1,53 +1,51 @@
 {
-    "client" : {
-        "enabled": true,
-        "languages": [
-            {
-                "languageId": "php",
-                "scopes": ["source.php", "embedding.php"],
-                "syntaxes": ["Packages/PHP/PHP.sublime-syntax"],
-            },
-        ],
-        "initializationOptions": {
-            "clearCache": false,
-            "storagePath": "E:/_Data/intelephense",
-            "globalStoragePath": "E:/_Data/intelephense",
-            // To use the licenceKey,
-            // you can also write it to "YOUR_HOME_DIR/intelephense/licence.txt"
-            // and comment out the following property
-            "licenceKey": "${packages}/User/intelephense.sublime-license",
+    "enabled": true,
+    "languages": [
+        {
+            "languageId": "php",
+            "scopes": ["source.php", "embedding.php"],
+            "syntaxes": ["Packages/PHP/PHP.sublime-syntax"],
         },
-        // @see https://github.com/bmewburn/vscode-intelephense/blob/master/package.json
-        "settings": {
-            "diagnostics": {
-                "undefinedSymbols": true,
-            },
-            "debug": {
-                "enable": false,
-            },
-            "files": {
-                "exclude": [
-                    // default
-                    "**/.git/**",
-                    "**/.svn/**",
-                    "**/.hg/**",
-                    "**/CVS/**",
-                    "**/.DS_Store/**",
-                    "**/node_modules/**",
-                    "**/bower_components/**",
-                    "**/vendor/**/{Tests,tests}/**",
-                    // my own
-                    "**/branch-*/**",
-                    "**/vendor/**/{Example,example,Examples,examples}/**",
-                ],
-                "associations": [
-                    // default
-                    "*.php",
-                    "*.phtml",
-                    // my own
-                    "*.inc",
-                ],
-            },
+    ],
+    "initializationOptions": {
+        "clearCache": false,
+        "storagePath": "E:/_Data/intelephense",
+        "globalStoragePath": "E:/_Data/intelephense",
+        // To use the licenceKey,
+        // you can also write it to "YOUR_HOME_DIR/intelephense/licence.txt"
+        // and comment out the following property
+        "licenceKey": "${packages}/User/intelephense.sublime-license",
+    },
+    // @see https://github.com/bmewburn/vscode-intelephense/blob/master/package.json
+    "settings": {
+        "diagnostics": {
+            "undefinedSymbols": true,
+        },
+        "debug": {
+            "enable": false,
+        },
+        "files": {
+            "exclude": [
+                // default
+                "**/.git/**",
+                "**/.svn/**",
+                "**/.hg/**",
+                "**/CVS/**",
+                "**/.DS_Store/**",
+                "**/node_modules/**",
+                "**/bower_components/**",
+                "**/vendor/**/{Tests,tests}/**",
+                // my own
+                "**/branch-*/**",
+                "**/vendor/**/{Example,example,Examples,examples}/**",
+            ],
+            "associations": [
+                // default
+                "*.php",
+                "*.phtml",
+                // my own
+                "*.inc",
+            ],
         },
     },
 }
