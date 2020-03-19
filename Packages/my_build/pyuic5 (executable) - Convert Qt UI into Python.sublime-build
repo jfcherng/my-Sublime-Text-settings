@@ -1,0 +1,13 @@
+{
+    // "name": "PyUIC: Convert Qt UI file into PyQt class",
+    "cmd": [
+        "pyuic5",
+        "${file}",
+        "-o",
+        "${file_base_name}.py",
+    ],
+    "file_patterns": [
+        "*.ui", // files generated from Qt Designer
+    ],
+    // "target": "console_exec",
+}
