@@ -41,6 +41,7 @@
 /Quokka/
 /SublimeAStyleFormatter/
 /SublimeLinter*/
+!/SublimeLinter-contrib-markdownlint/
 /SublimeREPL/
 /TypeScript/
 /UnitTesting/
