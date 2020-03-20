@@ -274,8 +274,6 @@
     { "keys": ["ctrl+alt+shift+p"], "command": "get_selection_scope" },
     // plugin: Side Bar Git
     { "keys": ["alt+g"], "command": "side_bar_git_liberal", "args": { "paths": "" } },
-    // plugin: SublimeHighlight
-    { "keys": ["ctrl+alt+shift+c"], "command": "sublime_highlight", "args": { "target": "clipboard", "output_type": "rtf" } },
     // plugin: SelectUntil
     { "keys": ["alt+s", "alt+u"], "command": "select_until", "args": { "extend": true } },
     // plugin: Terminal
@@ -291,12 +289,20 @@
     { "keys": ["ctrl+alt+f"], "command": "black_file", "context": [ { "key": "selector", "operator": "equal", "operand": "source.python" } ] },
     { "keys": ["ctrl+alt+shift+f"], "command": "black_diff", "context": [ { "key": "selector", "operator": "equal", "operand": "source.python" } ] },
     // plugin: HTMLPrettify
-    { "keys": ["ctrl+alt+f"], "command": "htmlprettify", "context": [ { "key": "selector", "operator": "equal", "operand": "source.css | source.scss | source.less" } ] },
-    { "keys": ["ctrl+alt+f"], "command": "htmlprettify", "context": [ { "key": "selector", "operator": "equal", "operand": "text.html.basic | text.xml" } ] },
-    // plugin: JsFormat, Pretty JSON, ESLint Formatter
+    { "keys": ["ctrl+alt+f"], "command": "htmlprettify", "context": [ { "key": "selector", "operator": "equal", "operand": "text.xml" } ] },
+    // plugin: JsPrettier, ESLint Formatter
     { "keys": ["ctrl+alt+f"], "command": "format_eslint", "context": [ { "key": "selector", "operator": "equal", "operand": "source.js" } ] },
-    { "keys": ["ctrl+alt+f"], "command": "pretty_json", "context": [ { "key": "selector", "operator": "equal", "operand": "source.json" } ] },
-    { "keys": ["ctrl+alt+f"], "command": "js_format", "context": [ { "key": "selector", "operator": "equal", "operand": "source.json.sublime" } ] },
+    {
+        "keys": ["ctrl+alt+f"],
+        "command": "js_prettier",
+        "context": [
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "text.html.markdown | text.html.basic | text.html.vue | source.json | source.css | source.scss | source.less",
+            },
+        ],
+    },
     // plugin: php-cs-fix
     { "keys": ["ctrl+alt+f"], "command": "phpcs_fix_this_file", "args": {"tool": "Fixer"}, "context": [ { "key": "selector", "operator": "equal", "operand": "embedding.php | source.php" } ] },
     /**************************
