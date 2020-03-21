@@ -37,7 +37,7 @@
         // Path used when invoking tex & friends; "" is fine for MiKTeX
         // For TeXlive 2011 (or other years) use
         // "texpath" : "C:\\texlive\\2011\\bin\\win32;$PATH",
-        "texpath" : "C:\\texlive\\2013\\bin\\win32;$PATH",
+        "texpath" : "C:\\texlive\\2019\\bin\\win32;$PATH",
         // TeX distro: "miktex" or "texlive"
         "distro" : "texlive"
     },
