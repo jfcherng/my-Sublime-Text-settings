@@ -6,6 +6,7 @@ import sublime
 from LSP.plugin.core.handlers import LanguageHandler
 from LSP.plugin.core.protocol import Response
 from LSP.plugin.core.settings import ClientConfig, read_client_config
+from LSP.plugin.core.typing import Dict, List
 from lsp_utils import ServerNpmResource
 from sublime_lib import ResourcePath
 
@@ -32,7 +33,7 @@ def is_node_installed():
 
 class LspJSONPlugin(LanguageHandler):
     def __init__(self) -> None:
-        self._default_schemas = []
+        self._default_schemas = []  # type: List[Dict]
 
     @property
     def name(self) -> str:
@@ -64,7 +65,7 @@ class LspJSONPlugin(LanguageHandler):
 
         return read_client_config(self.name, default_configuration)
 
-    def migrate_and_read_configuration(self) -> None:
+    def migrate_and_read_configuration(self) -> dict:
         settings = {}
         loaded_settings = sublime.load_settings(SETTINGS_FILENAME)
 
