@@ -80,7 +80,8 @@
             "settings": {
                 "pyls": {
                     "env": {
-                        // "PYTHONPATH": "/Users/mike/.virtualenvs/my-virtual-env/lib/python3.7/site-packages",
+                        // @see https://github.com/sublimelsp/LSP/issues/531#issuecomment-568188403
+                        // "VIRTUAL_ENV": "/Users/mike/.virtualenvs/my-virtual-env"
                     },
                     "plugins": {
                         "jedi": {
