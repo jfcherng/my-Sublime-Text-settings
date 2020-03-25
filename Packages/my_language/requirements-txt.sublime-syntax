@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/3/syntax.html
+# Derived from https://github.com/wuub/requirementstxt
+name: requirements.txt
+file_extensions:
+  - requirements.txt
+scope: source.requirements-txt
+contexts:
+  main:
+    - match: ','
+      scope: punctuation.separator.requirements-txt
+    - match: (#).*$\n?
+      scope: comment.line.requirements-txt
+      captures:
+        1: punctuation.definition.comment.requirements-txt
+    - match: '^[a-zA-Z0-9_\-\.]+'
+      scope: string.package_name.requirements-txt
+    - match: ==|<|<=|>=|>
+      scope: keyword.operator.logical.punctuation.requirements-txt
+    - match: '\d+\.[\da-zA-Z\-_\.]*'
+      scope: constant.numeric.verions.requirements-txt
