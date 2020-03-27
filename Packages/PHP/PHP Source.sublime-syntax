@@ -361,7 +361,7 @@ contexts:
           AMQPConnection | AMQPExchange | AMQPQueue | APCIterator | AppendIterator | ArgumentCountError | ArithmeticError | ArrayAccess | ArrayIterator | ArrayObject |
           AssertionError | BadFunctionCallException | BadMethodCallException | CachingIterator | Collator | CompileError | Countable | DivisionByZeroError | DOMAttr | DOMCharacterData | DOMComment |
           DOMDocument | DOMDocumentFragment | DOMElement | DOMEntityReference | DOMImplementation | DOMNamedNodeMap | DOMNode | DOMNodelist |
-          DOMProcessingInstruction | DOMText | DOMXPath | DateInterval | DatePeriod | DateTime | DateTimeZone | DirectoryIterator |
+          DOMProcessingInstruction | DOMText | DOMXPath | DateInterval | DatePeriod | DateTime | DateTimeImmutable | DateTimeInterface | DateTimeZone | DirectoryIterator |
           DomAttribute | DomDocument | DomDocumentType | DomElement | DomNode | DomProcessingInstruction | DomXsltStylesheet | DomainException |
           EmptyIterator | Error | ErrorException | Exception | FilesystemIterator | FilterIterator | GlobIterator | Gmagick | GmagickDraw |
           GmagickPixel | HaruAnnotation | HaruDestination | HaruDoc | HaruEncoder | HaruFont | HaruImage | HaruOutline |
@@ -373,7 +373,7 @@ contexts:
           MongoDate | MongoGridFS | MongoGridFSCursor | MongoGridFSFile | MongoGridfsFile | MongoId | MongoInt32 | MongoInt64 |
           MongoRegex | MongoTimestamp | MultipleIterator | NoRewindIterator | Normalizer | NumberFormatter | OCI-Collection | OCI-Lob |
           OutOfBoundsException | OutOfRangeException | OuterIterator | OverflowException | PDO | PDOStatement | ParentIterator | ParseError | Phar |
-          PharData | PharFileInfo | RRDCreator | RRDGraph | RRDUpdater | RangeException | RecursiveArrayIterator | RecursiveCachingIterator |
+          PharData | PharFileInfo | PhpToken | RRDCreator | RRDGraph | RRDUpdater | RangeException | RecursiveArrayIterator | RecursiveCachingIterator |
           RecursiveDirectoryIterator | RecursiveFilterIterator | RecursiveIterator | RecursiveIteratorIterator | RecursiveRegexIterator | RecursiveTreeIterator | Reflection | ReflectionClass |
           ReflectionExtension | ReflectionFunction | ReflectionFunctionAbstract | ReflectionMethod | ReflectionObject | ReflectionParameter | ReflectionProperty | Reflector |
           RegexIterator | ResourceBundle | RuntimeException | SAMConnection | SAMMessage | SCA | SCA_LocalProxy | SCA_SoapProxy |
@@ -871,7 +871,7 @@ contexts:
               E_WARNING | MT_RAND_PHP | PEAR_EXTENSION_DIR | PEAR_INSTALL_DIR | PHP_BINDIR | PHP_CONFIG_FILE_PATH | PHP_CONFIG_FILE_SCAN_DIR | PHP_DATADIR |
               PHP_DEBUG | PHP_EOL | PHP_EXTENSION_DIR | PHP_EXTRA_VERSION | PHP_FD_SETSIZE | PHP_FLOAT_DIG | PHP_FLOAT_EPSILON | PHP_FLOAT_MAX |
               PHP_FLOAT_MIN | PHP_INT_MAX | PHP_INT_MIN | PHP_INT_SIZE | PHP_LIBDIR | PHP_LOCALSTATEDIR | PHP_MAJOR_VERSION | PHP_MAXPATHLEN |
-              PHP_MINOR_VERSION | PHP_OS | PHP_OS_FAMILY | PHP_OUTPUT_HANDLER_CONT | PHP_OUTPUT_HANDLER_END | PHP_OUTPUT_HANDLER_START | PHP_PREFIX | PHP_RELEASE_VERSION |
+              PHP_MINOR_VERSION | PHP_OPERAND_TYPES_NOT_SUPPORTED | PHP_OS | PHP_OS_FAMILY | PHP_OUTPUT_HANDLER_CONT | PHP_OUTPUT_HANDLER_END | PHP_OUTPUT_HANDLER_START | PHP_PREFIX | PHP_RELEASE_VERSION |
               PHP_ROUND_HALF_DOWN | PHP_ROUND_HALF_EVEN | PHP_ROUND_HALF_ODD | PHP_ROUND_HALF_UP | PHP_SAPI | PHP_SHLIB_SUFFIX | PHP_SYSCONFDIR | PHP_URL_FRAGMENT |
               PHP_URL_HOST | PHP_URL_PASS | PHP_URL_PATH | PHP_URL_PORT | PHP_URL_QUERY | PHP_URL_SCHEME | PHP_URL_USER | PHP_VERSION |
               PHP_VERSION_ID | PHP_WINDOWS_NT_DOMAIN_CONTROLLER | PHP_WINDOWS_NT_SERVER | PHP_WINDOWS_NT_WORKSTATION | PHP_WINDOWS_VERSION_BUILD | PHP_WINDOWS_VERSION_MAJOR | PHP_WINDOWS_VERSION_MINOR | PHP_WINDOWS_VERSION_PLATFORM |
@@ -1938,7 +1938,7 @@ contexts:
         \b(?xi:
           abs | acos | acosh | asin | asinh | atan | atan2 | atanh |
           base_convert | bindec | ceil | cos | cosh | decbin | dechex | decoct |
-          deg2rad | exp | expm1 | floor | fmod | getrandmax | hexdec | hypot |
+          deg2rad | exp | expm1 | fdiv | floor | fmod | getrandmax | hexdec | hypot |
           intdiv | is_finite | is_infinite | is_nan | lcg_value | log | log10 | log1p |
           max | min | mt_getrandmax | mt_rand | mt_srand | octdec | pi | pow |
           rad2deg | rand | round | sin | sinh | sqrt | srand | tan |
