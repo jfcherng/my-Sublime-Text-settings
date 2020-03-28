@@ -18,36 +18,38 @@
     },
     // @see https://github.com/bmewburn/vscode-intelephense/blob/master/package.json
     "settings": {
-        "diagnostics": {
-            "undefinedConstants": true,
-            "undefinedFunctions": true,
-            "undefinedSymbols": true,
-        },
-        "debug": {
-            "enable": false,
-        },
-        "files": {
-            "exclude": [
-                // default
-                "**/.git/**",
-                "**/.svn/**",
-                "**/.hg/**",
-                "**/CVS/**",
-                "**/.DS_Store/**",
-                "**/node_modules/**",
-                "**/bower_components/**",
-                "**/vendor/**/{Tests,tests}/**",
-                // my own
-                "**/branch-*/**",
-                "**/vendor/**/{Example,example,Examples,examples}/**",
-            ],
-            "associations": [
-                // default
-                "*.php",
-                "*.phtml",
-                // my own
-                "*.inc",
-            ],
+        "intelephense": {
+            "trace": {
+                "server": "off",
+            },
+            "diagnostics": {
+                "undefinedConstants": true,
+                "undefinedFunctions": true,
+                "undefinedSymbols": true,
+            },
+            "files": {
+                "exclude": [
+                    // default
+                    "**/.git/**",
+                    "**/.svn/**",
+                    "**/.hg/**",
+                    "**/CVS/**",
+                    "**/.DS_Store/**",
+                    "**/node_modules/**",
+                    "**/bower_components/**",
+                    "**/vendor/**/{Tests,tests}/**",
+                    // my own
+                    "**/branch-*/**",
+                    "**/vendor/**/{Example,example,Examples,examples}/**",
+                ],
+                "associations": [
+                    // default
+                    "*.php",
+                    "*.phtml",
+                    // my own
+                    "*.inc",
+                ],
+            },
         },
     },
 }
