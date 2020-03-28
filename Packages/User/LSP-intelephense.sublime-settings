@@ -19,6 +19,8 @@
     // @see https://github.com/bmewburn/vscode-intelephense/blob/master/package.json
     "settings": {
         "diagnostics": {
+            "undefinedConstants": true,
+            "undefinedFunctions": true,
             "undefinedSymbols": true,
         },
         "debug": {
