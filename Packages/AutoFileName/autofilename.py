@@ -282,9 +282,7 @@ class FileNameComplete(sublime_plugin.EventListener):
 
         # Overrides default auto completion, replaces dot `.` by a `ꓸ` (Lisu Letter Tone Mya Ti)
         # https://github.com/BoundInCode/AutoFileName/issues/18
-        fn = fn.replace(".", "·")
-
-        return fn
+        return fn.replace(".", "·")
 
     def get_cur_path(self,view,selection):
         scope_contents = view.substr(view.extract_scope(selection-1)).strip()

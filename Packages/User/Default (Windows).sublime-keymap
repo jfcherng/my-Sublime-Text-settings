@@ -205,11 +205,6 @@
     { "keys": ["ctrl+alt+c", "ctrl+alt+w"], "command": "convert_to_separate_words"},
     { "keys": ["ctrl+alt+c", "ctrl+alt+/"], "command": "convert_to_slash"},
     { "keys": ["ctrl+shift+-"],             "command": "toggle_snake_camel_pascal"},
-    // plugin: Ctags
-    { "keys": ["ctrl+e", "ctrl+t"], "command": "navigate_to_definition" },
-    { "keys": ["ctrl+e", "ctrl+b"], "command": "jump_prev" },
-    { "keys": ["alt+s", "alt+s"], "command": "show_symbols" },
-    { "keys": ["alt+shift+s"], "command": "show_symbols", "args": { "type": "multi" } },
     // plugin: AceJump
     { "keys": ["ctrl+;"], "command": "ace_jump_char" },
     { "keys": ["ctrl+shift+;"], "command": "ace_jump_select" },
