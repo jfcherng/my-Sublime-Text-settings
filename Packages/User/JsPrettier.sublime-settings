@@ -439,11 +439,11 @@
         //
         // Valid Options:
         //
-        // - "avoid" (default) - Omit parentheses when possible. Example: `x => x`
-        // - "always" - Always include parentheses. Example: `(x) => x`
+        // - "avoid" - Omit parentheses when possible. Example: `x => x`
+        // - "always" (default) - Always include parentheses. Example: `(x) => x`
         // --------------------------------------------------------------------
 
-        "arrowParens": "avoid",
+        "arrowParens": "always",
 
         // --------------------------------------------------------------------
         // htmlWhitespaceSensitivity
