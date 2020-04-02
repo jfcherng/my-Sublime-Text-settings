@@ -78,6 +78,9 @@
 		"branch-build/",
 		"public/build/"
 	],
+	"block_caret": false,
+	"caret_extra_bottom": 2,
+	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "blink",
 	"close_windows_when_empty": false,
