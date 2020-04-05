@@ -5,6 +5,8 @@
         "-Wall",
         "${file}",
         "-I./include",
+        "-I./lib",
+        "-I./libs",
         "-o",
         "${file_path}/${file_base_name}",
     ],
