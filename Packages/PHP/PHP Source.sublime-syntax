@@ -665,7 +665,18 @@ contexts:
 
   # https://wiki.php.net/rfc/arrow_functions_v2
   arrow-function:
-    - match: '(?i)\b(fn)\b\s*(&)?\s*(?=\()'
+    # "fn" can be a function name before PHP 7.4
+    # Since PHP 7.4, "fn" is a reserved word
+    - match: (?i)(?=\bfn\b\s*&?\s*\()
+      branch_point: arrow-function-branch
+      branch:
+        # Anonymous function definition: fn($a) => $a * 2;
+        - is-arrow-function
+        # Function call, where "fn" is the function name: fn($a);
+        - fn-function-call
+
+  is-arrow-function:
+    - match: (?i)\b(fn)\b\s*(&)?\s*(?=\()
       scope: meta.function.arrow-function.php
       captures:
         1: storage.type.function.php
@@ -673,19 +684,21 @@ contexts:
       push:
         - match: \(
           scope: meta.function.parameters.php meta.group.php punctuation.section.group.begin.php
-          push:
-            - include: function-parameters
-            - match: (?==>)
-              pop: true
-        - match: "=>"
+          push: function-parameters
+        - match: '=>'
           scope: punctuation.definition.arrow-function.php
-          push:
+          set:
             - match: '(?=;|,|\)|\s*\?>)'
-              pop: true
+              pop: 2
             - include: expressions
-        # Exit on unexpected content
+        - include: comments
         - match: (?=\S)
-          pop: true
+          fail: arrow-function-branch
+
+  fn-function-call:
+    - include: function-call
+    - match: ''
+      pop: true
 
   closure:
     - match: (?i)\b(function)\s*(&)?\s*(?=\()
@@ -871,7 +884,7 @@ contexts:
               E_WARNING | MT_RAND_PHP | PEAR_EXTENSION_DIR | PEAR_INSTALL_DIR | PHP_BINDIR | PHP_CONFIG_FILE_PATH | PHP_CONFIG_FILE_SCAN_DIR | PHP_DATADIR |
               PHP_DEBUG | PHP_EOL | PHP_EXTENSION_DIR | PHP_EXTRA_VERSION | PHP_FD_SETSIZE | PHP_FLOAT_DIG | PHP_FLOAT_EPSILON | PHP_FLOAT_MAX |
               PHP_FLOAT_MIN | PHP_INT_MAX | PHP_INT_MIN | PHP_INT_SIZE | PHP_LIBDIR | PHP_LOCALSTATEDIR | PHP_MAJOR_VERSION | PHP_MAXPATHLEN |
-              PHP_MINOR_VERSION | PHP_OPERAND_TYPES_NOT_SUPPORTED | PHP_OS | PHP_OS_FAMILY | PHP_OUTPUT_HANDLER_CONT | PHP_OUTPUT_HANDLER_END | PHP_OUTPUT_HANDLER_START | PHP_PREFIX | PHP_RELEASE_VERSION |
+              PHP_MINOR_VERSION | PHP_OS | PHP_OS_FAMILY | PHP_OUTPUT_HANDLER_CONT | PHP_OUTPUT_HANDLER_END | PHP_OUTPUT_HANDLER_START | PHP_PREFIX | PHP_RELEASE_VERSION |
               PHP_ROUND_HALF_DOWN | PHP_ROUND_HALF_EVEN | PHP_ROUND_HALF_ODD | PHP_ROUND_HALF_UP | PHP_SAPI | PHP_SHLIB_SUFFIX | PHP_SYSCONFDIR | PHP_URL_FRAGMENT |
               PHP_URL_HOST | PHP_URL_PASS | PHP_URL_PATH | PHP_URL_PORT | PHP_URL_QUERY | PHP_URL_SCHEME | PHP_URL_USER | PHP_VERSION |
               PHP_VERSION_ID | PHP_WINDOWS_NT_DOMAIN_CONTROLLER | PHP_WINDOWS_NT_SERVER | PHP_WINDOWS_NT_WORKSTATION | PHP_WINDOWS_VERSION_BUILD | PHP_WINDOWS_VERSION_MAJOR | PHP_WINDOWS_VERSION_MINOR | PHP_WINDOWS_VERSION_PLATFORM |
