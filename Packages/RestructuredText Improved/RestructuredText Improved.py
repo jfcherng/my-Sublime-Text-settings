@@ -2,6 +2,9 @@
 
 import sublime_plugin, sublime, json, os, re
 
+IS_ST3 = 3000 <= int(sublime.version()) <= 4000
+IS_ST4 = 4000 <= int(sublime.version())
+
 #
 # sublime bug?: erases all user settings on restart!
 #
@@ -58,7 +61,7 @@ def plugin_loaded():
 
         s = re.sub(r'(^|(?<=\n))\s*//.*', '', s)
         sys.stderr.write("s: %s\n" % s)
-        user_preferences = json.loads(s)
+        user_preferences = sublime.decode_value(s)
 
     if 'ignored_packages' not in user_preferences:
         user_preferences['ignored_packages'] = [ 'Vintage' ]
@@ -80,16 +83,7 @@ def plugin_loaded():
                 b.write(f.read())
 
         with open(user_preferences_file, 'w') as f:
-            json.dump(user_preferences, f, indent=4)
-
-# comments are removed on dumping json :(
-
-ST3 = sublime.version() >= '3000'
-
-if not ST3:
-
-    def unload_handler():
-        plugin_unloaded()
-
-    plugin_loaded()
-
+            if IS_ST4:
+                f.write(sublime.encode_value(user_preferences, pretty=True))
+            else:
+                json.dump(user_preferences, f, indent=4)
