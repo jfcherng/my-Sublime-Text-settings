@@ -20,11 +20,11 @@
 		"svg",
 		"Symfony",
 		"todo",
-		"unittests"
+		"unittests",
 	],
 	"afn_blacklist_scopes":
 	[
-		"string.regexp"
+		"string.regexp",
 	],
 	"afn_valid_scopes":
 	[
@@ -33,7 +33,7 @@
 		"source.css",
 		"source.less",
 		"source.sass",
-		"source.scss"
+		"source.scss",
 	],
 	"atomic_save": false,
 	"auto_complete_cycle": true,
@@ -43,20 +43,20 @@
 	[
 		{
 			"characters": "<",
-			"selector": "text.html"
+			"selector": "text.html",
 		},
 		{
 			"characters": ".",
-			"selector": "source.python"
+			"selector": "source.python",
 		},
 		{
-			"characters": "$>:\\",
-			"selector": "source.php"
-		},
+			"characters": "$>:\\",//: "source.php",
+					"selector": "source.php",
+},
 		{
 			"characters": ".:>",
-			"selector": "source.c, source.c++"
-		}
+			"selector": "source.c, source.c++",
+		},
 	],
 	"auto_find_in_selection": true,
 	"binary_file_patterns":
@@ -74,9 +74,10 @@
 		"*.swf",
 		"*.jar",
 		"*.zip",
+		// project root ignore
 		"//branch-*/",
 		"branch-build/",
-		"public/build/"
+		"public/build/",
 	],
 	"block_caret": false,
 	"caret_extra_bottom": 2,
@@ -183,7 +184,7 @@
 		".gemtags",
 		".php_cs.cache",
 		".tags",
-		".tags_sorted_by_file"
+		".tags_sorted_by_file",
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -201,14 +202,14 @@
 		"CVS",
 		"INCA_libs",
 		"nLintDB",
-		"nLintLog"
+		"nLintLog",
 	],
 	"font_face": "Ubuntu Mono",
 	"font_options":
 	[
 		"bold",
 		"gdi",
-		"subpixel_antialias"
+		"subpixel_antialias",
 	],
 	"font_size": 12,
 	"gutter": true,
@@ -220,8 +221,8 @@
 		"SublimeLinter-contrib-yamllint",
 		"SublimeLinter-gcc",
 		"SublimeLinter-json",
-		"Vintage"
-	],
+			"Vintage",
+],
 	"ignored_words":
 	[
 		"args",
@@ -235,13 +236,13 @@
 		"intval",
 		"param",
 		"pep257",
-		"php"
+		"php",
 	],
 	"indent_guide_options":
 	[
 		"solid",
 		"draw_normal",
-		"draw_active"
+		"draw_active",
 	],
 	"indent_to_bracket": false,
 	"index_exclude_patterns":
@@ -249,7 +250,7 @@
 		"*.log",
 		"//branch-*/",
 		"public/build/",
-		"branch-build/"
+		"branch-build/",
 	],
 	"line_numbers": true,
 	"match_brackets": false,
@@ -267,11 +268,11 @@
 	"theme": "DC_3_GW.sublime-theme",
 	"theme_font_options":
 	[
-		"gdi"
+		"gdi",
 	],
 	"translate_tabs_to_spaces": true,
 	"trim_automatic_white_space": false,
 	"trim_trailing_white_space_on_save": true,
 	"update_check": false,
-	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?＜＞（）［］｛｝「」『』〈〉《》【】‘’“”＂＋－＊／，。、．‧・･·﹣：；～！？＠＃＄％︿＆｜＝"
+	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?＜＞（）［］｛｝「」『』〈〉《》【】‘’“”＂＋－＊／，。、．‧・･·﹣：；～！？＠＃＄％︿＆｜＝",
 }

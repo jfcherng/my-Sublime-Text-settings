@@ -48,7 +48,7 @@ FORWARD = 1
 BACKWARD = -1
 
 
-class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'], verbose=False)):
+class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'])):
     """Pan cursor object."""
 
     pass

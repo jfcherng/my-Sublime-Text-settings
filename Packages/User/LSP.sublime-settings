@@ -87,6 +87,7 @@
                         "jedi": {
                             "extra_paths": [
                                 // for ST plugin development
+                                "C:\\Program Files\\Sublime Text\\stubs",
                                 "C:\\Program Files\\Sublime Text 3\\stubs",
                             ],
                         },
@@ -210,11 +211,11 @@
                         "Packages/TypeScript/TypeScriptReact.sublime-syntax",
                         "Packages/TypeScript/TypeScriptReact.tmLanguage",
                     ],
-                }
+                },
             ],
         },
     },
-    "auto_show_diagnostics_panel": false,
+    "auto_show_diagnostics_panel": "never",
     "auto_show_diagnostics_panel_level": 3,
     "complete_all_chars": true,
     "completion_hint_type": "auto",
