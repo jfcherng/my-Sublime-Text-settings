@@ -1,5 +1,5 @@
 <snippet>
-	<description>reinterpret_cast</description>
+    <description>reinterpret_cast</description>
     <content><![CDATA[reinterpret_cast<${1:int}>(${2:variable})$0]]></content>
     <tabTrigger>reinterpret_cast</tabTrigger>
     <scope>source.c, source.c++, source.c++11</scope>

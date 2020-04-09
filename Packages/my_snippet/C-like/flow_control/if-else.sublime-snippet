@@ -1,9 +1,9 @@
 <snippet>
-	<description>If else Condition</description>
+    <description>If else Condition</description>
     <content><![CDATA[if (${1:/* condition */}) {
-	${2:/* code */}
+    ${2:/* code */}
 } else {
-	${0:/* code */}
+    ${0:/* code */}
 }]]></content>
     <tabTrigger>ife</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope>

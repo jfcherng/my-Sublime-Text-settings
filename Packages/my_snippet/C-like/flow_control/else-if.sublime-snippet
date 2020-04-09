@@ -1,7 +1,7 @@
 <snippet>
-	<name>Else if</name>
+    <name>Else if</name>
     <content><![CDATA[else if (${1:/* condition */}) {
-	${0:/* code */}
+    ${0:/* code */}
 }]]></content>
     <tabTrigger>elif</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope>

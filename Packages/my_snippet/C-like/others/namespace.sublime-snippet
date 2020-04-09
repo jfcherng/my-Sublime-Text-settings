@@ -1,7 +1,7 @@
 <snippet>
-	<description>Namespace</description>
+    <description>Namespace</description>
     <content><![CDATA[namespace${1/.+/ /m}${1:${TM_FILENAME/^((.*?)\..*)?$/$2/:mine}} {
-	$0
+    $0
 }
 ]]></content>
     <tabTrigger>ns</tabTrigger>

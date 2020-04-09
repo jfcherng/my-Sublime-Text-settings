@@ -1,5 +1,5 @@
 <snippet>
-	<description>#include &lt;…&gt;</description>
+    <description>#include &lt;…&gt;</description>
     <content><![CDATA[#include <${1:.h}>]]></content>
     <tabTrigger>Inc</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope> 

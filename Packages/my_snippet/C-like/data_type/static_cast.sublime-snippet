@@ -1,5 +1,5 @@
 <snippet>
-	<description>static_cast</description>
+    <description>static_cast</description>
     <content><![CDATA[static_cast<${1:int}>(${2:variable})$0]]></content>
     <tabTrigger>static_cast</tabTrigger>
     <scope>source.c, source.c++, source.c++11</scope>

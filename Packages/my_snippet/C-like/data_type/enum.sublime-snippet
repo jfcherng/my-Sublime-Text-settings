@@ -1,5 +1,5 @@
 <snippet>
-	<description>Enumeration</description>
+    <description>Enumeration</description>
     <content><![CDATA[enum ${1:name} { $0 };]]></content>
     <tabTrigger>enum</tabTrigger>
     <scope>source.c++, source.c++11, source.objc++</scope>

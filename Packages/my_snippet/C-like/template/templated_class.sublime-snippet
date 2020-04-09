@@ -1,12 +1,12 @@
 <snippet>
-	<content><![CDATA[template <typename ${1:T}>
+    <content><![CDATA[template <typename ${1:T}>
 class ${2:${TM_FILENAME/(.+)\..+|.*/$1/:name}} {
-	public:
-		${2/(\w+).*/$1/}(${3:/*arguments*/});
-		~${2/(\w+).*/$1/}();
-	private:
-		${0:/* data */}
+    public:
+        ${2/(\w+).*/$1/}(${3:/*arguments*/});
+        ~${2/(\w+).*/$1/}();
+    private:
+        ${0:/* data */}
 };]]></content>
-	<tabTrigger>tpclass</tabTrigger>
-	<scope>source.c++, source.objc++, source.c++11</scope>
+    <tabTrigger>tpclass</tabTrigger>
+    <scope>source.c++, source.objc++, source.c++11</scope>
 </snippet>

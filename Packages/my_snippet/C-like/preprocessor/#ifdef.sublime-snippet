@@ -1,8 +1,8 @@
 <snippet>
-	<description>#define</description>
-	<content><![CDATA[#ifdef ${1:SYMBOL}
-	${2:/* code */}
+    <description>#define</description>
+    <content><![CDATA[#ifdef ${1:SYMBOL}
+    ${2:/* code */}
 #endif]]></content>
-	<tabTrigger>ifdef</tabTrigger>
-	<scope>source.c, source.c++, source.c++11, source.objc, source.objc++</scope>
+    <tabTrigger>ifdef</tabTrigger>
+    <scope>source.c, source.c++, source.c++11, source.objc, source.objc++</scope>
 </snippet>

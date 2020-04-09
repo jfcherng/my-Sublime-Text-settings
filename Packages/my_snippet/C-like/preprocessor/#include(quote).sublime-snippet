@@ -1,5 +1,5 @@
 <snippet>
-	<description>#include "…"</description>
+    <description>#include "…"</description>
     <content><![CDATA[#include "${1:${TM_FILENAME/\..+$/.h/}}"]]></content>
     <tabTrigger>inc</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope>

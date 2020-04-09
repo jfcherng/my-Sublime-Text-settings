@@ -1,5 +1,5 @@
 <snippet>
-	<description>起手式</description>
+    <description>起手式</description>
     <content><![CDATA[#include <iostream>
 
 using namespace std;

@@ -1,9 +1,9 @@
 <snippet>
-	<description>Functor</description>
+    <description>Functor</description>
     <content><![CDATA[struct ${1:name} {
-	${2:bool} operator()(${3:/* args */}) const noexcept {
-		${0:/* code */}
-	}
+    ${2:bool} operator()(${3:/* args */}) const noexcept {
+        ${0:/* code */}
+    }
 };]]></content>
     <tabTrigger>functor</tabTrigger>
     <scope>source.c++, source.c++11</scope>

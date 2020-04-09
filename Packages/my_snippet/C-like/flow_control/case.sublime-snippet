@@ -1,8 +1,8 @@
 <snippet>
-	<name>Case</name>
+    <name>Case</name>
     <content><![CDATA[case ${1:/* constant */}:
-	${0:/* statements */}
-	break;
+    ${0:/* statements */}
+    break;
 ]]></content>
     <tabTrigger>case</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope>

@@ -1,5 +1,5 @@
 <snippet>
-	<description>std::set</description>
+    <description>std::set</description>
     <content><![CDATA[std::set<${1:int}> ${2:set};$0]]></content>
     <tabTrigger>set</tabTrigger>
     <scope>source.c++, source.c++11, source.objc++</scope>

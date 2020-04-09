@@ -1,10 +1,10 @@
 <snippet>
-	<description>try &amp; catch</description>
-	<content><![CDATA[try {
-	${1:/* code */}
+    <description>try &amp; catch</description>
+    <content><![CDATA[try {
+    ${1:/* code */}
 } catch (${2:const std::exception &e}) {
-	${0:std::cerr << e.what() << '\n';}
+    ${0:std::cerr << e.what() << '\n';}
 }]]></content>
-	<tabTrigger>try</tabTrigger>
-	<scope>source.c++, source.objc++, source.c++11</scope>
+    <tabTrigger>try</tabTrigger>
+    <scope>source.c++, source.objc++, source.c++11</scope>
 </snippet>

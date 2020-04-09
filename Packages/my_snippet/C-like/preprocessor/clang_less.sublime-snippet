@@ -1,5 +1,5 @@
 <snippet>
-	<description>Clang version &lt;= check</description>
+    <description>Clang version &lt;= check</description>
     <content><![CDATA[defined(__clang__) && ((__clang_major__ < ${1:3}) || (__clang_major__ == ${1:3}) && (__clang_minor__ <= ${2:2}))]]></content>
     <tabTrigger>clangless</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.c++11, source.objc++</scope>

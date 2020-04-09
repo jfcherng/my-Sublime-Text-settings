@@ -40,20 +40,22 @@ indent_size = 4
 [*.{sh,csh,tcsh,zsh,bash,fish}]
 indent_size = 4
 
-[*.{sublime-commands,sublime-keymap,sublime-menu,sublime-mousemap,sublime-settings}]
-indent_size = 4
-
 [*.sublime-syntax]
 indent_size = 2
+
+[*.{sublime-keymap,sublime-mousemap,sublime-color-scheme,sublime-build,sublime-commands,sublime-snippet,sublime-menu}]
+indent_size = 4
+indent_style = space
+
+[*.{sublime-project,sublime-workspace,sublime-settings}]
+indent_size = 4
+indent_style = tab
 
 [*.tmPreferences]
 indent_size = 4
 
 [*.{yml,yaml,toml,neon}]
 indent_size = 2
-
-[Preferences.sublime-settings]
-indent_style = tab
 
 [Makefile]
 indent_style = tab

@@ -1,7 +1,7 @@
 <snippet>
     <description>Regular function</description>
     <content><![CDATA[${1:int} ${2:function_name} (${3:/* arguments */}) {
-	${0:/* code */}
+    ${0:/* code */}
 }]]></content>
     <tabTrigger>func</tabTrigger>
     <scope>source.c, source.objc, source.c++, source.objc++, source.c++11</scope>

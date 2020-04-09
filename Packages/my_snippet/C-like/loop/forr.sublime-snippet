@@ -1,8 +1,8 @@
 <snippet>
-	<description>Range-based For Loop</description>
-	<content><![CDATA[for (auto &&${1:val} : ${2:var}) {
-	${0:/* code */}
+    <description>Range-based For Loop</description>
+    <content><![CDATA[for (auto &&${1:val} : ${2:var}) {
+    ${0:/* code */}
 }]]></content>
-	<tabTrigger>forr</tabTrigger>
-	<scope>source.c, source.objc, source.c++, source.objc++, source.c++11</scope>
+    <tabTrigger>forr</tabTrigger>
+    <scope>source.c, source.objc, source.c++, source.objc++, source.c++11</scope>
 </snippet>

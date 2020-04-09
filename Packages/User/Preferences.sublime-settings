@@ -50,9 +50,9 @@
 			"selector": "source.python",
 		},
 		{
-			"characters": "$>:\\",//: "source.php",
-					"selector": "source.php",
-},
+			"characters": "$>:\\",
+			"selector": "source.php",
+		},
 		{
 			"characters": ".:>",
 			"selector": "source.c, source.c++",
@@ -221,8 +221,8 @@
 		"SublimeLinter-contrib-yamllint",
 		"SublimeLinter-gcc",
 		"SublimeLinter-json",
-			"Vintage",
-],
+		"Vintage",
+	],
 	"ignored_words":
 	[
 		"args",

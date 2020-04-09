@@ -1,5 +1,5 @@
 <snippet>
-	<description>std::vector</description>
+    <description>std::vector</description>
     <content><![CDATA[std::vector<${1:int}> ${2:v};$0]]></content>
     <tabTrigger>vector</tabTrigger>
     <scope>source.c++, source.c++11, source.objc++</scope>
