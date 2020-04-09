@@ -242,18 +242,6 @@
     { "keys": ["alt+r", "alt+c"], "command": "cycle_through_regions" },
     { "keys": ["alt+r", "alt+n"], "command": "normalize_region_ends" },
     { "keys": ["alt+r", "alt+s"], "command": "split_selection" },
-    // plugin: MultiFill
-    { "keys": ["alt+m", "alt+f"], "command": "multi_integer" },
-    { "keys": ["super+alt+up"],               "command": "multi_window_compare", "args": { "direction": "up",   "sync":"false" } },
-    { "keys": ["super+alt+down"],             "command": "multi_window_compare", "args": { "direction": "down", "sync":"false" } },
-    { "keys": ["super+alt+shift+up"],         "command": "multi_window_compare", "args": { "direction": "up",   "sync":"true"  } },
-    { "keys": ["super+alt+shift+down"],       "command": "multi_window_compare", "args": { "direction": "down", "sync":"true"  } },
-    { "keys": ["super+alt+left"],             "command": "multi_select_editor",  "args": { "direction": "left"  } },
-    { "keys": ["super+alt+right"],            "command": "multi_select_editor",  "args": { "direction": "right" } },
-    { "keys": ["super+ctrl+alt+left"],        "command": "multi_select_windows", "args": { "direction": "left"  } },
-    { "keys": ["super+ctrl+alt+right"],       "command": "multi_select_windows", "args": { "direction": "right" } },
-    { "keys": ["super+ctrl+alt+shift+left"],  "command": "multi_move_window",    "args": { "direction": "left"  } },
-    { "keys": ["super+ctrl+alt+shift+right"], "command": "multi_move_window",    "args": { "direction": "right" } },
     // plugin: OpenUri
     { "keys": ["alt+o", "alt+u"], "command": "open_uri_from_cursors", "args": {"browser": ""} },
     // plugin: Power Cursor
