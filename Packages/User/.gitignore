@@ -1,5 +1,6 @@
 # do not add any dir
-*/
+/*/
+!/my_*/
 
 *.crt
 *.sublime-license
