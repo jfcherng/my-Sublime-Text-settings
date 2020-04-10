@@ -273,8 +273,7 @@
     { "keys": ["ctrl+alt+shift+f"], "command": "black_diff", "context": [ { "key": "selector", "operator": "equal", "operand": "source.python" } ] },
     // plugin: HTMLPrettify
     { "keys": ["ctrl+alt+f"], "command": "htmlprettify", "context": [ { "key": "selector", "operator": "equal", "operand": "text.xml" } ] },
-    // plugin: JsPrettier, ESLint Formatter
-    { "keys": ["ctrl+alt+f"], "command": "format_eslint", "context": [ { "key": "selector", "operator": "equal", "operand": "source.js" } ] },
+    // plugin: JsPrettier
     {
         "keys": ["ctrl+alt+f"],
         "command": "js_prettier",
@@ -282,7 +281,7 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "text.html.markdown | text.html.basic | text.html.vue | source.json | source.css | source.scss | source.less",
+                "operand": "text.html.basic | text.html.markdown | text.html.vue | source.js | source.json | source.css | source.scss | source.less | source.ts | source.tsx | source.yaml",
             },
         ],
     },
