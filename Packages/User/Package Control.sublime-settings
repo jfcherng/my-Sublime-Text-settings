@@ -34,7 +34,7 @@
 		"Deselect",
 		"DoxyDoxygen (evolution)",
 		"EditorConfig",
-		"Emmet",
+		"Emmet2",
 		"Emoji",
 		"ExportHtml",
 		"Fanhuaji",
@@ -47,6 +47,7 @@
 		"GotoEndOfLineOrScope",
 		"HTML-CSS-JS Prettify",
 		"HyperClick",
+		"Inline Python",
 		"Insert Nums",
 		"IntelliDocs",
 		"Jinja2",
@@ -122,5 +123,6 @@
 		"https://github.com/jfcherng/Sublime-Bootstrap-4-Autocomplete.git",
 		"https://github.com/jfcherng/Sublime-Bootstrap-4-Snippets.git",
 		"https://github.com/jfcherng/Sublime-IntelliDocs.git",
+		"https://github.com/emmetio/sublime-text-plugin/releases/latest/download/registry.json",
 	],
 }

@@ -210,9 +210,9 @@
     { "keys": ["ctrl+shift+;"], "command": "ace_jump_select" },
     { "keys": ["alt+;"], "command": "ace_jump_add_cursor" },
     // plugin: Emmet
-    { "keys": ["alt+up"],   "command": "run_emmet_action", "args": { "action": "increment_number_by_1" } },
-    { "keys": ["alt+down"], "command": "run_emmet_action", "args": { "action": "decrement_number_by_1" } },
-    { "keys": ["ctrl+shift+e"], "args": {"action": "evaluate_math_expression"}, "command": "run_emmet_action", "context": [{"key": "emmet_action_enabled.evaluate_math_expression"}]},
+    { "keys": ["alt+up"],   "command": "emmet_increment_number", "args": { "delta": 1 } },
+    { "keys": ["alt+down"], "command": "emmet_increment_number", "args": { "delta": -1 } },
+    { "keys": ["alt+e", "alt+p"], "command": "inline_python_str" },
     // plugin: Emoji
     { "keys": ["alt+e", "alt+m"], "command": "select_emoji" },
     { "keys": ["ctrl+shift+c"], "command": "color_picker" },
