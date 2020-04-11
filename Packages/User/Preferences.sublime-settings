@@ -50,9 +50,9 @@
 			"selector": "source.python",
 		},
 		{
-			"characters": "$>:\\",
+			"characters": "$>:\\",//: "source.php",
 			"selector": "source.php",
-		},
+},
 		{
 			"characters": ".:>",
 			"selector": "source.c, source.c++",
