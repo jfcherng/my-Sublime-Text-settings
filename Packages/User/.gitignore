@@ -6,5 +6,6 @@
 *.sublime-license
 encoding_cache.json
 
+OverrideAudit.status
 Package Control.*
 !Package Control.sublime-settings
