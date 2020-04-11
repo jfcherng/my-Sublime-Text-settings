@@ -231,7 +231,7 @@
     "show_symbol_action_links": true,
     "show_view_status": true,
     "log_payloads": true,
-    "log_debug": true,
+    "log_debug": false,
     "log_server": true,
     "log_stderr": true,
 }
