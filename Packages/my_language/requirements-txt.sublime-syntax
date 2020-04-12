@@ -4,6 +4,10 @@
 # Derived from https://github.com/wuub/requirementstxt
 name: requirements.txt
 file_extensions:
+  - requirements-linux.txt
+  - requirements-mac.txt
+  - requirements-win.txt
+  - requirements-window.txt
   - requirements.txt
 scope: source.requirements-txt
 contexts:
