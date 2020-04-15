@@ -213,6 +213,7 @@
 	],
 	"font_size": 12,
 	"gutter": true,
+	"hide_pointer_while_typing": false,
 	"highlight_line": true,
 	"ignored_packages":
 	[
