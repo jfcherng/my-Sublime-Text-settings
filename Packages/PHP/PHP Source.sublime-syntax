@@ -1477,6 +1477,7 @@ contexts:
     # General annotations
     - include: doc-annotation
   doc-annotation:
+    - include: email
     # general annotations like @Route("/login", name="login", methods="GET")
     - match: \@{{identifier_annotation}}(?=\s*\()
       scope: keyword.other.annotation.object.php
@@ -1528,6 +1529,9 @@ contexts:
     - match: ^\s*(\*)(?!/)
       captures:
         1: punctuation.definition.comment.php
+  email:
+    - match: '[a-zA-Z0-9.!#$%&*+/=?^_|~-]+@[a-zA-Z0-9\-_]+(?:\.[a-zA-Z0-9\-_]+)*'
+      scope: markup.underline.email.php
   regex-double-quoted:
     - match: (?="/(\\.|[^"/])+/[eimsuxADJSUX]*")|(?="/[^"]*$)
       push:
