@@ -58,6 +58,8 @@
         "layer0.opacity": 1.0,
         "content_margin": 6,
     },
+
+    // VCS filenames
     {
         "class": "sidebar_label",
         "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
@@ -71,8 +73,6 @@
         ],
         "color": "color(var(--background) blend(rgb(0, 0, 0) 70%))",
     },
-
-    // VCS filenames
     {
         "class": "sidebar_label",
         "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
@@ -128,27 +128,6 @@
         // "layer0.opacity": 1.0,
     },
 
-//
-// STATUS BAR
-//
-    {
-        "class": "status_container",
-        "content_margin": [8, 0, 0, 0],
-    },
-    {
-        "class": "status_bar",
-        "content_margin": [6, 2, 6, 2], // make bar thinner
-        // change the bg color
-        "layer1.tint": "color(#00f)",
-        "layer1.opacity": 0.2,
-        "content_margin": [8, 2],
-    },
-    {
-        "class": "label_control",
-        "parents": [{"class": "status_bar"}],
-        "fg": "color(#ddd)",
-        "font.size": 12,
-    },
     // fix the missing status bar icons
     {
         "class": "panel_button_control",
@@ -175,20 +154,4 @@
         "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" },
     },
 
-//
-// SIDEBAR
-//
-    {
-        "class": "sidebar_heading",
-        "fg": "color(#aaa)",
-    },
-    {
-        "class": "sidebar_tree",
-        "row_padding": [6, 3, 6, 3], // make rows more compact
-    },
-    {
-        "class": "tree_row",
-        "attributes": ["selectable", "hover"],
-        "layer0.opacity": 0.75,
-    },
 ]
