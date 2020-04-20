@@ -556,6 +556,12 @@
         },
         {
             "font_style": "bold",
+            "foreground": "var(Blue)",
+            "name": "PHP - RegExp - modifier",
+            "scope": "meta.regex.modifier.php",
+        },
+        {
+            "font_style": "bold",
             "foreground": "var(Green)",
             "name": "PHP - RegExp - group names",
             "scope": "entity.name.other.group.regexp, punctuation.definition.group.capture.begin.regexp, punctuation.definition.group.capture.end.regexp",
