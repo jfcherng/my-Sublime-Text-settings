@@ -56,6 +56,7 @@ contexts:
       captures:
         1: storage.type.trait.php
         2: entity.name.trait.php
+    - include: attributes
     - include: typed-property
     - include: function
     - match: '^\s*((?!default|else){{identifier}})\s*(:)(?!:)'
@@ -355,6 +356,58 @@ contexts:
         - match: ''
           pop: true
 
+  attributes:
+    # https://wiki.php.net/rfc/attributes_v2
+    - match: (?=<<(?![<=]))
+      branch_point: branch-point-attributes
+      branch:
+        - is-attributes-branch
+        - not-attributes-branch
+
+  attributes-in-function-parameter:
+    # https://wiki.php.net/rfc/attributes_v2 (for function parameter)
+    - match: (?=<<(?![<=]))
+      branch_point: branch-point-attributes-in-function-parameter
+      branch:
+        - is-attributes-in-function-parameter-branch
+        - not-attributes-branch
+
+  is-attributes-branch:
+    - match: '<<(?={{path}})'
+      scope: punctuation.definition.attribute.begin.php
+      push:
+        - meta_scope: meta.attribute.php
+        # [</#] is not fully quailified in order to not flicker while typing
+        - match: '>>(?=\s*(?:$|[</#]|\b(?:const|class|function|fn|final|abstract|var|public|private|protected|static)\b))'
+          scope: punctuation.definition.attribute.end.php
+          pop: 2 # branch successful matched
+        - match: (?=[<>=)\]},;]|\s*\?>)
+          pop: true
+        - include: class-name
+        - include: expressions
+    - match: ''
+      fail: branch-point-attributes
+
+  is-attributes-in-function-parameter-branch:
+    - match: '<<(?={{path}})'
+      scope: punctuation.definition.attribute.begin.php
+      push:
+        - meta_scope: meta.attribute.php
+        - match: '>>'
+          scope: punctuation.definition.attribute.end.php
+          pop: 2 # branch successful matched
+        - match: (?=[<>=)\]},;]|\s*\?>)
+          pop: true
+        - include: class-name
+        - include: expressions
+    - match: ''
+      fail: branch-point-attributes-in-function-parameter
+
+  not-attributes-branch:
+    - match: '<<'
+      scope: keyword.operator.bitwise.php
+      pop: true
+
   class-builtin:
     - match: |-
         (?xi)(\\)?\b(
@@ -373,7 +426,7 @@ contexts:
           MongoDate | MongoGridFS | MongoGridFSCursor | MongoGridFSFile | MongoGridfsFile | MongoId | MongoInt32 | MongoInt64 |
           MongoRegex | MongoTimestamp | MultipleIterator | NoRewindIterator | Normalizer | NumberFormatter | OCI-Collection | OCI-Lob |
           OutOfBoundsException | OutOfRangeException | OuterIterator | OverflowException | PDO | PDOStatement | ParentIterator | ParseError | Phar |
-          PharData | PharFileInfo | PhpToken | RRDCreator | RRDGraph | RRDUpdater | RangeException | RecursiveArrayIterator | RecursiveCachingIterator |
+          PharData | PharFileInfo | PhpAttribute | PhpCompilerAttribute | PhpToken | RRDCreator | RRDGraph | RRDUpdater | RangeException | RecursiveArrayIterator | RecursiveCachingIterator |
           RecursiveDirectoryIterator | RecursiveFilterIterator | RecursiveIterator | RecursiveIteratorIterator | RecursiveRegexIterator | RecursiveTreeIterator | Reflection | ReflectionClass |
           ReflectionExtension | ReflectionFunction | ReflectionFunctionAbstract | ReflectionMethod | ReflectionObject | ReflectionParameter | ReflectionProperty | Reflector |
           RegexIterator | ResourceBundle | RuntimeException | SAMConnection | SAMMessage | SCA | SCA_LocalProxy | SCA_SoapProxy |
@@ -735,6 +788,7 @@ contexts:
     - match: \b(array|callable|int|string|bool|float|object)\b
       scope: storage.type.php
     # Class name type hint
+    - include: attributes-in-function-parameter
     - include: type-hint
     - match: '\.\.\.'
       scope: keyword.operator.spread.php
