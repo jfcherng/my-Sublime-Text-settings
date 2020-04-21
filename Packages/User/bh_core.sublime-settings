@@ -111,6 +111,21 @@
             "language_list": ["PHP", "HTML", "HTML 5"],
             "enabled": true,
         },
+        // PHP Attribute
+        {
+            "name": "php_attribute",
+            "open": "(<<)",
+            "close": "(>>)",
+            "style": "angle",
+            "scope_exclude": ["source.php"],
+            "scope_exclude_exceptions": [
+                "punctuation.definition.attribute.begin.php",
+                "punctuation.definition.attribute.end.php",
+            ],
+            "language_filter": "whitelist",
+            "language_list": ["PHP"],
+            "enabled": true,
+        },
         ///////////////////
         // add new rules //
         ///////////////////

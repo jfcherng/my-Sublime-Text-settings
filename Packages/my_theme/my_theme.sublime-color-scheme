@@ -507,13 +507,18 @@
             "scope": "keyword.other.phpunit.php",
         },
         {
+            "foreground": "var(--foreground)",
+            "name": "PHP - Attributes punctuations",
+            "scope": "punctuation.definition.attribute.begin.php, punctuation.definition.attribute.end.php",
+        },
+        {
             "foreground": "var(Pink200)",
             "name": "PHP - Annotations",
             "scope": "keyword.other.annotation.tag.php, keyword.other.annotation.object.php",
         },
         {
             "foreground": "var(foreground)",
-            "name": "PHP - Annotation punctutions",
+            "name": "PHP - Annotation punctuations",
             "scope": "punctuation.section.group",
         },
         {
@@ -806,8 +811,8 @@
             "scope": "brackethighlighter.square",
         },
         {
-            "background": "#066EA8",
-            "foreground": "#F99157",
+            "background": "#AA66AA",
+            "foreground": "#FFCC66",
             "name": "Bracket Angle",
             "scope": "brackethighlighter.angle",
         },
