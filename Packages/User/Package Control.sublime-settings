@@ -64,6 +64,7 @@
 		"LSP-json",
 		"LSP-typescript",
 		"LSP-vue",
+		"LSP-yaml",
 		"MarkdownPreview",
 		"MultiEditUtils",
 		"nginx",
