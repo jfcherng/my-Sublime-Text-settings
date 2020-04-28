@@ -132,51 +132,6 @@
                 "Packages/Python/Python.sublime-syntax",
             ],
         },
-        "js-ts-lsp": {
-            // https://github.com/sourcegraph/javascript-typescript-langserver
-            // yarn global add javascript-typescript-langserver
-            "enabled": true,
-            "command": [
-                "javascript-typescript-stdio",
-            ],
-            "languages": [
-                {
-                    "languageId": "javascript",
-                    "scopes": [
-                        "source.js",
-                        "source.js.eslint",
-                        "source.js.gruntfile",
-                        "source.js.gulpfile",
-                        "source.js.postcss",
-                        "source.js.stylelint",
-                        "source.js.webpack",
-                        "source.jsx",
-                    ],
-                    "syntaxes": [
-                        "Packages/JavaScript/JavaScript.sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (ESLint).sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (Gruntfile).sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (Gulpfile).sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (PostCSS).sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (Stylelint).sublime-syntax",
-                        "Packages/my_language/aliases/JavaScript (Webpack).sublime-syntax",
-                    ],
-                },
-                {
-                    "languageId": "typescript",
-                    "scopes": [
-                        "source.ts",
-                        "source.tsx",
-                    ],
-                    "syntaxes": [
-                        "Packages/TypeScript/TypeScript.sublime-syntax",
-                        "Packages/TypeScript/TypeScript.tmLanguage",
-                        "Packages/TypeScript/TypeScriptReact.sublime-syntax",
-                        "Packages/TypeScript/TypeScriptReact.tmLanguage",
-                    ],
-                },
-            ],
-        },
     },
     "auto_show_diagnostics_panel": "never",
     "auto_show_diagnostics_panel_level": 3,

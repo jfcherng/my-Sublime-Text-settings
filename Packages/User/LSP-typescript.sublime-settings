@@ -1,0 +1,58 @@
+{
+    // @see https://github.com/sourcegraph/javascript-typescript-langserver
+    "languages": [
+        {
+            "languageId": "javascript",
+            "scopes": [
+                "source.js",
+                "source.js.eslint",
+                "source.js.gruntfile",
+                "source.js.gulpfile",
+                "source.js.postcss",
+                "source.js.stylelint",
+                "source.js.webpack",
+            ],
+            "syntaxes": [
+                "Packages/JavaScript/JavaScript.sublime-syntax",
+                "Packages/Babel/JavaScript (Babel).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (ESLint).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (Gruntfile).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (Gulpfile).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (PostCSS).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (Stylelint).sublime-syntax",
+                "Packages/my_language/aliases/JavaScript (Webpack).sublime-syntax",
+            ],
+        },
+        {
+            "languageId": "javascriptreact",
+            "scopes": [
+                "source.jsx",
+            ],
+            "syntaxes": [
+                "Packages/User/JS Custom/Syntaxes/React.sublime-syntax",
+            ],
+        },
+        {
+            "languageId": "typescript",
+            "scopes": [
+                "source.ts",
+            ],
+            "syntaxes": [
+                "Packages/TypeScript Syntax/TypeScript.tmLanguage",
+                "Packages/TypeScript Syntax/TypeScript.sublime-syntax",
+            ],
+        },
+        {
+            "languageId": "typescriptreact",
+            "scopes": [
+                "source.tsx",
+            ],
+            "syntaxes": [
+                "Packages/TypeScript Syntax/TypeScriptReact.tmLanguage",
+                "Packages/TypeScript Syntax/TypeScriptReact.sublime-syntax",
+            ],
+        },
+    ],
+    "initializationOptions": {},
+    "settings": {},
+}
