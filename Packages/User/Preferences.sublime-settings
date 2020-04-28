@@ -52,7 +52,7 @@
 		{
 			"characters": "$>:\\",
 			"selector": "source.php",
-},
+		},
 		{
 			"characters": ".:>",
 			"selector": "source.c, source.c++",
