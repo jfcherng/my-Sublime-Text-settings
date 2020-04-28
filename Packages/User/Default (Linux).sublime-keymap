@@ -238,10 +238,10 @@
     { "keys": ["alt+f", "alt+s"], "command": "lsp_format_document_range", "context": [{ "key": "setting.lsp_active" }] },
     // plugin: MultiEditUtils
     { "keys": ["shift+escape"], "command": "jump_to_last_region" },
-    { "keys": ["alt+r", "alt+e"], "command": "remove_empty_regions", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },
-    { "keys": ["alt+r", "alt+c"], "command": "cycle_through_regions" },
-    { "keys": ["alt+r", "alt+n"], "command": "normalize_region_ends" },
-    { "keys": ["alt+r", "alt+s"], "command": "split_selection" },
+    { "keys": ["alt+r", "alt+e"], "command": "remove_empty_regions",  "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },
+    { "keys": ["alt+r", "alt+c"], "command": "cycle_through_regions", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },
+    { "keys": ["alt+r", "alt+n"], "command": "normalize_region_ends", "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },
+    { "keys": ["alt+r", "alt+s"], "command": "split_selection",       "context": [{ "key": "setting.is_widget", "operator": "equal", "operand": false }] },
     // plugin: OpenUri
     { "keys": ["alt+o", "alt+u"], "command": "open_uri_from_cursors", "args": {"browser": ""} },
     // plugin: Power Cursor
