@@ -196,6 +196,11 @@
         },
         */
         {
+            "font_style": "underline",
+            "name": "Underline",
+            "scope": "markup.underline",
+        },
+        {
             "foreground": "var(Grey700)",
             "name": "Comment",
             "scope": "comment",
@@ -255,13 +260,12 @@
             "scope": "storage.type",
         },
         {
-            "font_style": "underline",
             "foreground": "var(--foreground)",
             "name": "Class name",
             "scope": "entity.name.class",
         },
         {
-            "font_style": "italic underline",
+            "font_style": "italic",
             "foreground": "var(--foreground)",
             "name": "Inherited class",
             "scope": "entity.other.inherited-class",
