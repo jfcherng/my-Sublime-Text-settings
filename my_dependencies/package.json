@@ -1,7 +1,6 @@
 {
   "author": "Jack Cherng",
   "dependencies": {
-    "bash-language-server": "^1",
     "eslint": "^6",
     "eslint-config-prettier": "^6",
     "less": "^3",

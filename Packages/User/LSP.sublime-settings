@@ -6,23 +6,6 @@
     ],
     // LSP servers configurations
     "clients": {
-        "bash-lsp": {
-            // https://github.com/mads-hartmann/bash-language-server
-            // npm -g i bash-language-server
-            // yarn global add bash-language-server
-            "enabled": true,
-            "command": [
-                "bash-language-server",
-                "start",
-            ],
-            "languageId": "bash",
-            "scopes": [
-                "source.shell.bash",
-            ],
-            "syntaxes": [
-                "Packages/ShellScript/Bash.sublime-syntax",
-            ],
-        },
         "clangd": {
             "enabled": true,
             "command": [

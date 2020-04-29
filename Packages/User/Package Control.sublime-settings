@@ -58,6 +58,7 @@
 		"LESS",
 		"LiveReload",
 		"LSP",
+		"LSP-bash",
 		"LSP-css",
 		"LSP-html",
 		"LSP-intelephense",
