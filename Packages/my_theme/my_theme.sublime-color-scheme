@@ -143,9 +143,19 @@
         "Brown"      : "var(Brown600)"      ,
         "Grey"       : "var(Grey600)"       ,
         "BlueGrey"   : "var(BlueGrey600)"   ,
-        // custom
+        // built-in
         "--background": "var(Black)",
         "--foreground": "var(White)",
+        // "--accent": "var(White)",
+        "--bluish": "var(Blue)",
+        "--greenish": "var(Green)",
+        "--orangish": "var(Orange)",
+        "--pinkish": "var(Pink)",
+        "--purplish": "var(Purple)",
+        "--cyanish": "var(Cyan)",
+        "--redish": "var(Red)",
+        "--yellowish": "var(Yellow)",
+        // custom
         "DarkBlueBackground": "color(var(Blue) blend(var(--background) 15%))",
     },
     "globals": {

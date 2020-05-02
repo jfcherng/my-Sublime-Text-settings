@@ -1,116 +1,120 @@
 // @see https://www.sublimetext.com/docs/3/themes.html
 [
+    ////////////////
+    // VCS badges //
+    ////////////////
+
     // @see https://gist.github.com/OdatNurd/4bb596e6162693567642b7aef4cab4c0
-    // VCS badges
+    // @see https://github.com/arxeiss/Sublime-GitBadgesLikeVSCode
+    // Deleted file or staged deleted file (visible only at folders)
+    {
+        "class": "vcs_status_badge",
+        "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
+        "layer0.tint": "color(var(--redish) min-contrast(var(--background) 2.5))",
+        "layer0.opacity": 0.7,
+        "content_margin": 6,
+    },
+    {
+        "class": "vcs_status_badge",
+        "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
+        "layer0.tint": "color(var(--redish) min-contrast(var(--background) 2.5))",
+        "layer0.opacity": 0.7,
+        "content_margin": 6,
+    },
+
+    // Untracked files or staged untracked (added) - Green color
+    {
+        "class": "vcs_status_badge",
+        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+        "layer0.texture": "my_theme/git_badges/added.png",
+        "layer0.tint": "color(var(--greenish) blend(var(--bluish) 50%))",
+        "layer0.opacity": 0.7,
+        "content_margin": 6,
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
+        "color": "color(var(--greenish) blend(var(--bluish) 50%) min-contrast(var(--background) 2.5))",
+    },
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-        "layer0.texture": "Theme - Default/common/status_untracked.png",
-        "layer0.tint": "color(var(--yellowish) blend(rgb(255, 255, 255) 60%))",
-        "layer0.opacity": 1.0,
+        "layer0.texture": "my_theme/git_badges/untracked.png",
+        "layer0.tint": "color(var(--greenish) blend(var(--bluish) 50%))",
+        "layer0.opacity": 0.7,
+        "layer0.draw_center": true,
         "content_margin": 6,
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
+        "color": "color(var(--greenish) blend(var(--bluish) 50%) min-contrast(var(--background) 2.5))",
+    },
+
+    // Modified file or staged modified file - Yellow color
+    {
+        "class": "vcs_status_badge",
+        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+        "layer0.texture": "my_theme/git_badges/staged.png",
+        "layer0.tint": "var(--yellowish)",
+        "layer0.opacity": 0.7,
+        "content_margin": 6,
+    },
+    {
+        "class": "sidebar_label",
+        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
+        "color": "color(var(--yellowish) min-contrast(var(--background) 2.5))",
     },
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-        "layer0.texture": "Theme - Default/common/status_modified.png",
-        "layer0.tint": "color(var(--bluish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
+        "layer0.texture": "my_theme/git_badges/modified.png",
+        "layer0.tint": "var(--yellowish)",
+        "layer0.opacity": 0.7,
         "content_margin": 6,
     },
     {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-        "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--purplish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
-        "content_margin": 6,
+        "class": "sidebar_label",
+        "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
+        "color": "color(var(--yellowish) min-contrast(var(--background) 2.5))",
     },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-        "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--greenish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
-        "content_margin": 6,
-    },
+
+    // Conflicted merge
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
         "layer0.texture": "Theme - Default/common/status_unmerged.png",
-        "layer0.tint": "color(var(--redish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
+        "layer0.tint": "var(--pinkish)",
+        "layer0.opacity": 0.7,
         "content_margin": 6,
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-        "layer0.texture": "Theme - Default/common/status_staged.png",
-        "layer0.tint": "color(var(--pinkish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
-        "content_margin": 6,
-    },
-    {
-        "class": "vcs_status_badge",
-        "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-        "layer0.texture": "Theme - Default/common/status_modified.png",
-        "layer0.tint": "color(var(--pinkish) min-contrast(var(--background) 2.5))",
-        "layer0.opacity": 1.0,
-        "content_margin": 6,
-    },
-
-    // VCS filenames
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["ignored"]}],
-        "color": "color(var(--background) blend(rgb(255, 255, 255) 70%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [
-            {"class": "window", "attributes": ["file_light"]},
-            {"class": "file_system_entry", "attributes": ["ignored"]},
-        ],
-        "color": "color(var(--background) blend(rgb(0, 0, 0) 70%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-        "color": "color(var(--yellowish) blend(rgb(255, 255, 255) 75%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-        "color": "color(var(--bluish) blend(rgb(255, 255, 255) 75%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-        "color": "color(var(--purplish) blend(rgb(255, 255, 255) 75%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-        "color": "color(var(--greenish) blend(rgb(255, 255, 255) 75%))",
     },
     {
         "class": "sidebar_label",
         "parents": [{"class": "file_system_entry", "attributes": ["unmerged"]}],
-        "color": "color(var(--redish) blend(rgb(255, 255, 255) 75%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["deleted"]}],
-        "color": "color(var(--pinkish) blend(rgb(255, 255, 255) 75%))",
-    },
-    {
-        "class": "sidebar_label",
-        "parents": [{"class": "file_system_entry", "attributes": ["missing"]}],
-        "color": "color(var(--pinkish) blend(rgb(255, 255, 255) 75%))",
+        "color": "color(var(--pinkish) min-contrast(var(--background) 2.5))",
     },
 
+    // At folder always show circle and inherit color from above
+    {
+        "class": "vcs_status_badge",
+        "parents": [{"class": "tree_row", "attributes": ["expandable"]}],
+        "layer0.texture": "Theme - Default/common/status_modified.png",
+    },
+    // Except unmerged status
+    {
+        "class": "vcs_status_badge",
+        "parents": [
+            {"class": "tree_row", "attributes": ["expandable"]},
+            {"class": "file_system_entry", "attributes": ["unmerged"]}
+        ],
+        "layer0.texture": "Theme - Default/common/status_unmerged.png",
+    },
+
+    ////////////////
+    // file icons //
+    ////////////////
+
     // @see https://github.com/braver/FileIcons#customize
-    // file icons
     {
         "class": "icon_file_type",
         "layer0.tint": [255, 255, 255],
