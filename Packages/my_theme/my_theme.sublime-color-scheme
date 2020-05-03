@@ -764,6 +764,14 @@
             "scope": "diff.deleted.char",
             "foreground_adjust": "l(+ 10%)",
         },
+        /////////////////
+        // NSIS script //
+        /////////////////
+        {
+            "foreground": "var(Teal)",
+            "name": "NSIS Section",
+            "scope": "entity.name.section.nsis",
+        },
         //////////////////
         // ASS subitlte //
         //////////////////
