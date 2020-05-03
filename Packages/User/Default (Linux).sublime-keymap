@@ -9,6 +9,14 @@
     /**************************
      *    Built-in commands   *
      **************************/
+    // force trim trailing white spaces
+    {
+        "keys": ["ctrl+t", "ctrl+s"], "command": "trim_trailing_white_space",
+        "context": [
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "num_selections", "operator": "equal", "operand": 1, "match_all": true },
+        ],
+    },
     // diff-related requires ST 3190
     { "keys": ["alt+d", "alt+i"],   "command": "prev_modification"   },
     { "keys": ["alt+d", "alt+k"],   "command": "next_modification"   },
