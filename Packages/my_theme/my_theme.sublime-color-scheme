@@ -180,7 +180,7 @@
         "invisibles": "color(White blend(color(Black) 25%))",
         "line_highlight": "color(color(White blend(color(Black) 30%)) alpha(50%))",
         "misspelling": "var(Pink300)",
-        "selection": "color(White alpha(0.15))",
+        "selection": "color(White alpha(0.18))",
         "selection_border": "var(CyanSaturated)",
         // "selection_foreground": "var(--foreground)",
         "selection_corner_style": "square",
