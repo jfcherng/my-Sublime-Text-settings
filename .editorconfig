@@ -49,7 +49,7 @@ indent_style = space
 
 [*.{sublime-project,sublime-workspace,sublime-settings}]
 indent_size = 4
-indent_style = tab
+indent_style = space
 
 [*.tmPreferences]
 indent_size = 4
