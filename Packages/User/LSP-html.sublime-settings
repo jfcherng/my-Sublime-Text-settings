@@ -1,0 +1,14 @@
+{
+    "languages": [
+        {
+            "languageId": "html",
+            "scopes": [
+                "text.html.basic",
+            ],
+            "syntaxes": [
+                "Packages/HTML/HTML.sublime-syntax",
+                // "Packages/PHP/PHP.sublime-syntax",
+            ],
+        },
+    ],
+}
