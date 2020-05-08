@@ -2,7 +2,7 @@
     // Debug logging
     "debug_enable": false,
     // Character threshold to search
-    "search_threshold": 10000,
+    "search_threshold": 20000,
     // Ignore threshold
     "ignore_threshold": false,
     // Set max number of multi-select brackets that will be searched automatically
