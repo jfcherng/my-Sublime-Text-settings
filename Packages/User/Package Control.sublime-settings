@@ -120,10 +120,10 @@
 	],
 	"package_name_map":
 	{
-		"Sublime-Bootstrap-4-Autocomplete": "Bootstrap 4 Autocomplete",
-		"Sublime-Bootstrap-4-Snippets": "Bootstrap 4 Snippets",
-		"Sublime-IntelliDocs": "IntelliDocs",
-		"Sublime-ToggleLoggings": "ToggleLoggings",
+		"ST-Bootstrap-4-Autocomplete": "Bootstrap 4 Autocomplete",
+		"ST-Bootstrap-4-Snippets": "Bootstrap 4 Snippets",
+		"ST-IntelliDocs": "IntelliDocs",
+		"ST-ToggleLoggings": "ToggleLoggings",
 	},
 	"repositories":
 	[
