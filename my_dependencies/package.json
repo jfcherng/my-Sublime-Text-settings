@@ -2,7 +2,7 @@
   "author": "Jack Cherng",
   "dependencies": {
     "babel-eslint": "^10",
-    "eslint": "^6",
+    "eslint": "^7",
     "eslint-config-prettier": "^6",
     "eslint-plugin-prettier": "^3",
     "less": "^3",
