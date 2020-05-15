@@ -67,6 +67,9 @@
                         // "VIRTUAL_ENV": "/Users/mike/.virtualenvs/my-virtual-env"
                     },
                     "plugins": {
+                        "autopep8": {
+                            "enabled": false,
+                        },
                         "jedi": {
                             "extra_paths": [
                                 // for ST plugin development
@@ -103,6 +106,9 @@
                         "pyls_mypy": {
                             "enabled": false,
                             "live_mode": true,
+                        },
+                        "yapf": {
+                            "enabled": true,
                         },
                     },
                 },
