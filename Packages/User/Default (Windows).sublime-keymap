@@ -93,7 +93,6 @@
     { "keys": ["enter"],     "command": "commit_completion",  "context": [ { "key": "auto_complete_visible" }, { "key": "setting.auto_complete_commit_on_tab", "operand": false } ] },
     { "keys": ["tab"],       "command": "commit_completion",  "context": [ { "key": "auto_complete_visible" }, { "key": "setting.auto_complete_commit_on_tab", "operand": false } ] },
     { "keys": ["alt+j"],     "command": "hide_auto_complete", "context": [ { "key": "auto_complete_visible", "operator": "equal", "operand": true } ] },
-    { "keys": ["alt+l"],     "command": "hide_auto_complete", "context": [ { "key": "auto_complete_visible", "operator": "equal", "operand": true } ] },
     // files
     { "keys": ["alt+s", "alt+a"], "command": "save_all" },
     { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
@@ -110,7 +109,6 @@
     { "keys": ["alt+enter"],      "command": "find_all",    "args": { "close_panel": true }, "context": [{ "key": "panel", "operand": "replace" }, { "key": "panel_has_focus" }] },
     { "keys": ["ctrl+alt+enter"], "command": "replace_all", "args": { "close_panel": true }, "context": [{ "key": "panel", "operand": "replace" }, { "key": "panel_has_focus" }] },
     // goto definition
-    { "keys": ["f12"],          "command": "goto_definition"        },
     { "keys": ["ctrl+shift+r"], "command": "goto_symbol_in_project" },
     { "keys": ["ctrl+alt+r"],   "command": "navigate_to_line_via_quick_panel" },
     // paste (set default to use smart paste)
@@ -238,11 +236,54 @@
     { "keys": ["shift+f8"], "command": "lsp_previous_diagnostic", "context": [{ "key": "setting.lsp_active" }] },
     { "keys": ["escape"], "command": "lsp_hide_diagnostic", "context": [{ "key": "setting.lsp_diagnostic_phantom" }] },
     { "keys": ["f2"], "command": "lsp_symbol_rename", "context": [{ "key": "setting.lsp_active" }] },
-    { "keys": ["f12"], "command": "lsp_symbol_definition", "context": [{ "key": "setting.lsp_active" }] },
-    { "keys": ["ctrl+alt+space"], "command": "noop", "context": [{ "key": "lsp.signature_help", "operator": "equal", "operand": 0}] },
-    { "keys": ["ctrl+alt+space"], "command": "lsp_hover", "context": [{ "key": "selector", "operator": "equal", "operand": "entity.name.class | entity.name.function | entity.name.tag | entity.other.inherited-class | meta.property-name.css | meta.property-value.css | meta.selector.css | support.class | support.function | variable.function" }] },
-    { "keys": ["alt+i"], "command": "noop", "context": [{ "key": "lsp.signature_help", "operator": "equal", "operand": -1 }] },
-    { "keys": ["alt+k"], "command": "noop", "context": [{ "key": "lsp.signature_help", "operator": "equal", "operand": 1 }] },
+    {
+        "keys": ["f12"],
+        "command": "lsp_symbol_definition",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+        ],
+    },
+    {
+        "keys": ["ctrl+alt+space"],
+        "command": "lsp_hover",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "selector", "operator": "equal", "operand": "entity.name.class | entity.name.function | entity.name.tag | entity.other.inherited-class | meta.property-name.css | meta.property-value.css | meta.selector.css | support.class | support.function | variable.function" }
+        ],
+    },
+    {
+        "keys": ["ctrl+alt+space"],
+        "command": "noop",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "lsp.signature_help", "operator": "equal", "operand": 0 },
+        ],
+    },
+    {
+        "keys": ["alt+i"],
+        "command": "noop",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "lsp.signature_help", "operator": "equal", "operand": -1 },
+        ],
+    },
+    {
+        "keys": ["alt+k"],
+        "command": "noop",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "lsp.signature_help", "operator": "equal", "operand": 1 },
+        ],
+    },
+    {
+        "keys": ["alt+l"],
+        "command": "auto_complete_open_link",
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "auto_complete_visible", "operator": "equal", "operand": true },
+        ],
+    },
     { "keys": ["alt+f", "alt+d"], "command": "lsp_format_document", "context": [{ "key": "setting.lsp_active" }] },
     { "keys": ["alt+f", "alt+s"], "command": "lsp_format_document_range", "context": [{ "key": "setting.lsp_active" }] },
     // plugin: MultiEditUtils
