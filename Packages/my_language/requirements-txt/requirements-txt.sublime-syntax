@@ -18,9 +18,17 @@ contexts:
       scope: comment.line.requirements-txt
       captures:
         1: punctuation.definition.comment.requirements-txt
-    - match: '^[a-zA-Z0-9_\-\.]+'
+    - match: ^(git)(\+)
+      captures:
+        1: string.unquoted.protocol.requirements-txt
+        2: punctuation.separator.protocol.requirements-txt
+      push:
+        - match: .*
+          scope: string.package_name.requirements-txt
+          pop: true
+    - match: ^[a-zA-Z0-9_\-\.]+
       scope: string.package_name.requirements-txt
     - match: ==|<|<=|>=|>
       scope: keyword.operator.logical.punctuation.requirements-txt
-    - match: '\d+\.[\da-zA-Z\-_\.]*'
+    - match: \d+\.[\da-zA-Z\-_\.]*
       scope: constant.numeric.verions.requirements-txt
