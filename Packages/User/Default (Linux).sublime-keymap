@@ -98,6 +98,7 @@
     { "keys": ["alt+s", "alt+a"], "command": "save_all" },
     { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
     { "keys": ["alt+shift+o", "alt+shift+s"], "command": "reveal_in_side_bar" },
+    { "keys": ["alt+f2"], "command": "rename_file" },
     // word wrap
     { "keys": ["alt+w"], "command": "toggle_setting", "args": { "setting": "word_wrap" } },
     // convert identations to (spaces|tabs)
@@ -273,7 +274,6 @@
     // plugin: ToggleWord
     { "keys": ["alt+t"], "command": "toggle_word" },
     // plugin: FileManager
-    { "keys": ["alt+f2"], "command": "fm_rename" },
     { "keys": ["alt+shift+o", "alt+shift+b"], "command": "fm_open_in_browser" },
     { "keys": ["alt+shift+o", "alt+shift+e"], "command": "fm_open_in_explorer" },
     // plugin: sublack
