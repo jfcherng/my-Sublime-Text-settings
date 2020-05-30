@@ -112,7 +112,7 @@
 	"dc_use_soda_search_icons": true,
 	"dc_use_white_puck": false,
 	"default_line_ending": "unix",
-	"detect_indentation": false,
+	"detect_indentation": true,
 	"dictionary": "Packages/Language - English/en_US-large.dic",
 	"draw_minimap_border": true,
 	"draw_shadows": true,
