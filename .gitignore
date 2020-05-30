@@ -1,9 +1,7 @@
-Backup/
-Cache/
-Index/
-Local/
+/Backup/
+/Cache/
+/Index/
+/Local/
+/Log/
 
 /KEEPME
-
-# plugin generated
-Settings/
