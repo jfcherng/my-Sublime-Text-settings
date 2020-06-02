@@ -161,11 +161,11 @@
     "globals": {
         "active_guide": "color(White alpha(0.3))",
         "background": "var(--background)",
+        "block_caret": "color(var(--foreground) blend(var(--background) 50%))",
         "bracket_contents_foreground": "var(LightBlue300)",
         "bracket_contents_options": "underline",
         "brackets_foreground": "var(LightBlue300)",
         "brackets_options": "underline",
-        "block_caret": "color(var(--foreground) blend(var(--background) 50%))",
         "caret": "var(--foreground)",
         "find_highlight": "var(YellowSaturated)",
         "find_highlight_foreground": "var(BlackLight)",
@@ -173,6 +173,7 @@
         "guide": "color(White alpha(0.2))",
         "gutter": "var(BlackLight)",
         "gutter_foreground": "color(White blend(color(Black) 40%))",
+        "gutter_foreground_highlight": "color(var(--foreground) blend(var(--background) 85%))",
         "highlight": "var(--foreground)",
         "implicit_selection_foreground": "true",
         "inactive_selection": "color(White alpha(0.2))",
@@ -180,11 +181,13 @@
         "invisibles": "color(White blend(color(Black) 25%))",
         "line_highlight": "color(color(White blend(color(Black) 30%)) alpha(50%))",
         "misspelling": "var(Pink300)",
+        "scroll_highlight": "var(--foreground)",
+        "scroll_selected_highlight": "var(Yellow)",
         "selection": "color(White alpha(0.18))",
         "selection_border": "var(CyanSaturated)",
-        // "selection_foreground": "var(--foreground)",
-        "selection_corner_style": "square",
         "selection_corner_radius": "0",
+        "selection_corner_style": "square",
+        "selection_foreground": "var(--foreground)",
         "shadow": "color(Black alpha(0.2))",
         "shadow_width": "8",
         "stack_guide": "color(White alpha(0.2))",
@@ -195,9 +198,10 @@
         "line_diff_added": "var(Green700)",
         "line_diff_deleted": "var(Red700)",
         "line_diff_modified": "var(Yellow700)",
-        // phantom / popup
+        // phantom / popup / sheet
         "phantom_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: transparent; --purplish: #BF94E6; } a { color: var(--bluish); } #inline-error .error a { color: var(--foreground); background-color: color(var(--redish) blend(var(--background) 30%)); font-size: 1rem; font-weight: normal; } #inline-error .error-arrow { border-left-color: color(var(--redish) blend(var(--background) 30%)); } #inline-error .error { background-color: color(var(--redish) blend(var(--background) 30%)); }",
         "popup_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: color(var(--background) blend(#FFF 95%)); --purplish: #BF94E6; } a { color: var(--bluish); } html.light { background-color: color(var(--background) blend(#000 95%)); } #show-scope a { font-size: 1rem; } #show-scope { padding: 0.5rem; }",
+        "sheet_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: transparent; --purplish: #BF94E6; } a { color: var(--bluish); } #inline-error .error a { color: var(--foreground); background-color: color(var(--redish) blend(var(--background) 30%)); font-size: 1rem; font-weight: normal; } #inline-error .error-arrow { border-left-color: color(var(--redish) blend(var(--background) 30%)); } #inline-error .error { background-color: color(var(--redish) blend(var(--background) 30%)); }",
     },
     "rules": [
         // hash style syntax highlight
