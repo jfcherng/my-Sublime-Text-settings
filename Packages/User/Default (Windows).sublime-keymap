@@ -17,10 +17,11 @@
             { "key": "num_selections", "operator": "equal", "operand": 1, "match_all": true },
         ],
     },
-    // diff-related requires ST 3190
-    { "keys": ["alt+d", "alt+i"],   "command": "prev_modification"   },
-    { "keys": ["alt+d", "alt+k"],   "command": "next_modification"   },
+    // diff-related
+    { "keys": ["alt+d", "alt+i"], "command": "prev_modification" },
+    { "keys": ["alt+d", "alt+k"], "command": "next_modification" },
     { "keys": ["ctrl+k", "ctrl+z"], "command": "revert_modification" },
+    { "keys": ["ctrl+alt+shift+z"], "command": "revert_hunk" },
     { "keys": ["ctrl+k", "ctrl+/"], "command": "toggle_inline_diff"  },
     { "keys": ["alt+shift+o", "alt+shift+m"], "command": "sublime_merge_open_repo" },
     // "insert a tab" rather than "insert the best completion" while pressing Tab at BOL
@@ -225,8 +226,6 @@
     { "keys": ["ctrl+shift+c"], "command": "color_picker" },
     // plugin: Find Cursor
     { "keys": ["alt+f", "alt+c"], "command": "find_cursor", "args": { "reverse": false, "pan": false } },
-    // plugin: GitGutter
-    { "keys": ["ctrl+alt+shift+z"], "command": "git_gutter_revert_change" },
     // plugin: Insert Nums
     { "keys": ["alt+m", "alt+i"], "command": "prompt_insert_nums" },
     // plugin: IntelliDocs
