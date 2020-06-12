@@ -219,9 +219,6 @@
 	[
 		"Codecs33",
 		"RestructuredText",
-		"SublimeLinter-contrib-yamllint",
-		"SublimeLinter-gcc",
-		"SublimeLinter-json",
 		"Vintage",
 	],
 	"ignored_words":
