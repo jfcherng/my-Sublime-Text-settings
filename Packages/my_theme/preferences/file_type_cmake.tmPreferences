@@ -2,11 +2,11 @@
 <plist version="1.0">
   <dict>
     <key>scope</key>
-    <string>source.ts, source.js.typescript</string>
+    <string>source.cmake, source.cmakeeditor</string>
     <key>settings</key>
     <dict>
       <key>icon</key>
-      <string>file_type_typescript</string>
+      <string>file_type_cmake</string>
     </dict>
   </dict>
 </plist>
