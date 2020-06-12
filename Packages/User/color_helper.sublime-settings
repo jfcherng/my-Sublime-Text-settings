@@ -196,6 +196,7 @@
             ],
             "allowed_colors": ["hex", "hex_compressed", "hexa", "hexa_compressed", "rgb", "rgba", "hsl", "hsla", "gray", "graya", "hwb", "hwba"],
             "extensions": [
+                ".hidden-color-scheme",
                 ".sublime-color-scheme",
                 ".sublime-settings",
                 ".sublime-theme",
