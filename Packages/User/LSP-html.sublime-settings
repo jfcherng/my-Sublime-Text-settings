@@ -2,13 +2,8 @@
     "languages": [
         {
             "languageId": "html",
-            "scopes": [
-                "text.html.basic",
-            ],
-            "syntaxes": [
-                "Packages/HTML/HTML.sublime-syntax",
-                // "Packages/PHP/PHP.sublime-syntax",
-            ],
+            "document_selector": "text.html.basic | embedding.php",
+            "feature_selector": "text.html",
         },
     ],
 }

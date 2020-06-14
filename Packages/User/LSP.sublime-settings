@@ -18,108 +18,66 @@
             "languages": [
                 {
                     "languageId": "c",
-                    "scopes": [
-                        "source.c",
-                    ],
-                    "syntaxes": [
-                        "Packages/C++/C.sublime-syntax",
-                    ],
+                    "document_selector": "source.c",
                 },
                 {
                     "languageId": "cpp",
-                    "scopes": [
-                        "source.c++",
-                    ],
-                    "syntaxes": [
-                        "Packages/C++/C++.sublime-syntax",
-                    ],
+                    "document_selector": "source.c++",
                 },
                 {
                     "languageId": "objective-c",
-                    "scopes": [
-                        "source.objc",
-                    ],
-                    "syntaxes": [
-                        "Packages/Objective-C/Objective-C.sublime-syntax",
-                    ],
+                    "document_selector": "source.objc",
                 },
                 {
                     "languageId": "objective-cpp",
-                    "scopes": [
-                        "source.objc++",
-                    ],
-                    "syntaxes": [
-                        "Packages/Objective-C/Objective-C++.sublime-syntax",
-                    ],
+                    "document_selector": "source.objc++",
                 },
             ],
         },
         "pyls": {
-            // pip install -U python-language-server[all] pyls-mypy
+            // pip install -U python-language-server[all] pyls-mypy pyls-black
             "enabled": true,
             "command": [
                 "pyls",
             ],
+            // @see https://github.com/palantir/python-language-server/blob/develop/vscode-client/package.json
             "settings": {
-                "pyls": {
-                    "env": {
-                        // @see https://github.com/sublimelsp/LSP/issues/531#issuecomment-568188403
-                        // "VIRTUAL_ENV": "/Users/mike/.virtualenvs/my-virtual-env"
-                    },
-                    "plugins": {
-                        "autopep8": {
-                            "enabled": false,
-                        },
-                        "jedi": {
-                            "extra_paths": [
-                                // for ST plugin development
-                                "C:\\Program Files\\Sublime Text\\stubs",
-                                "C:\\Program Files\\Sublime Text 3\\stubs",
-                            ],
-                        },
-                        "pycodestyle": {
-                            "enabled": true,
-                            "ignore": [
-                                "E2",
-                                "E5",
-                                // PEP 8 suggests putting multiline binary operator in a new line
-                                // so we disable W503 (PEP 8) and enable W504
-                                // https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator
-                                "W503",
-                            ],
-                        },
-                        "pydocstyle": {
-                            "enabled": true,
-                            "ignore": [
-                                "D1",
-                                "D2",
-                                "D4",
-                            ],
-                        },
-                        "pyflakes": {
-                            "enabled": true,
-                        },
-                        "pylint": {
-                            "enabled": false,
-                            "ignore": [],
-                        },
-                        "pyls_mypy": {
-                            "enabled": false,
-                            "live_mode": true,
-                        },
-                        "yapf": {
-                            "enabled": true,
-                        },
-                    },
+                "pyls.env": {
+                    // @see https://github.com/sublimelsp/LSP/issues/531#issuecomment-568188403
+                    // "VIRTUAL_ENV": "/Users/mike/.virtualenvs/my-virtual-env"
                 },
+                "pyls.plugins.autopep8.enabled": false,
+                "pyls.plugins.jedi.extra_paths": [
+                    // for ST plugin development
+                    "C:\\Program Files\\Sublime Text\\stubs",
+                    "C:\\Program Files\\Sublime Text 3\\stubs",
+                ],
+                "pyls.plugins.mccabe.enabled": true,
+                "pyls.plugins.pycodestyle.enabled": true,
+                "pyls.plugins.pycodestyle.ignore": [
+                    "E2",
+                    "E5",
+                    // PEP 8 suggests putting multiline binary operator in a new line
+                    // so we disable W503 (PEP 8) and enable W504
+                    // https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator
+                    "W503",
+                ],
+                "pyls.plugins.pydocstyle.enabled": true,
+                "pyls.plugins.pydocstyle.ignore": [
+                    "D1",
+                    "D2",
+                    "D4",
+                ],
+                "pyls.plugins.pyflakes.enabled": true,
+                "pyls.plugins.pyflakes.ignore": [],
+                "pyls.plugins.pylint.enabled": false,
+                "pyls.plugins.pylint.ignore": [],
+                "pyls.plugins.pyls_mypy.enabled": false,
+                "pyls.plugins.pyls_mypy.live_mode": true,
+                "pyls.plugins.yapf.enabled": true,
             },
             "languageId": "python",
-            "scopes": [
-                "source.python",
-            ],
-            "syntaxes": [
-                "Packages/Python/Python.sublime-syntax",
-            ],
+            "document_selector": "source.python",
         },
     },
     "auto_show_diagnostics_panel": "never",
@@ -130,15 +88,13 @@
     "diagnostics_highlight_style": "box",
     "document_highlight_style": "underline",
     "only_show_lsp_completions": false,
-    "show_code_actions_bulb": true,
     "show_diagnostics_count_in_view_status": true,
     "show_diagnostics_in_view_status": true,
     "show_diagnostics_severity_level": 3,
     "show_references_in_quick_panel": false,
     "show_symbol_action_links": true,
     "show_view_status": true,
-    "log_payloads": true,
     "log_debug": false,
-    "log_server": true,
+    "log_server": false,
     "log_stderr": true,
 }

@@ -2,8 +2,8 @@
     "languages": [
         {
             "languageId": "php",
-            "scopes": ["source.php", "embedding.php"],
-            "syntaxes": ["Packages/PHP/PHP.sublime-syntax"],
+            "document_selector": "embedding.php",
+            "feature_selector": "source.php",
         },
     ],
     "initializationOptions": {
@@ -17,35 +17,29 @@
     },
     // @see https://github.com/bmewburn/vscode-intelephense/blob/master/package.json
     "settings": {
-        "intelephense": {
-            "trace": {
-                "server": "off",
-            },
-            "files": {
-                "exclude": [
-                    // default
-                    "**/.git/**",
-                    "**/.svn/**",
-                    "**/.hg/**",
-                    "**/CVS/**",
-                    "**/.DS_Store/**",
-                    "**/node_modules/**",
-                    "**/bower_components/**",
-                    "**/vendor/**/{Tests,tests}/**",
-                    "**/.history/**",
-                    "**/vendor/**/vendor/**",
-                    // my own
-                    "**/branch-*/**",
-                    "**/vendor/**/{Example,example,Examples,examples}/**",
-                ],
-                "associations": [
-                    // default
-                    "*.php",
-                    "*.phtml",
-                    // my own
-                    "*.inc",
-                ],
-            },
-        },
+        "intelephense.files.associations": [
+            // default
+            "*.php",
+            "*.phtml",
+            // my own
+            "*.inc",
+        ],
+        "intelephense.files.exclude": [
+            // default
+            "**/.git/**",
+            "**/.svn/**",
+            "**/.hg/**",
+            "**/CVS/**",
+            "**/.DS_Store/**",
+            "**/node_modules/**",
+            "**/bower_components/**",
+            "**/vendor/**/{Tests,tests}/**",
+            "**/.history/**",
+            "**/vendor/**/vendor/**",
+            // my own
+            "**/branch-*/**",
+            "**/vendor/**/{Example,example,Examples,examples}/**"
+        ],
+        "intelephense.trace.server": "off",
     },
 }
