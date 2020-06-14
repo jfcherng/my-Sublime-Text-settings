@@ -187,7 +187,7 @@
         "selection_border": "var(CyanSaturated)",
         "selection_corner_radius": "0",
         "selection_corner_style": "square",
-        "selection_foreground": "var(--foreground)",
+        // "selection_foreground": "var(--foreground)",
         "shadow": "color(Black alpha(0.2))",
         "shadow_width": "8",
         "stack_guide": "color(White alpha(0.2))",

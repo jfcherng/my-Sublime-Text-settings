@@ -1,12 +1,15 @@
 {
     "toggle_words_dict": [
         ["0", "1"],
+        ["before", "after"],
         ["forward", "backward"],
+        ["good", "bad"],
         ["high", "low"],
         ["in", "out"],
         ["input", "output"],
         ["inside", "outside"],
         ["left", "right"],
+        ["low", "high"],
         ["on", "off"],
         ["start", "end"],
         ["top", "bottom"],
