@@ -11,6 +11,7 @@
 	],
 	"installed_packages":
 	[
+		"(T)CSH Syntax",
 		"AceJump",
 		"Advanced Substation Alpha (ASS)",
 		"AlignTab",
@@ -99,7 +100,6 @@
 		"SublimeLinter-contrib-sublime-syntax",
 		"SublimeLinter-php",
 		"SublimeLinter-shellcheck",
-		"Tcsh and Csh Mode",
 		"Terminal",
 		"Theme - DC",
 		"Toggle Words",
