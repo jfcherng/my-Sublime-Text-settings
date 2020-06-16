@@ -1,5 +1,4 @@
 {
-    "enabled": true,
     "languages": [
         {
             "languageId": "php",
@@ -22,11 +21,6 @@
             "trace": {
                 "server": "off",
             },
-            "diagnostics": {
-                "undefinedConstants": true,
-                "undefinedFunctions": true,
-                "undefinedSymbols": true,
-            },
             "files": {
                 "exclude": [
                     // default
@@ -38,6 +32,8 @@
                     "**/node_modules/**",
                     "**/bower_components/**",
                     "**/vendor/**/{Tests,tests}/**",
+                    "**/.history/**",
+                    "**/vendor/**/vendor/**",
                     // my own
                     "**/branch-*/**",
                     "**/vendor/**/{Example,example,Examples,examples}/**",

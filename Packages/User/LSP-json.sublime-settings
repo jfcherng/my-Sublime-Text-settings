@@ -1,6 +1,5 @@
 {
     // @see https://www.npmjs.com/package/vscode-json-languageserver
-    "enabled": true,
     "languages": [
         {
             "languageId": "json",
