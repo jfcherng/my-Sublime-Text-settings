@@ -27,8 +27,7 @@
     // "insert a tab" rather than "insert the best completion" while pressing Tab at BOL
     {
         "keys": ["tab"], "command": "indent",
-        "context":
-        [
+        "context": [
             { "key": "preceding_text", "operator": "regex_match", "operand": "^\\s*$", "match_all": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "following_text", "operator": "not_regex_match", "operand": "^$", "match_all": true },
@@ -36,13 +35,19 @@
         ],
     },
     {
-        "keys": ["tab"], "command": "insert", "args": { "characters": "\t" },
-        "context":
-        [
+        "keys": ["tab"], "command": "insert",
+        "args": { "characters": "\t" },
+        "context": [
             { "key": "preceding_text", "operator": "regex_match", "operand": "^\\s*$", "match_all": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true },
             { "key": "auto_complete_visible", "operator": "equal", "operand": false },
+        ],
+    },
+    {
+        "keys": ["escape"], "command": "deselect",
+        "context": [
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
         ],
     },
     // movement/select (Home, End)
