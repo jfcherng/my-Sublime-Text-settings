@@ -157,6 +157,7 @@
         "--yellowish": "var(Yellow)",
         // custom
         "DarkBlueBackground": "color(var(Blue) blend(var(--background) 15%))",
+        "DarkOrangeBackground": "color(var(Orange) blend(var(--background) 15%))",
     },
     "globals": {
         "active_guide": "color(White alpha(0.3))",
@@ -518,7 +519,12 @@
         {
             "background": "var(DarkBlueBackground)",
             "name": "PHP - Block Comment",
-            "scope": "embedding.php comment.block.documentation",
+            "scope": "source.php comment.block.documentation",
+        },
+        {
+            "background": "var(DarkOrangeBackground)",
+            "name": "PHP - Attributes",
+            "scope": "meta.attribute.php",
         },
         {
             "font_style": "bold",
