@@ -22,7 +22,9 @@ class NavigateToLineViaQuickPanelCommand(sublime_plugin.WindowCommand):
 
         view.window().focus_view(view)
         view.run_command("goto_line", {"line": idx + 1})
-        view_select_regions_only(view, [view_full_line(view, view.text_point(idx, 0), True)])
+        view_select_regions_only(
+            view, [view_full_line(view, view.text_point(idx, 0), True)]
+        )
 
     def _select_entry(self, idx: int, view: sublime.View, orig_sel: list) -> None:
         if not view:
@@ -33,10 +35,14 @@ class NavigateToLineViaQuickPanelCommand(sublime_plugin.WindowCommand):
             view_select_regions_only(view, orig_sel)
 
             if orig_sel:
-                view.show(orig_sel[-1])  # moving to the last selection makes more sense?
+                view.show(
+                    orig_sel[-1]
+                )  # moving to the last selection makes more sense?
 
 
-def view_full_line(view: sublime.View, point: int, no_line_ending: bool = False) -> sublime.Region:
+def view_full_line(
+    view: sublime.View, point: int, no_line_ending: bool = False
+) -> sublime.Region:
     region = view.full_line(point)
 
     # "region" may be empty if it meets EOF

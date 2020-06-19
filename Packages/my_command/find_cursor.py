@@ -48,7 +48,7 @@ FORWARD = 1
 BACKWARD = -1
 
 
-class PanCursor(namedtuple('PanCursor', ['cursor', 'distance', 'index'])):
+class PanCursor(namedtuple("PanCursor", ["cursor", "distance", "index"])):
     """Pan cursor object."""
 
     pass
@@ -140,7 +140,9 @@ class FindCursorCommand(sublime_plugin.TextCommand):
     def get_cursor(self, direction, pan):
         """Get the cursor."""
 
-        return self.get_pan_cursor(direction) if pan else self.get_iter_cursor(direction)
+        return (
+            self.get_pan_cursor(direction) if pan else self.get_iter_cursor(direction)
+        )
 
     def get_pan_cursor(self, direction):
         """
@@ -151,7 +153,9 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         grab first cursor outside of viewable region in the desired direction.
         """
 
-        self.skip_focus = int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
+        self.skip_focus = (
+            int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
+        )
         cursor = None
         index = int(self.settings.get("caret_last_index", NULL_INDEX))
 
@@ -168,7 +172,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             backwards = direction == BACKWARD
             before = False
             after = False
-            for s in (reversed(sel) if backwards else sel):
+            for s in reversed(sel) if backwards else sel:
                 if before is False and visible_region.begin() > s.b:
                     before = True
                     cursor = s
@@ -209,7 +213,9 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             if index == NULL_INDEX:
                 # Select first selection nearest the center of viewable region.
                 # This is done only on first search.
-                center_pt = visible_region.begin() + int((visible_region.end() - visible_region.begin()) / 2)
+                center_pt = visible_region.begin() + int(
+                    (visible_region.end() - visible_region.begin()) / 2
+                )
                 closest = None
                 idx = -1
                 for s in sel:
