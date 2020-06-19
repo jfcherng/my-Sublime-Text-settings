@@ -43,13 +43,20 @@ indent_size = 4
 [*.sublime-syntax]
 indent_size = 2
 
-[*.{sublime-keymap,sublime-mousemap,sublime-color-scheme,sublime-build,sublime-commands,sublime-snippet,sublime-menu}]
+[*.{sublime-keymap,sublime-mousemap}]
+indent_size = 4
+indent_style = space
+
+[*.{sublime-color-scheme,sublime-build,sublime-commands,sublime-menu}]
 indent_size = 4
 indent_style = space
 
 [*.{sublime-project,sublime-workspace,sublime-settings}]
 indent_size = 4
 indent_style = space
+
+[*.{sublime-snippet}]
+indent_style = tab
 
 [*.tmPreferences]
 indent_size = 4
