@@ -84,6 +84,7 @@
 	"caret_extra_top": 2,
 	"caret_extra_width": 2,
 	"caret_style": "blink",
+	"clear_selections": false, // https://github.com/sublimehq/sublime_text/issues/1022#issuecomment-530241903
 	"close_windows_when_empty": false,
 	"color_scheme": "Packages/my_theme/my_theme.sublime-color-scheme",
 	"dc_always_show_minimap_viewport": true,
