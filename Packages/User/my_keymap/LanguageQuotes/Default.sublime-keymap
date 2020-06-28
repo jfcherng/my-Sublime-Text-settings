@@ -1,4 +1,19 @@
 [
+    // Javascript
+    {
+        "keys": ["$"],
+        "command": "insert_snippet",
+        "args": { "contents": "\\${${0:$SELECTION}}" },
+        "context": [
+            { "key": "setting.auto_match_enabled" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            {
+                "key": "selector",
+                "operator": "equal",
+                "operand": "source.js string | source.jsx string | source.ts string | source.tsx string"
+            }
+        ]
+    },
     // Shell
     {
         "keys": ["$"],

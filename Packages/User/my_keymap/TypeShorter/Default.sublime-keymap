@@ -11,9 +11,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.c | source.c++ | source.objc | source.objc++",
-            },
-        ],
+                "operand": "source.c | source.c++ | source.objc | source.objc++"
+            }
+        ]
     },
     {
         "keys": ["d", "k", " "],
@@ -23,22 +23,22 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.c | source.c++ | source.objc | source.objc++",
-            },
-        ],
+                "operand": "source.c | source.c++ | source.objc | source.objc++"
+            }
+        ]
     },
     // HTML
     {
         "keys": ["c", "m", "t", " "],
         "command": "insert_snippet",
-        "args": { "contents": "<!-- $0 -->" },
+        "args": { "contents": "<!-- $1 -->$0" },
         "context": [
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "text.html.basic - source.php",
-            },
-        ],
+                "operand": "text.html.basic - source.php"
+            }
+        ]
     },
     // Javascript
     {
@@ -49,9 +49,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.js | source.jsx | source.ts | source.tsx",
-            },
-        ],
+                "operand": "source.js | source.jsx | source.ts | source.tsx"
+            }
+        ]
     },
     // PHP
     {
@@ -62,9 +62,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.php",
-            },
-        ],
+                "operand": "source.php"
+            }
+        ]
     },
     {
         "keys": ["d", "k", " "],
@@ -74,9 +74,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.php",
-            },
-        ],
+                "operand": "source.php"
+            }
+        ]
     },
     // Python
     {
@@ -87,9 +87,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.python",
-            },
-        ],
+                "operand": "source.python"
+            }
+        ]
     },
     // SASS/SCSS
     {
@@ -100,9 +100,9 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.sass | source.scss",
-            },
-        ],
+                "operand": "source.sass | source.scss"
+            }
+        ]
     },
     // Shell
     {
@@ -113,8 +113,8 @@
             {
                 "key": "selector",
                 "operator": "equal",
-                "operand": "source.shell",
-            },
-        ],
-    },
+                "operand": "source.shell"
+            }
+        ]
+    }
 ]
