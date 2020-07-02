@@ -55,6 +55,10 @@ indent_style = space
 indent_size = 4
 indent_style = space
 
+[*.{sublime-completions}]
+indent_size = 4
+indent_style = space
+
 [*.{sublime-snippet}]
 indent_style = tab
 
