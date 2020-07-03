@@ -52,6 +52,7 @@
                     "C:\\Program Files\\Sublime Text\\stubs",
                     "C:\\Program Files\\Sublime Text 3\\stubs",
                 ],
+                "pyls.plugins.jedi_completion.fuzzy": true,
                 "pyls.plugins.mccabe.enabled": true,
                 "pyls.plugins.pycodestyle.enabled": true,
                 "pyls.plugins.pycodestyle.ignore": [
