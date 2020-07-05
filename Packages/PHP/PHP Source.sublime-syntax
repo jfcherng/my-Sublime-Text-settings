@@ -8,7 +8,7 @@ variables:
   identifier: '\b{{identifier_start}}[[:alnum:]_]*\b'
   path: '\\?({{identifier}}\\)*{{identifier}}'
   sql_indicator: \s*(?:SELECT|INSERT|UPDATE|DELETE|CREATE|REPLACE|ALTER)\b
-  identifier_annotation: '\b(?:{{path}}|[[:alpha:][:alnum:]_\-]+)\b'
+  identifier_annotation: '\b(?:[[:alpha:][:alnum:]_\-]+|{{path}})\b'
   visibility_modifier: '\b(?:var|public|private|protected)\b'
 
 contexts:
