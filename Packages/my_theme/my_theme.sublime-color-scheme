@@ -289,7 +289,7 @@
         },
         {
             "font_style": "bold",
-            "foreground": "var(Green)",
+            "foreground": "var(LimeA700)",
             "name": "Function name",
             "scope": "entity.name.function",
         },
