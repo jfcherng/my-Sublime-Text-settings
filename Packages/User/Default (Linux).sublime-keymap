@@ -482,6 +482,25 @@
     // plugin: Terminal
     { "keys": ["alt+shift+o", "alt+shift+t"], "command": "open_terminal" },
     { "keys": ["ctrl+alt+shift+t"], "command": "open_terminal_project_folder" },
+    // plugin: TodoReview
+    {
+        "keys": ["b"],
+        "command": "todo_review_results",
+        "args": { "direction": "up_skip" },
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo-list" }]
+    },
+    {
+        "keys": ["f"],
+        "command": "todo_review_results",
+        "args": { "direction": "down_skip" },
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo-list" }]
+    },
+    {
+        "keys": ["r"],
+        "command": "todo_review_results",
+        "args": { "refresh": "true" },
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.todo-list" }]
+    },
     // plugin: ToggleWord
     { "keys": ["alt+t"], "command": "toggle_word" },
     // plugin: FileManager
