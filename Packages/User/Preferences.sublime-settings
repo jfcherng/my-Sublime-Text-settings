@@ -181,11 +181,13 @@
 		"*.xlsx",
 		"*.xz",
 		"*.zip",
+		".directory",
 		".DS_Store",
 		".gemtags",
 		".php_cs.cache",
 		".tags",
 		".tags_sorted_by_file",
+		"desktop.ini",
 	],
 	"find_selected_text": true,
 	"folder_exclude_patterns":
@@ -198,6 +200,8 @@
 		".sass-cache",
 		".simvision",
 		".svn",
+		".Trash",
+		".Trash-*",
 		"__MACOSX",
 		"__pycache__",
 		"CVS",
@@ -254,6 +258,7 @@
 	"line_numbers": true,
 	"match_brackets": false,
 	"match_tags": false,
+	"preview_on_click": "only_left",
 	"rulers":
 	[
 		200,
@@ -261,6 +266,7 @@
 		100,
 		120
 	],
+	"selection_description_column_type": "real",
 	"show_encoding": true,
 	"show_line_endings": true,
 	"spell_check": false,
