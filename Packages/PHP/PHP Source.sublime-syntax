@@ -1568,7 +1568,7 @@ contexts:
               scope: punctuation.section.group.end.php
             - include: doc-annotation-args-named
             - include: doc-annotation-args-unnamed
-    - match: \@{{identifier_annotation}}\b
+    - match: \@{{identifier_annotation}}(?=$|[\s'"(\[{])
       scope: meta.comment.annotation.php keyword.other.annotation.tag.php
   doc-annotation-args-named:
     - include: doc-annotation-leading-asterisk
