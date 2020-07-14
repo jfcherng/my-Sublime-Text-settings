@@ -1,0 +1,8 @@
+{
+    "languages": [
+        {
+            "languageId": "vue",
+            "document_selector": "text.html.vue",
+        },
+    ],
+}

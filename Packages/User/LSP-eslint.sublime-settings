@@ -1,0 +1,31 @@
+{
+    "languages": [
+        {
+            "languageId": "javascript",
+            "document_selector": "source.js",
+        },
+        {
+            "languageId": "typescript",
+            "document_selector": "source.ts",
+        },
+        {
+            "languageId": "vue",
+            "document_selector": "text.html.vue",
+        },
+    ],
+    "settings": {
+        "validate": "on",
+        "packageManager": "npm",
+        "options": {},
+        "run": "onType",
+        "nodePath": null,
+        "format": false,
+        "quiet": false,
+        "onIgnoredFiles": "off",
+        "codeAction.disableRuleComment.enable": true,
+        "codeAction.disableRuleComment.location": "separateLine",
+        "codeAction.showDocumentation.enable": true,
+        "codeActionOnSave.enable": true,
+        "codeActionOnSave.mode": "all",
+    },
+}
