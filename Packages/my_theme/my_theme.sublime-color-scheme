@@ -538,6 +538,11 @@
             "scope": "punctuation.definition.attribute.begin.php, punctuation.definition.attribute.end.php",
         },
         {
+            "foreground": "var(--foreground)",
+            "name": "PHP - Spread operator",
+            "scope": "keyword.operator.spread.php",
+        },
+        {
             "foreground": "var(Pink200)",
             "name": "PHP - Annotations",
             "scope": "keyword.other.annotation.tag.php, keyword.other.annotation.object.php",
