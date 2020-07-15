@@ -1,9 +1,0 @@
-{
-    "languages": [
-        {
-            "languageId": "html",
-            "document_selector": "text.html.basic | embedding.php",
-            "feature_selector": "text.html",
-        },
-    ],
-}
