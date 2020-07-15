@@ -9,8 +9,10 @@ variables:
   path: '\\?({{identifier}}\\)*{{identifier}}'
   regex_modifier: '[eimsuxADJSUX]*'
   sql_indicator: \s*(?:SELECT|INSERT|UPDATE|DELETE|CREATE|REPLACE|ALTER)\b
-  identifier_annotation: '\b(?:[[:alpha:][:alnum:]_\-]+|{{path}})\b'
   visibility_modifier: '\b(?:var|public|private|protected)\b'
+
+  # jfcherng
+  identifier_annotation: '\b(?:[[:alpha:][:alnum:]_\-]+|{{path}})\b'
 
 contexts:
   main:
@@ -371,10 +373,13 @@ contexts:
         - match: \(
           scope: punctuation.section.group.begin.php
           set:
-            - meta_scope: meta.attribute.php meta.group.php
+            - meta_scope: meta.attribute.php meta.function-call.php meta.group.php
             - match: \)
-              scope: punctuation.section.group.end.php
+              scope: meta.function-call.php meta.group.php punctuation.section.group.end.php
               pop: true
+            - match: ','
+              scope: punctuation.separator.php
+            - include: function-call-named-parameters
             - include: expressions
         - match: ''
           pop: true
@@ -1167,7 +1172,18 @@ contexts:
           set: after-function-call
         - match: ','
           scope: punctuation.separator.php
+        - include: function-call-named-parameters
         - include: expressions
+  function-call-named-parameters:
+    # https://wiki.php.net/rfc/named_params
+    - match: ({{identifier}})\s*(:)(?!:)
+      captures:
+        1: variable.parameter.named.php
+        2: punctuation.definition.variable.php
+      push:
+        - include: expressions
+        - match: ''
+          pop: true
   heredoc:
     - match: (?=<<<\s*'?({{identifier}})'?\s*$)
       push:
