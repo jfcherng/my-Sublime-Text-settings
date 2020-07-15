@@ -8,4 +8,6 @@ markdown
 mypy
 pymdown-extensions
 python-language-server[all]
+pyls-mypy
+pyls-black
 yamllint
