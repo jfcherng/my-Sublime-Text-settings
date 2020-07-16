@@ -2,20 +2,16 @@
 	"bootstrapped": true,
 	"in_process_packages":
 	[
-		"Codecs33",
 	],
 	"install_prereleases":
 	[
-		"GitGutter",
 		"PackageDev",
 	],
 	"installed_packages":
 	[
-		"(T)CSH Syntax",
 		"AceJump",
 		"Advanced Substation Alpha (ASS)",
 		"AlignTab",
-		"ANSIescape",
 		"AutoFileName",
 		"AutomaticPackageReloader",
 		"AutoSetSyntax",
@@ -31,6 +27,7 @@
 		"ColorHelper",
 		"Console Exec",
 		"ConvertToUTF8",
+		"CSH Syntax",
 		"DoxyDoxygen (evolution)",
 		"EditorConfig",
 		"Emmet2",
@@ -41,7 +38,6 @@
 		"FileManager",
 		"Filter Lines",
 		"GenerateUUID",
-		"Gitignore",
 		"GotoEndOfLineOrScope",
 		"HTML-CSS-JS Prettify",
 		"HyperClick",
@@ -51,8 +47,6 @@
 		"Jinja2",
 		"jQuery",
 		"JsPrettier",
-		"LaTeXTab",
-		"LaTeXTools",
 		"LESS",
 		"LiveReload",
 		"LSP",
@@ -68,7 +62,6 @@
 		"MarkdownPreview",
 		"MultiEditUtils",
 		"nginx",
-		"NSIS",
 		"OpenUri",
 		"OverrideAudit",
 		"Package Control",
@@ -89,7 +82,6 @@
 		"SelectUntil",
 		"SideBarGit",
 		"Sort Lines (Numerically)",
-		"SPICE Circuit Simulator",
 		"sublack",
 		"SublimeAStyleFormatter",
 		"SublimeLinter",

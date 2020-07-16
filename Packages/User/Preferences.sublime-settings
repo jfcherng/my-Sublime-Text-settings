@@ -222,7 +222,6 @@
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Codecs33",
 		"RestructuredText",
 		"Vintage",
 	],
