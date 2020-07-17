@@ -1,4 +1,5 @@
 {
     "spell_check": true,
+    "spelling_selector": "- meta.text.cjk",
     "trim_trailing_white_space_on_save": false,
 }
