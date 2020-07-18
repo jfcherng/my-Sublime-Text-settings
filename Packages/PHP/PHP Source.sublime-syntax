@@ -395,7 +395,7 @@ contexts:
           EmptyIterator | Error | ErrorException | Exception | FilesystemIterator | FilterIterator | GlobIterator | Gmagick | GmagickDraw |
           GmagickPixel | HaruAnnotation | HaruDestination | HaruDoc | HaruEncoder | HaruFont | HaruImage | HaruOutline |
           HaruPage | HttpDeflateStream | HttpInflateStream | HttpMessage | HttpQueryString | HttpRequest | HttpRequestPool | HttpResponse |
-          Imagick | ImagickDraw | ImagickPixel | ImagickPixelIterator | InfiniteIterator | IntlDateFormatter | InvalidArgumentException | Iterator |
+          Imagick | ImagickDraw | ImagickPixel | ImagickPixelIterator | InfiniteIterator | InternalIterator | IntlDateFormatter | InvalidArgumentException | Iterator |
           IteratorAggregate | IteratorIterator | JsonException | JsonSerializable | KTaglib_ID3v2_AttachedPictureFrame | KTaglib_ID3v2_Frame | KTaglib_ID3v2_Tag | KTaglib_MPEG_AudioProperties |
           KTaglib_MPEG_File | KTaglib_Tag | LengthException | LimitIterator | Locale | LogicException | Memcache | Memcached |
           MessageFormatter | Mongo | MongoBinData | MongoCode | MongoCollection | MongoCursor | MongoDB | MongoDBRef |
@@ -977,7 +977,7 @@ contexts:
               M_PI_4 | M_SQRT1_2 | M_SQRT2 | M_SQRT3 | M_SQRTPI | NAN | NEGATIVE_SIGN | NOEXPR |
               NOSTR | N_CS_PRECEDES | N_SEP_BY_SPACE | N_SIGN_POSN | PATHINFO_BASENAME | PATHINFO_DIRNAME | PATHINFO_EXTENSION | PATHINFO_FILENAME |
               PATH_SEPARATOR | PM_STR | POSITIVE_SIGN | P_CS_PRECEDES | P_SEP_BY_SPACE | P_SIGN_POSN | RADIXCHAR | SEEK_CUR |
-              SEEK_END | SEEK_SET | SORT_ASC | SORT_DESC | SORT_LOCALE_STRING | SORT_NUMERIC | SORT_REGULAR | SORT_STRING |
+              SEEK_END | SEEK_SET | SORT_ASC | SORT_DESC | SORT_FLAG_CASE | SORT_LOCALE_STRING | SORT_NATURAL | SORT_NUMERIC | SORT_REGULAR | SORT_STRING |
               STR_PAD_BOTH | STR_PAD_LEFT | STR_PAD_RIGHT | THOUSANDS_SEP | THOUSEP | T_FMT | T_FMT_AMPM | UPLOAD_ERR_CANT_WRITE |
               UPLOAD_ERR_EXTENSION | UPLOAD_ERR_FORM_SIZE | UPLOAD_ERR_INI_SIZE | UPLOAD_ERR_NO_FILE | UPLOAD_ERR_NO_TMP_DIR | UPLOAD_ERR_OK | UPLOAD_ERR_PARTIAL | YESEXPR |
               YESSTR | __COMPILER_HALT_OFFSET__
@@ -1565,62 +1565,6 @@ contexts:
         1: keyword.other.phpdoc.php
     # General annotations
     - include: doc-annotation
-  doc-annotation:
-    - include: email
-    # general annotations like @Route("/login", name="login", methods="GET")
-    - match: \@{{identifier_annotation}}(?=\s*\()
-      scope: keyword.other.annotation.object.php
-      push:
-        - meta_scope: meta.comment.annotation.php
-        - include: doc-annotation-leading-asterisk
-        - match: \)
-          scope: punctuation.section.group.end.php
-          pop: true
-        - match: \(
-          scope: punctuation.section.group.begin.php
-          push:
-            - match: (?=\))
-              pop: true
-            - match: '[,.:]'
-              scope: punctuation.separator.php
-            - match: '[(\[{]'
-              scope: punctuation.section.group.begin.php
-            - match: '[)\]}]'
-              scope: punctuation.section.group.end.php
-            - include: doc-annotation-args-named
-            - include: doc-annotation-args-unnamed
-    - match: \@{{identifier_annotation}}(?=$|[\s'"(\[{])
-      scope: meta.comment.annotation.php keyword.other.annotation.tag.php
-  doc-annotation-args-named:
-    - include: doc-annotation-leading-asterisk
-    - match: '({{identifier}})\s*(=)'
-      captures:
-        1: variable.parameter.php
-        2: keyword.operator.assignment.php
-      push:
-        - include: doc-annotation
-        - match: (?=[,)])
-          pop: true
-        - match: '[.:]'
-          scope: punctuation.separator.php
-        - match: '[\[{]'
-          scope: punctuation.section.group.begin.php
-        - match: '[\]}]'
-          scope: punctuation.section.group.end.php
-        - include: doc-annotation-args-unnamed
-  doc-annotation-args-unnamed:
-    - include: doc-annotation
-    - include: doc-annotation-leading-asterisk
-    - include: constants
-    - include: numbers
-    - include: strings
-  doc-annotation-leading-asterisk:
-    - match: ^\s*(\*)(?!/)
-      captures:
-        1: punctuation.definition.comment.php
-  email:
-    - match: '[a-zA-Z0-9.!#$%&*+/=?^_|~-]+@[a-zA-Z0-9\-_]+(?:\.[a-zA-Z0-9\-_]+)*'
-      scope: markup.underline.email.php
   regex-double-quoted-branch:
     - match: (")(/)
       captures:
@@ -2469,7 +2413,7 @@ contexts:
       scope: support.function.url.php
     - match: |-
         \b(?xi:
-          boolval | debug_zval_dump | doubleval | empty | floatval | get_debug_type | get_defined_vars | get_resource_type | gettype |
+          boolval | debug_zval_dump | doubleval | empty | floatval | get_debug_type | get_defined_vars | get_resource_id | get_resource_type | gettype |
           import_request_variables | intval | is_array | is_bool | is_callable | is_countable | is_double | is_float |
           is_int | is_integer | is_iterable | is_long | is_null | is_numeric | is_object | is_real |
           is_resource | is_scalar | is_string | isset | print_r | serialize | settype | strval |
@@ -2596,3 +2540,61 @@ contexts:
           set: after-identifier
         - match: ''
           pop: true
+
+  # jfcherng
+  doc-annotation:
+    - include: email
+    # general annotations like @Route("/login", name="login", methods="GET")
+    - match: \@{{identifier_annotation}}(?=\s*\()
+      scope: keyword.other.annotation.object.php
+      push:
+        - meta_scope: meta.comment.annotation.php
+        - include: doc-annotation-leading-asterisk
+        - match: \)
+          scope: punctuation.section.group.end.php
+          pop: true
+        - match: \(
+          scope: punctuation.section.group.begin.php
+          push:
+            - match: (?=\))
+              pop: true
+            - match: '[,.:]'
+              scope: punctuation.separator.php
+            - match: '[(\[{]'
+              scope: punctuation.section.group.begin.php
+            - match: '[)\]}]'
+              scope: punctuation.section.group.end.php
+            - include: doc-annotation-args-named
+            - include: doc-annotation-args-unnamed
+    - match: \@{{identifier_annotation}}(?=$|[\s'"(\[{])
+      scope: meta.comment.annotation.php keyword.other.annotation.tag.php
+  doc-annotation-args-named:
+    - include: doc-annotation-leading-asterisk
+    - match: '({{identifier}})\s*(=)'
+      captures:
+        1: variable.parameter.php
+        2: keyword.operator.assignment.php
+      push:
+        - include: doc-annotation
+        - match: (?=[,)])
+          pop: true
+        - match: '[.:]'
+          scope: punctuation.separator.php
+        - match: '[\[{]'
+          scope: punctuation.section.group.begin.php
+        - match: '[\]}]'
+          scope: punctuation.section.group.end.php
+        - include: doc-annotation-args-unnamed
+  doc-annotation-args-unnamed:
+    - include: doc-annotation
+    - include: doc-annotation-leading-asterisk
+    - include: constants
+    - include: numbers
+    - include: strings
+  doc-annotation-leading-asterisk:
+    - match: ^\s*(\*)(?!/)
+      captures:
+        1: punctuation.definition.comment.php
+  email:
+    - match: '[a-zA-Z0-9.!#$%&*+/=?^_|~-]+@[a-zA-Z0-9\-_]+(?:\.[a-zA-Z0-9\-_]+)*'
+      scope: markup.underline.email.php
