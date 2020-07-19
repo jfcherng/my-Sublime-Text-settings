@@ -17,6 +17,7 @@
         ["up", "down"],
         ["upward", "downward"],
         ["width", "height"],
+        ["y", "n"],
         ["yes", "no"],
     ],
 }
