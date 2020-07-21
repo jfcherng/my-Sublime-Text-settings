@@ -74,10 +74,10 @@ contexts:
     - include: expressions
 
   block:
-    - match: '\}'
+    - match: \}
       scope: punctuation.section.block.end.php
       pop: true
-    - match: '\{'
+    - match: \{
       scope: punctuation.section.block.begin.php
       push: block
     - include: embedded-html
@@ -483,11 +483,11 @@ contexts:
     - meta_content_scope: meta.use.php
     - match: (?=;|$\n)
       pop: true
-    - match: '\{'
-      scope: punctuation.section.block.php
+    - match: \{
+      scope: punctuation.section.block.begin.php
       push:
-        - match: '\}'
-          scope: punctuation.section.block.php
+        - match: \}
+          scope: punctuation.section.block.end.php
           pop: true
         - include: use-statement-common
         - include: use-statement-identifier-class-def
@@ -525,11 +525,11 @@ contexts:
     - meta_content_scope: meta.use.php
     - match: (?=;|$\n)
       pop: true
-    - match: '\{'
-      scope: punctuation.section.block.php
+    - match: \{
+      scope: punctuation.section.block.begin.php
       push:
-        - match: '\}'
-          scope: punctuation.section.block.php
+        - match: \}
+          scope: punctuation.section.block.end.php
           pop: true
         - include: use-statement-common
         - include: use-statement-identifier-function-def
@@ -540,11 +540,11 @@ contexts:
     - meta_content_scope: meta.use.php
     - match: (?=;|$\n)
       pop: true
-    - match: '\{'
-      scope: punctuation.section.block.php
+    - match: \{
+      scope: punctuation.section.block.begin.php
       push:
-        - match: '\}'
-          scope: punctuation.section.block.php
+        - match: \}
+          scope: punctuation.section.block.end.php
           pop: true
         - include: use-statement-common
         - include: identifier-constant-pop
@@ -562,8 +562,8 @@ contexts:
   class-definition:
     - match: "(?=;)"
       pop: true
-    - match: '\{'
-      scope: meta.block.php punctuation.section.block.php
+    - match: \{
+      scope: meta.block.php punctuation.section.block.begin.php
       set: class-body
     - include: attributes
     - include: comments
@@ -614,8 +614,8 @@ contexts:
     - meta_scope: meta.class.php meta.block.php
     - include: attributes
     - include: comments
-    - match: '\}'
-      scope: punctuation.section.block.php
+    - match: \}
+      scope: punctuation.section.block.end.php
       pop: true
     - match: (?i)\b(use)\b\s*
       captures:
@@ -624,12 +624,12 @@ contexts:
         - meta_scope: meta.use.php
         - match: (?=;|(?:^\s*$))
           pop: true
-        - match: '\{'
-          scope: punctuation.section.block.php
+        - match: \{
+          scope: punctuation.section.block.begin.php
           set:
             - meta_scope: meta.use.php meta.block.php
-            - match: '}'
-              scope: punctuation.section.block.php
+            - match: \}
+              scope: punctuation.section.block.end.php
               pop: true
             - include: attributes
             - include: comments
@@ -771,7 +771,7 @@ contexts:
 
   function-parameters:
     - meta_scope: meta.function.parameters.php meta.group.php
-    - match: '\)'
+    - match: \)
       scope: punctuation.section.group.end.php
       set:
         - meta_scope: meta.function.php
@@ -781,7 +781,7 @@ contexts:
             1: keyword.other.function.use.php
             2: punctuation.section.group.begin.php
           set: function-use
-        - match: '(?=:)'
+        - match: (?=:)
           set: function-return-type
         - match: \{
           scope: meta.block.php punctuation.section.block.begin.php
@@ -808,7 +808,7 @@ contexts:
     - match: '='
       scope: keyword.operator.assignment.php
       push:
-        - match: '(?=,|\))'
+        - match: (?=,|\))
           pop: true
         - include: expressions
 
@@ -816,7 +816,7 @@ contexts:
     - meta_scope: meta.function.closure.use.php
     - include: attributes
     - include: comments
-    - match: '\)'
+    - match: \)
       scope: punctuation.section.group.end.php
       set:
         - meta_scope: meta.function.php
@@ -857,7 +857,7 @@ contexts:
       scope: punctuation.section.block.end.php
       pop: true
     - include: embedded-html
-    - match: '\{'
+    - match: \{
       scope: punctuation.section.block.begin.php
       push: block
     - include: statements
