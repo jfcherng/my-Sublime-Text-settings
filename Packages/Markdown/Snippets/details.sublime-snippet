@@ -1,0 +1,8 @@
+<snippet>
+    <description>details & summary</description>
+    <content><![CDATA[<details>${1:<summary>$2</summary>}
+$3
+</details>]]></content>
+    <tabTrigger>details</tabTrigger>
+    <scope>text.html.markdown - (meta.image | meta.link)</scope>
+</snippet>
