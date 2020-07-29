@@ -1,0 +1,4 @@
+{
+    // we prefer the "Terminal" plugin
+    "show_open_terminal_command": false,
+}
