@@ -1,9 +1,4 @@
 {
-    // Disable language client capabilities. Supported values:
-    // "hover", "completion", "colorProvider", "documentHighlight", "signatureHelp"
-    "disabled_capabilities": [
-        "colorProvider",
-    ],
     // LSP servers configurations
     "clients": {
         "clangd": {
@@ -40,17 +35,23 @@
             "command": [
                 "pyls",
             ],
+            "env": {
+                "PYTHONPATH": "$packages",
+                "MYPY_PATH": "$packages",
+            },
             // @see https://github.com/palantir/python-language-server/blob/develop/vscode-client/package.json
             "settings": {
                 "pyls.env": {
                     // @see https://github.com/sublimelsp/LSP/issues/531#issuecomment-568188403
                     // "VIRTUAL_ENV": "/Users/mike/.virtualenvs/my-virtual-env"
+                    "PYTHONPATH": "$packages",
+                    "MYPY_PATH": "$packages",
                 },
                 "pyls.plugins.autopep8.enabled": false,
                 "pyls.plugins.jedi.extra_paths": [
-                    // for ST plugin development
-                    "C:\\Program Files\\Sublime Text\\stubs",
-                    "C:\\Program Files\\Sublime Text 3\\stubs",
+                    // add jfcherng-sublime/ST-API-stubs
+                    "$packages/../st-stubs",
+                    "$packages",
                 ],
                 "pyls.plugins.jedi_completion.fuzzy": true,
                 "pyls.plugins.mccabe.enabled": true,
@@ -81,12 +82,18 @@
             "document_selector": "source.python",
         },
     },
+    // other settings
     "auto_show_diagnostics_panel": "never",
     "auto_show_diagnostics_panel_level": 3,
-    "complete_all_chars": true,
-    "completion_hint_type": "auto",
     "diagnostics_gutter_marker": "dot",
     "diagnostics_highlight_style": "box",
+    "disabled_capabilities": [
+        "colorProvider",
+        // "completion",
+        // "documentHighlight",
+        // "hover",
+        // "signatureHelp",
+    ],
     "document_highlight_style": "underline",
     "only_show_lsp_completions": false,
     "show_diagnostics_count_in_view_status": true,
@@ -98,4 +105,9 @@
     "log_debug": false,
     "log_server": false,
     "log_stderr": true,
+    "lsp_code_actions_on_save": {
+        // "source.fixAll": true,
+        // "source.organizeImports": true,
+    },
+    "lsp_format_on_save": false,
 }
