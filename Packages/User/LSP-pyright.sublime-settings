@@ -1,0 +1,19 @@
+{
+    // @see https://github.com/microsoft/pyright/blob/master/docs/settings.md
+    "settings": {
+        // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
+        "python.analysis.diagnosticSeverityOverrides": {
+            "reportUnusedImport": "information",
+            "reportUnusedClass": "information",
+            "reportUnusedFunction": "information",
+            "reportUnusedVariable": "information",
+            "reportDuplicateImport ": "warning",
+        },
+        "python.analysis.extraPaths": [
+            // For Sublime Text plugin development
+            "$packages/../st-stubs",
+            "$sublime_py_files_dir",
+            "$packages",
+        ],
+    },
+}
