@@ -43,13 +43,4 @@
         ]
     ],
     "group_tabs_sizes_by": "section",
-
-    // Used to overload ``profiles_default`` values.
-    "profiles": [
-        {
-            "languages":  [ "python", "cython" ],
-            "parsers":    [ "LanguagePython" ],
-            "doc_styles": [ "Doxygen" ]// or "Doxygen", ApiDoc", "Sphinx" (you may consider Breathe's Doc)
-        },
-    ],
 }
