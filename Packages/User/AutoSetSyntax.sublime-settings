@@ -17,9 +17,6 @@
     "log_level": "INFO",
     // syntax maaping rules
     "syntax_mapping": {
-        "ANSIescape/ANSI.": [
-            "^\\s*\\[SideBarGit@.*\\] git +(?:blame|lg?)\\b",
-        ],
         "Makefile/Makefile.": [
             "(?i)^#\\s*-\\*-\\s+Makefile\\s+-\\*-",
         ],
