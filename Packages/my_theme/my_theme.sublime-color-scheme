@@ -644,25 +644,25 @@
         ///////////
         {
             "font_style": "bold",
+            "foreground": "var(RedSaturated)",
+            "name": "Shell - su/sudo",
+            "scope": "support.function.su.shell, support.function.sudo.shell",
+        },
+        {
+            "foreground": "var(--foreground)",
+            "name": "Shell - variable assigned",
+            "scope": "meta.variable.shell variable.other.readwrite.shell",
+        },
+        {
+            "font_style": "bold",
             "foreground": "var(DeepPurple300)",
             "name": "Shell - variable",
             "scope": "variable.other.normal.shell, variable.other.positional.shell, variable.other.bracket.shell, variable.other.special.shell, variable.other.loop.shell, variable.other.c-style.shell, variable.other.positional.shell, variable.other.readwrite.shell",
         },
         {
-            "font_style": "bold",
-            "foreground": "var(DeepPurple300)",
-            "name": "Shell - bracket variable in meta.reset.color",
-            "scope": "meta.reset.color variable.other.bracket.shell, meta.reset.color variable.other.bracket.shell variable.other.bracket.shell, meta.reset.color variable.other.bracket.shell variable.other.bracket.shell variable.other.bracket.shell",
-        },
-        {
-            "foreground": "var(Cyan200)",
-            "name": "Shell - true",
-            "scope": "variable.other.true.shell",
-        },
-        {
-            "foreground": "var(Pink200)",
-            "name": "Shell - false",
-            "scope": "variable.other.false.shell",
+            "foreground": "var(Cyan500)",
+            "name": "Shell - true/false",
+            "scope": "constant.language.boolean.shell",
         },
         {
             "font_style": "bold",
