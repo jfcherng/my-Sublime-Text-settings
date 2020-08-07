@@ -219,6 +219,7 @@
 	"font_size": 12,
 	"gutter": true,
 	"hide_pointer_while_typing": false,
+	"highlight_find_results_in_scrollbar": true,
 	"highlight_line": true,
 	"ignored_packages":
 	[
