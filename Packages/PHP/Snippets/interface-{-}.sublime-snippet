@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-interface ${2:InterfaceName}
+interface ${2:InterfaceName}${3: extends ${4:AnotherInterface}}
 {
 	$0
 }
