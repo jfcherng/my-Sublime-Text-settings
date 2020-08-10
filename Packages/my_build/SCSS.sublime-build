@@ -16,8 +16,6 @@
     "windows": {
         "shell": true,
     },
-    "target": "ansi_color_build",
-    "syntax": "Packages/ANSIescape/ANSI.sublime-syntax",
     "variants": [{
         "cmd": [
             "sass",
