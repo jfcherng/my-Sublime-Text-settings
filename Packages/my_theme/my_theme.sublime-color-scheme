@@ -429,10 +429,40 @@
         // markdown //
         //////////////
         {
-            "font_style": "bold",
-            "foreground": "var(Pink300)",
-            "name": "Markdown - heading - punctuation",
-            "scope": "punctuation.definition.heading.setext.markdown, punctuation.definition.heading.begin.markdown",
+            "name": "Markdown - heading 1",
+            "background": "color(var(Red) alpha(0.2))",
+            "foreground": "var(Red)",
+            "scope": "markup.heading.1.markdown",
+        },
+        {
+            "name": "Markdown - heading 2",
+            "background": "color(var(Orange) alpha(0.2))",
+            "foreground": "var(Orange)",
+            "scope": "markup.heading.2.markdown",
+        },
+        {
+            "name": "Markdown - heading 3",
+            "background": "color(var(Yellow) alpha(0.2))",
+            "foreground": "var(Yellow)",
+            "scope": "markup.heading.3.markdown",
+        },
+        {
+            "name": "Markdown - heading 4",
+            "background": "color(var(Green) alpha(0.2))",
+            "foreground": "var(Green)",
+            "scope": "markup.heading.4.markdown",
+        },
+        {
+            "name": "Markdown - heading 5",
+            "background": "color(var(Cyan) alpha(0.2))",
+            "foreground": "var(Cyan)",
+            "scope": "markup.heading.5.markdown",
+        },
+        {
+            "name": "Markdown - heading 6",
+            "background": "color(var(Purple) alpha(0.2))",
+            "foreground": "var(Purple)",
+            "scope": "markup.heading.6.markdown",
         },
         {
             "font_style": "bold",
@@ -484,7 +514,8 @@
             "scope": "markup.italic.markdown",
         },
         {
-            "background": "color(var(White) alpha(0.08))",
+            "background": "color(var(White) alpha(0.02))",
+            "foreground": "var(White) ",
             "name": "Markdown - code-fence",
             "scope": "markup.raw.code-fence.markdown-gfm",
         },
@@ -756,7 +787,8 @@
         // inline diff (ST) //
         //////////////////////
         {
-            "background": "color(var(--background) blend(var(Green) 80%))",
+            "background": "color(var(--background) blend(var(Green) 802))",
+            "foreground": "var(--background) blend(var(",
             "name": "ST diff inserted",
             "scope": "diff.inserted",
             "foreground_adjust": "l(- 10%)",
