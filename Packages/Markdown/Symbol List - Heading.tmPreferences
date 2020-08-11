@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plist version="1.0">
+<dict>
+    <key>scope</key>
+    <string>text.html.markdown markup.heading - meta.whitespace.newline.markdown</string>
+    <key>settings</key>
+    <dict>
+        <key>showInSymbolList</key>
+        <integer>1</integer>
+        <key>symbolTransformation</key>
+        <string><![CDATA[
+        # -------------- #
+        # pre-processing #
+        # -------------- #
+        # strip trailing spaces and "#"s
+        s/[\s#]+$//g;
+        # strip leading spaces and spaces right after "#"
+        s/^\s*(#+)\s*/$1 /;
+
+        # now, we have something like "### HEADING 3"
+        # let's replace "#"s into its indent level number
+        s/^#{6}/　　　　　⑥/g;
+        s/^#{5}/　　　　⑤/g;
+        s/^#{4}/　　　④/g;
+        s/^#{3}/　　③/g;
+        s/^#{2}/　②/g;
+        s/^#{1}/①/g;
+
+        # --------------- #
+        # post-processing #
+        # --------------- #
+        # handle image (only left the alt attribute)
+        s/!\[([^\]]*)\]\([^\)]*\)/$1/g;
+        # handle hyperlink (only left the text)
+        s/\[([^\]]*)\]\([^\)]*\)/$1/g;
+        ]]></string>
+    </dict>
+</dict>
+</plist>
