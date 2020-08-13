@@ -64,10 +64,12 @@
             "Nunjucks.tmLanguage",
         ],
         "jinja2": [
+            "Jinja.sublime-syntax",
             "Jinja2.sublime-syntax",
             "Jinja2.tmLanguage",
         ],
         "twig": [
+            "Twig.sublime-syntax",
             "HTML (Twig).sublime-syntax",
             "HTML (Twig).tmLanguage",
             "Craft-Twig.sublime-syntax",
