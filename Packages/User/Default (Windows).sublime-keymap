@@ -105,6 +105,7 @@
     { "keys": ["ctrl+alt+down"], "command": "select_lines", "args": { "forward": true } },
     { "keys": ["ctrl+alt+i"], "command": "select_lines", "args": { "forward": false } },
     { "keys": ["ctrl+alt+k"], "command": "select_lines", "args": { "forward": true } },
+    // { "keys": ["ctrl+o"], "command": "extend_selection_to_previous_line" },
     // swap lines
     { "keys": ["ctrl+alt+shift+i"], "command": "swap_line_up" },
     { "keys": ["ctrl+alt+shift+k"], "command": "swap_line_down" },
