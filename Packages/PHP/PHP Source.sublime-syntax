@@ -1203,6 +1203,7 @@ contexts:
             2: punctuation.terminator.expression.php
             3: meta.heredoc-end.php
           pop: 1
+        - include: heredoc-jfcherng
         - match: <<<\s*(HTML)\s*$\n?
           scope: punctuation.section.embedded.begin.php punctuation.definition.string.php
           captures:
@@ -2594,3 +2595,58 @@ contexts:
   email:
     - match: '[a-zA-Z0-9.!#$%&*+/=?^_|~-]+@[a-zA-Z0-9\-_]+(?:\.[a-zA-Z0-9\-_]+)*'
       scope: markup.underline.email.php
+  heredoc-jfcherng:
+    - match: <<<\s*(JS)\s*$\n?
+      scope: punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.heredoc.php
+      embed: heredoc-javascript
+      embed_scope: meta.embedded.js source.js
+      escape: (?=^\s*JS\b)
+    - match: <<<\s*('JS')\s*$\n?
+      scope: meta.embedded.js punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.nowdoc.php
+      embed: scope:source.js
+      embed_scope: meta.embedded.js source.js
+      escape: (?=^\s*JS\b)
+    - match: (<<<)\s*(PHP)\s*$\n?
+      scope: punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.heredoc.php
+      embed: heredoc-php
+      embed_scope: meta.embedded.php embedding.php
+      escape: (?=^\s*PHP\b)
+    - match: (<<<)\s*('PHP')\s*$\n?
+      scope: meta.embedded.php punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.nowdoc.php
+      embed: scope:embedding.php
+      embed_scope: meta.embedded.php embedding.php
+      escape: (?=^\s*PHP\b)
+    - match: (<<<)\s*(DIFF)\s*$\n?
+      scope: punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.heredoc.php
+      embed: heredoc-diff
+      embed_scope: meta.embedded.diff source.diff
+      escape: (?=^\s*DIFF\b)
+    - match: (<<<)\s*('DIFF')\s*$\n?
+      scope: meta.embedded.diff punctuation.section.embedded.begin.php punctuation.definition.string.php
+      captures:
+        1: keyword.operator.nowdoc.php
+      embed: scope:source.diff
+      embed_scope: meta.embedded.diff source.diff
+      escape: (?=^\s*DIFF\b)
+  heredoc-php:
+    - meta_include_prototype: false
+    - match: ''
+      push: scope:embedding.php
+      with_prototype:
+        - include: interpolation
+  heredoc-diff:
+    - meta_include_prototype: false
+    - match: ''
+      push: scope:source.diff
+      with_prototype:
+        - include: interpolation
