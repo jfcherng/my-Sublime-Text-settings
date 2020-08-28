@@ -30,7 +30,7 @@
 		"CSH Syntax",
 		"DoxyDoxygen (evolution)",
 		"EditorConfig",
-		"Emmet2",
+		"Emmet",
 		"Emoji",
 		"ExportHtml",
 		"Fanhuaji",
@@ -102,7 +102,6 @@
 	"repositories":
 	[
 		"https://raw.githubusercontent.com/jfcherng-sublime/ST-my-package-control/master/repository.json",
-		"https://github.com/emmetio/sublime-text-plugin/releases/latest/download/registry.json",
 		"https://github.com/evandrocoan/AutoFileName.git",
 	],
 }

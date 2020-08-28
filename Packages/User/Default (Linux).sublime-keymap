@@ -338,7 +338,7 @@
     { "keys": ["ctrl+;"], "command": "ace_jump_char" },
     { "keys": ["ctrl+shift+;"], "command": "ace_jump_select" },
     { "keys": ["alt+;"], "command": "ace_jump_add_cursor" },
-    // plugin: Emmet
+    // plugin: Emmet 2
     { "keys": ["alt+up"], "command": "emmet_increment_number", "args": { "delta": 1 } },
     { "keys": ["alt+down"], "command": "emmet_increment_number", "args": { "delta": -1 } },
     { "keys": ["alt+e", "alt+p"], "command": "inline_python_str" },
