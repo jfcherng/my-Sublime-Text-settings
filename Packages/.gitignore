@@ -1,5 +1,6 @@
 # dependencies will be downloaded by Package Control automatically
 /backrefs/
+/bracex/
 /bz2/
 /coverage/
 /jsonschema/
