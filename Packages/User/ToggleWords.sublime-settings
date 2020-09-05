@@ -3,6 +3,7 @@
         ["0", "1"],
         ["before", "after"],
         ["forward", "backward"],
+        ["from", "to"],
         ["good", "bad"],
         ["high", "low"],
         ["in", "out"],
