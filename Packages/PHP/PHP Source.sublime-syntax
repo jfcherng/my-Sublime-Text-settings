@@ -1,6 +1,7 @@
 %YAML 1.2
 ---
 name: PHP Source
+symbol_name: PHP
 hidden: true
 version: 2
 scope: source.php
