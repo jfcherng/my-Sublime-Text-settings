@@ -10,6 +10,7 @@
             "reportDuplicateImport ": "warning",
         },
         "python.analysis.extraPaths": [
+            "$folder/.venv/Lib/site-packages",
             // For Sublime Text plugin development
             "$packages/../st-stubs",
             "$sublime_py_files_dir",

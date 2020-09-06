@@ -31,7 +31,7 @@
         },
         "pyls": {
             // pip install -U python-language-server[all] pyls-mypy pyls-black
-            "enabled": true,
+            "enabled": false,
             "command": [
                 "pyls",
             ],
