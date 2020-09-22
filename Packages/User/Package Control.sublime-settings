@@ -5,6 +5,7 @@
 	],
 	"install_prereleases":
 	[
+		"Package Control",
 		"PackageDev",
 	],
 	"installed_packages":
@@ -102,6 +103,7 @@
 	],
 	"repositories":
 	[
+		"https://packagecontrol.io/prerelease/packages.json",
 		"https://raw.githubusercontent.com/jfcherng-sublime/ST-my-package-control/master/repository.json",
 		"https://github.com/evandrocoan/AutoFileName.git",
 	],
