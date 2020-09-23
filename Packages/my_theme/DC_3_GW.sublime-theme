@@ -158,4 +158,13 @@
         "layer0.opacity": { "target": 0.6, "speed": 4.0, "interpolation": "smoothstep" },
     },
 
+    ////////////
+    // Others //
+    ////////////
+
+    {
+        "class": "quick_panel_path_label",
+        // such as repository links in "Package Control: List Packages"
+        "link_color": "var(--bluish)",
+    },
 ]
