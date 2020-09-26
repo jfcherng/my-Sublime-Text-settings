@@ -21,7 +21,11 @@ class StepTabCycleCommand(sublime_plugin.WindowCommand):
 
     def run(self, steps: int) -> None:
         window = self.window
+        view = window.active_view()
 
-        group_index, view_index = window.get_view_index(window.active_view())
+        if not view:
+            return
+
+        group_index, view_index = window.get_view_index(view)
         views = window.views_in_group(group_index)
         window.focus_view(views[(view_index + steps) % len(views)])

@@ -8,7 +8,7 @@ import sublime_plugin
 
 
 class DeselectCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    def run(self, edit: sublime.Edit) -> None:
         sel = self.view.sel()
 
         if len(sel) <= 0:

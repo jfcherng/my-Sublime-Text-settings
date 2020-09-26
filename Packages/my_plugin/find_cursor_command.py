@@ -140,9 +140,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
     def get_cursor(self, direction, pan):
         """Get the cursor."""
 
-        return (
-            self.get_pan_cursor(direction) if pan else self.get_iter_cursor(direction)
-        )
+        return self.get_pan_cursor(direction) if pan else self.get_iter_cursor(direction)
 
     def get_pan_cursor(self, direction):
         """
@@ -153,9 +151,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         grab first cursor outside of viewable region in the desired direction.
         """
 
-        self.skip_focus = (
-            int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
-        )
+        self.skip_focus = int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
         cursor = None
         index = int(self.settings.get("caret_last_index", NULL_INDEX))
 
@@ -247,7 +243,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         """Show the cursor and the carets in a highly visible way, then revert them back to normal."""
 
         self.settings = sublime.load_settings("find_cursor.sublime-settings")
-        timeout = self.settings.get("find_mode_timeout", 3000)
+        timeout = int(self.settings.get("find_mode_timeout", 3000))
         self.save()
         self.high_visibility()
         self.find_cursor(FORWARD if not reverse else BACKWARD, pan)

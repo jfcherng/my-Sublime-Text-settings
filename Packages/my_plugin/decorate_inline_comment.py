@@ -40,7 +40,7 @@ for cmt_config in CMT_CONFIGS:
 
 
 class decorateInlineCommentCommand(sublime_plugin.TextCommand):
-    def run(self, edit):
+    def run(self, edit: sublime.Edit) -> None:
         v = self.view
 
         for sel in v.sel():
@@ -52,13 +52,17 @@ class decorateInlineCommentCommand(sublime_plugin.TextCommand):
 
             line_regions = v.lines(sel)
 
+            matches = None
+            cmt_config = None
+
+            # find the corresponding matches and cmt_config
             for line_region in line_regions:
                 for cmt_config in CMT_CONFIGS:
                     matches = cmt_config["re_whitespaces"].match(v.substr(line_region))
                     if matches is not None:
                         break
 
-            if not matches:
+            if not matches or not cmt_config:
                 print("Unsupported comment: {!r}".format(v.substr(sel)))
                 continue
 
