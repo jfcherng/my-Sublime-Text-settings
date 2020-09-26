@@ -9,13 +9,13 @@
     ///////////////////////////
 
     // Show popup tooltip with info about scope
-    "show_popup": true,
+    "show_popup": false,
 
     // Show scope in status bar
     "show_statusbar": false,
 
     // Show scope in auto-popup panel
-    "show_panel": false,
+    "show_panel": true,
 
     // Show scopes in console
     "console_log": false,
@@ -41,7 +41,7 @@
     "extent_line_char": false,
 
     // Show color and style at the given point
-    "styling": true,
+    "styling": false,
 
     // When showing a color with alpha transparency,
     // Simulate what the color would look like in sublime
@@ -50,7 +50,7 @@
 
     // Show the selector names and scopes
     // responsible for the color and styles
-    "selectors": true,
+    "selectors": false,
 
     // Show current syntax and color scheme paths
     // (click to open if using tooltips)
@@ -77,7 +77,7 @@
     "clipboard": false,
 
     // Allow multi-select scope hunting
-    "multiselect": false,
+    "multiselect": true,
 
     // Max region size to highlight
     "highlight_max_size": 100,
