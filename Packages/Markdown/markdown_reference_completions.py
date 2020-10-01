@@ -2,7 +2,7 @@ import re
 import sublime
 import sublime_plugin
 
-from typing import Any, AnyStr, Dict, Iterable, List, Match, Optional, Tuple, Union
+from typing import Any, AnyStr, Dict, Iterable, List, Match, Optional, Sequence, Tuple, Union
 
 
 # test case
@@ -31,9 +31,7 @@ def truncate(s: str, max_length: int, ellipsis: str = "…") -> str:
     return s if len(s) <= max_length else s[: max_length - 1] + ellipsis
 
 
-def strip_pairs(
-    s: str, pairs: Iterable[Union[List[str], Tuple[str]]], only_first: bool = True
-) -> str:
+def strip_pairs(s: str, pairs: Iterable[Sequence[str]], only_first: bool = True) -> str:
     """
     @brief Strip pairs from the string.
 
@@ -61,7 +59,6 @@ class MarkdownReferenceCompletions(sublime_plugin.EventListener):
     @brief Provide completions that match just after typing an opening square bracket.
     """
 
-    # fmt: off
     # @see https://www.markdownguide.org/basic-syntax/#reference-style-links
     re_ref_links = re.compile(
         r"(?:^[ \t]*((?:[\-*]|\d+\.)[ \t]+)?)"
@@ -70,10 +67,9 @@ class MarkdownReferenceCompletions(sublime_plugin.EventListener):
         r"(?:[ \t]+(?P<title>.*))?",
         re.MULTILINE,
     )
-    # fmt: on
 
     re_linkable = re.compile(r"^(https?|ftps?)://", re.IGNORECASE)
-
+    ignored_commands = {"move", "drag_select", "left_delete", "right_delete", "delete_word"}
     working_scope = (
         "text.html.markdown meta.link.reference"
         "    (constant.other.reference.link.markdown | punctuation.definition.constant.end.markdown)"
@@ -84,7 +80,7 @@ class MarkdownReferenceCompletions(sublime_plugin.EventListener):
     ) -> None:
         cursor = view.sel()[0].b
 
-        if command_name in ("move", "drag_select", "left_delete", "right_delete", "delete_word"):
+        if command_name in self.ignored_commands:
             return
 
         # auto invoke auto_complete
