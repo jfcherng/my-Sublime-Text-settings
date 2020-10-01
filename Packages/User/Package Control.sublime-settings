@@ -57,7 +57,7 @@
         "LSP-html",
         "LSP-intelephense",
         "LSP-json",
-        "LSP-pyright",
+        "LSP-pylance",
         "LSP-typescript",
         "LSP-vue",
         "LSP-yaml",

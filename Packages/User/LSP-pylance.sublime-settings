@@ -1,0 +1,14 @@
+{
+    // @see https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance#settings-and-customization
+    // @see https://github.com/microsoft/pyright/blob/master/docs/settings.md
+    // @see https://github.com/microsoft/pyright/blob/master/client/package.json
+    "settings": {
+        // Additional import search resolution paths
+        "python.analysis.extraPaths": [
+            // For Sublime Text plugin development
+            "$packages/../st-stubs",
+            "$sublime_py_files_dir",
+            "$packages",
+        ],
+    },
+}
