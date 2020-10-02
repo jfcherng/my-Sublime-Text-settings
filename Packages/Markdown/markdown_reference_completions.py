@@ -66,7 +66,7 @@ class MarkdownReferenceCompletions(sublime_plugin.EventListener):
     re_ref_links = re.compile(
         r"(?:^[ \t]*((?:[\-*]|\d+\.)[ \t]+)?)"
         r"\[(?P<ref_id>[^\]]+)\]:"
-        r"(?:[ \t]+(?P<link><[^>]*>|[^\s]*))"
+        r"(?:[ \t]*(?P<link><[^>]*>|[^\s]*))"
         r"(?:[ \t]+(?P<title>.*))?",
         re.MULTILINE,
     )
