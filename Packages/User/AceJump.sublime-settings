@@ -1,0 +1,17 @@
+{
+    // Characters to be used as labels in order they'll appear
+    "labels": "abcdefghjkmnpqrstuvwxyzABCDEFGHKLMNPQRSTUVWXYZ0123456789",
+
+    // Syntax highlighting scope for the labels
+    "labels_scope": "invalid",
+
+    // Controls the color of inactive carets when inputting the character.
+    "inactive_carets_scope": "text.plain",
+
+    // valid values: 1 (replace char), 2 (inline phantom)
+    "hinting_mode": 2,
+
+    // the CSS applies to phantoms when highlight_mode is 2 (inline phantom)
+    // @see https://www.sublimetext.com/docs/minihtml.html#css
+    "phantom_css": "html, body { padding: 0; margin: 0; } .label { font-weight: 700; background-color: var(--foreground); color: var(--background); padding: 0 0.25em; line-height: 1; font-size: 0.98em; }",
+}
