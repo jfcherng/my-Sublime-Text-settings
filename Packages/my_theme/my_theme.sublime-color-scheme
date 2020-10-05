@@ -787,8 +787,7 @@
         // inline diff (ST) //
         //////////////////////
         {
-            "background": "color(var(--background) blend(var(Green) 802))",
-            "foreground": "var(--background) blend(var(",
+            "background": "color(var(--background) blend(var(Green) 80%))",
             "name": "ST diff inserted",
             "scope": "diff.inserted",
             "foreground_adjust": "l(- 10%)",
