@@ -4,39 +4,35 @@ import re
 
 COMMENT_SCOPE = "comment"
 
-# fmt: off
 CMT_CONFIGS = [
     {
-        'modifier': '//',
-        'fill': '/',
-        'fill_with_padding_spaces': False,
-        're_whitespaces': None,
+        "modifier": "//",
+        "fill": "/",
+        "fill_with_padding_spaces": False,
+        "re_whitespaces": None,
     },
     {
-        'modifier': '::',
-        'fill': '-',
-        'fill_with_padding_spaces': True,
-        're_whitespaces': None,
+        "modifier": "::",
+        "fill": "-",
+        "fill_with_padding_spaces": True,
+        "re_whitespaces": None,
     },
     {
-        'modifier': '#',
-        'fill': '-',
-        'fill_with_padding_spaces': True,
-        're_whitespaces': None,
+        "modifier": "#",
+        "fill": "-",
+        "fill_with_padding_spaces": True,
+        "re_whitespaces": None,
     },
     {
-        'modifier': ';',
-        'fill': '-',
-        'fill_with_padding_spaces': True,
-        're_whitespaces': None,
+        "modifier": ";",
+        "fill": "-",
+        "fill_with_padding_spaces": True,
+        "re_whitespaces": None,
     },
 ]
-# fmt: on
 
 for cmt_config in CMT_CONFIGS:
-    cmt_config["re_whitespaces"] = re.compile(
-        r"^(?P<leading_ws>\s*)(?={})".format(cmt_config["modifier"])
-    )
+    cmt_config["re_whitespaces"] = re.compile(r"^(?P<leading_ws>\s*)(?={modifier})".format_map(cmt_config))
 
 
 class decorateInlineCommentCommand(sublime_plugin.TextCommand):
@@ -86,14 +82,7 @@ class decorateInlineCommentCommand(sublime_plugin.TextCommand):
             v.insert(
                 edit,
                 sel.end(),
-                (
-                    eols[0]
-                    + leading_ws
-                    + cmt_config["modifier"]
-                    + dummy_content
-                    + cmt_config["modifier"]
-                    + eols[1]
-                ),
+                (eols[0] + leading_ws + cmt_config["modifier"] + dummy_content + cmt_config["modifier"] + eols[1]),
             )
 
             for line_region in reversed(line_regions):
@@ -112,13 +101,7 @@ class decorateInlineCommentCommand(sublime_plugin.TextCommand):
             v.insert(
                 edit,
                 sel.begin(),
-                (
-                    leading_ws
-                    + cmt_config["modifier"]
-                    + dummy_content
-                    + cmt_config["modifier"]
-                    + "\n"
-                ),
+                (leading_ws + cmt_config["modifier"] + dummy_content + cmt_config["modifier"] + "\n"),
             )
 
     def _get_full_comment_region(self, view: sublime.View, pt: int) -> sublime.Region:
@@ -159,11 +142,9 @@ class decorateInlineCommentCommand(sublime_plugin.TextCommand):
             else:
                 break
 
-        # fmt: off
         return view.full_line(
             sublime.Region(
                 view.text_point(row_begin, col),
                 view.text_point(row_end, col),
             )
         )
-        # fmt: on

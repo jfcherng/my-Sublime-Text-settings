@@ -7,6 +7,9 @@ class NavigateToLineViaQuickPanelCommand(sublime_plugin.WindowCommand):
         # if the file gets closed during selection, `view` will become `None`
         view = self.window.active_view()
 
+        if not view:
+            return
+
         orig_sel = [r for r in view.sel()]
 
         sublime.active_window().show_quick_panel(
@@ -17,17 +20,11 @@ class NavigateToLineViaQuickPanelCommand(sublime_plugin.WindowCommand):
         )
 
     def _highlight_entry(self, idx: int, view: sublime.View) -> None:
-        if not view:
-            return
-
         view.window().focus_view(view)
         view.run_command("goto_line", {"line": idx + 1})
         view_select_regions_only(view, [view_full_line(view, view.text_point(idx, 0), True)])
 
     def _select_entry(self, idx: int, view: sublime.View, orig_sel: list) -> None:
-        if not view:
-            return
-
         if idx == -1:
             view.window().focus_view(view)
             view_select_regions_only(view, orig_sel)

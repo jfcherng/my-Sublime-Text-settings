@@ -40,7 +40,9 @@ Example Keymap:
 import sublime_plugin
 import sublime
 import time
+
 from collections import namedtuple
+from typing import cast
 
 PAN_MODE = -2
 NULL_INDEX = -1
@@ -98,7 +100,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
                 self.restore_item(defaults, "style", "caret_style")
                 self.restore_item(defaults, "inverse", "inverse_caret_state")
             self.settings.erase("caret_defaults")
-            if int(self.settings.get("caret_last_index", NULL_INDEX)) != NULL_INDEX:
+            if cast(int, (self.settings.get("caret_last_index", NULL_INDEX))) != NULL_INDEX:
                 self.settings.erase("caret_last_index")
 
     def high_visibility(self):
@@ -151,9 +153,9 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         grab first cursor outside of viewable region in the desired direction.
         """
 
-        self.skip_focus = int(self.settings.get("caret_last_index", NULL_INDEX)) == NULL_INDEX
+        self.skip_focus = cast(int, (self.settings.get("caret_last_index", NULL_INDEX))) == NULL_INDEX
         cursor = None
-        index = int(self.settings.get("caret_last_index", NULL_INDEX))
+        index = cast(int, (self.settings.get("caret_last_index", NULL_INDEX)))
 
         sel = self.view.sel()
         visible_region = self.view.visible_region()
@@ -197,7 +199,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
 
         self.skip_focus = False
         cursor = None
-        index = int(self.settings.get("caret_last_index", NULL_INDEX))
+        index = cast(int, (self.settings.get("caret_last_index", NULL_INDEX)))
 
         if index == PAN_MODE:
             index = NULL_INDEX
@@ -209,9 +211,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
             if index == NULL_INDEX:
                 # Select first selection nearest the center of viewable region.
                 # This is done only on first search.
-                center_pt = visible_region.begin() + int(
-                    (visible_region.end() - visible_region.begin()) / 2
-                )
+                center_pt = visible_region.begin() + int((visible_region.end() - visible_region.begin()) / 2)
                 closest = None
                 idx = -1
                 for s in sel:
@@ -243,7 +243,7 @@ class FindCursorCommand(sublime_plugin.TextCommand):
         """Show the cursor and the carets in a highly visible way, then revert them back to normal."""
 
         self.settings = sublime.load_settings("find_cursor.sublime-settings")
-        timeout = int(self.settings.get("find_mode_timeout", 3000))
+        timeout = cast(int, (self.settings.get("find_mode_timeout", 3000)))
         self.save()
         self.high_visibility()
         self.find_cursor(FORWARD if not reverse else BACKWARD, pan)
