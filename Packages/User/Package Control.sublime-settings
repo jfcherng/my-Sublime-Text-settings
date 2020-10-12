@@ -5,6 +5,7 @@
     ],
     "install_prereleases":
     [
+        "ColorHelper",
         "LaTeXTools",
         "Package Control",
         "PackageDev",
@@ -104,6 +105,7 @@
     "repositories":
     [
         "https://packagecontrol.io/prerelease/packages.json",
+        "https://raw.githubusercontent.com/facelessuser/sublime-channel/master/repositories.json",
         "https://raw.githubusercontent.com/jfcherng-sublime/ST-my-package-control/master/repository.json",
         "https://github.com/evandrocoan/AutoFileName.git",
     ],
