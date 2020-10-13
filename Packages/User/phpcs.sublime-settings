@@ -87,7 +87,7 @@
     "php_cs_fixer_show_quick_panel": false,
 
     // Path to where you have the php-cs-fixer installed
-    "php_cs_fixer_executable_path": "${st_packages_path}/my_bin/php-cs-fixer.phar",
+    "php_cs_fixer_executable_path": "${st_packages_path}/User/my_bin/php-cs-fixer.phar",
 
     // Additional arguments you can specify into the application
     "php_cs_fixer_additional_args": {

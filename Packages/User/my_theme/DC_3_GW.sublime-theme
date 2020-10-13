@@ -26,7 +26,7 @@
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["added"]}],
-        "layer0.texture": "my_theme/git_badges/added.png",
+        "layer0.texture": "User/my_theme/git_badges/added.png",
         "layer0.tint": "color(var(--greenish) blend(var(--bluish) 50%))",
         "layer0.opacity": 0.7,
         "content_margin": 6,
@@ -39,7 +39,7 @@
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["untracked"]}],
-        "layer0.texture": "my_theme/git_badges/untracked.png",
+        "layer0.texture": "User/my_theme/git_badges/untracked.png",
         "layer0.tint": "color(var(--greenish) blend(var(--bluish) 50%))",
         "layer0.opacity": 0.7,
         "layer0.draw_center": true,
@@ -55,7 +55,7 @@
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["staged"]}],
-        "layer0.texture": "my_theme/git_badges/staged.png",
+        "layer0.texture": "User/my_theme/git_badges/staged.png",
         "layer0.tint": "var(--yellowish)",
         "layer0.opacity": 0.7,
         "content_margin": 6,
@@ -68,7 +68,7 @@
     {
         "class": "vcs_status_badge",
         "parents": [{"class": "file_system_entry", "attributes": ["modified"]}],
-        "layer0.texture": "my_theme/git_badges/modified.png",
+        "layer0.texture": "User/my_theme/git_badges/modified.png",
         "layer0.tint": "var(--yellowish)",
         "layer0.opacity": 0.7,
         "content_margin": 6,

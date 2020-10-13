@@ -21,6 +21,6 @@
             "${file}",
             "${file_path}/${file_base_name}.css",
         ],
-        "name": "Compress",
+        "name": "Compressed",
     }],
 }

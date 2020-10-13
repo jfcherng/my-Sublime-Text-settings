@@ -1,0 +1,37 @@
+{
+    "cmd": [
+        // @see https://github.com/sass/node-sass#command-line-interface
+        "node-sass",
+        "${file}", "${file_base_name}.css",
+        "--output-style", "expanded",
+        "--linefeed", "lf",
+        "--indent-type", "space",
+        "--indent-width", "2",
+        // "--source-map",
+        "--include-path", "C:/Users/Clover/AppData/Local/Yarn/Data/global/node_modules/compass-mixins/lib",
+    ],
+    "selector": "source.sass, source.scss",
+    "working_dir": "${file_path}",
+    "osx": {
+        "path": "/usr/local/bin:$PATH",
+    },
+    "linux": {
+        "path": "/usr/local/bin:$PATH",
+    },
+    "windows": {
+        "shell": true,
+    },
+    "variants": [{
+        "cmd": [
+            "node-sass",
+            "${file}", "${file_base_name}.min.css",
+            "--output-style", "compressed",
+            "--linefeed", "lf",
+            "--indent-type", "space",
+            "--indent-width", "2",
+            // "--source-map",
+            "--include-path", "C:/Users/Clover/AppData/Local/Yarn/Data/global/node_modules/compass-mixins/lib",
+        ],
+        "name": "Compressed",
+    }],
+}
