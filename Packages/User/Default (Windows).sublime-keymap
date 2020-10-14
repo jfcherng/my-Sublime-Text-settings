@@ -546,6 +546,21 @@
     /**************************
      *    Chained  commands   *
      **************************/
+    // add a new line outside the block comment
+    {
+        "keys": ["ctrl+enter"],
+        "command": "chain",
+        "args": {
+            "commands": [
+                ["expand_selection", {"to": "scope"}],
+                ["run_macro_file", {"file": "res://Packages/Default/Add Line.sublime-macro"}],
+            ]
+        },
+        "context": [
+            { "key": "num_selections", "operator": "equal", "operand": 1 },
+            { "key": "selector", "operator": "equal", "operand": "comment.block" },
+        ],
+    },
     // show/hide all inline diff
     {
         "keys": ["ctrl+k", "ctrl+;"],
