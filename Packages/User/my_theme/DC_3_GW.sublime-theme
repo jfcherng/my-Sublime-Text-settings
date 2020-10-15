@@ -151,7 +151,7 @@
     ////////////
 
     {
-        "class": "quick_panel_path_label",
+        "class": "quick_panel_detail_label",
         // such as repository links in "Package Control: List Packages"
         "link_color": "var(--bluish)",
     },
