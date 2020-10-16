@@ -1,12 +1,25 @@
 {
+    // if you are developing this plugin...
+    "developing": true,
+    // Use a predefined setup from this plugin, valid values are:
+    // - "": An empty string will does nothing.
+    // - "sublime_text": Suitable for people who are developing ST plugins.
+    //                  `sys.path` from plugin_host will be added into "python.analysis.extraPaths"
+    //                   so ST package dependecies can be resolved by the LSP server.
+    "dev_environment": "sublime_text",
+    //////////////////
+    // LSP settings //
+    //////////////////
     "settings": {
+        // Add parentheses to function completions.
+        "python.analysis.completeFunctionParens": true,
         // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
         "python.analysis.diagnosticSeverityOverrides": {
             "reportUnusedImport": "information",
             "reportUnusedClass": "information",
             "reportUnusedFunction": "information",
             "reportUnusedVariable": "information",
-            "reportDuplicateImport ": "warning",
+            "reportDuplicateImport ": "warning"
         },
         // Additional import search resolution paths
         "python.analysis.extraPaths": [
@@ -19,14 +32,6 @@
             // my custom stubs
             "$packages/../stubs",
             "$packages/../typings",
-            // Package Control dependencies
-            "$packages/jieba/st3",
-            "$packages/lsp_utils/st3",
-            "$packages/pyyaml/st3",
-            "$packages/sublime_lib/st3",
-            // For Sublime Text plugin development
-            "$sublime_py_files_dir",
-            "$packages",
         ],
     },
 }

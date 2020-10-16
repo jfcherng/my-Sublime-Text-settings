@@ -21,19 +21,18 @@
         "Symfony",
         "todo",
         "unittests",
+        "polyfill",
     ],
     "afn_blacklist_scopes":
     [
         "string.regexp",
+        "comment",
     ],
     "afn_valid_scopes":
     [
-        "text -text.html.basic",
+        "text - text.html.basic",
         "source string",
-        "source.css",
-        "source.less",
-        "source.sass",
-        "source.scss",
+        "source.css, source.less, source.sass, source.scss",
     ],
     "atomic_save": false,
     "auto_complete_cycle": true,
@@ -215,7 +214,8 @@
     "font_options":
     [
         "bold",
-        "gdi",
+        // "gdi",
+        "dwrite_cleartype_natural",
         "subpixel_antialias",
     ],
     "font_size": 12,
@@ -276,10 +276,13 @@
     "show_encoding": true,
     "show_line_endings": true,
     "spell_check": false,
+    "tab_size": 4,
     "theme": "DC_3_GW.sublime-theme",
     "theme_font_options":
     [
         "gdi",
+        "dwrite_cleartype_natural",
+        "subpixel_antialias",
     ],
     "translate_tabs_to_spaces": true,
     "trim_automatic_white_space": false,

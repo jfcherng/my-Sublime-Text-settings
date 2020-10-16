@@ -166,7 +166,7 @@
     // goto definition
     { "keys": ["ctrl+shift+r"], "command": "goto_symbol_in_project" },
     { "keys": ["ctrl+alt+r"], "command": "navigate_to_line_via_quick_panel" },
-    // paste (set default to use smart paste)
+    // paste (use smart paste by default)
     { "keys": ["ctrl+v"], "command": "paste_and_indent" },
     { "keys": ["ctrl+shift+v"], "command": "paste" },
     // indent
@@ -382,6 +382,7 @@
     {
         "keys": ["f12"],
         "command": "lsp_symbol_definition",
+        // "args": { "side_by_side": true },
         "context": [
             {
                 "key": "lsp.session_with_capability",
@@ -405,7 +406,10 @@
     {
         "keys": ["alt+s", "alt+h"],
         "command": "lsp_signature_help_show",
-        "context": [{ "key": "setting.lsp_active" }, { "key": "lsp.signature_help", "operator": "equal", "operand": 0 }]
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "lsp.signature_help", "operator": "equal", "operand": 0 }
+        ]
     },
     {
         "keys": ["alt+i"],
@@ -418,7 +422,10 @@
     {
         "keys": ["alt+k"],
         "command": "lsp_signature_help_next",
-        "context": [{ "key": "setting.lsp_active" }, { "key": "lsp.signature_help", "operator": "equal", "operand": 1 }]
+        "context": [
+            { "key": "setting.lsp_active" },
+            { "key": "lsp.signature_help", "operator": "equal", "operand": 1 }
+        ]
     },
     {
         "keys": ["alt+f", "alt+d"],

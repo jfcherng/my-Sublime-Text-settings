@@ -40,6 +40,5 @@
             "**/branch-*/**",
             "**/vendor/**/{Example,example,Examples,examples}/**"
         ],
-        "intelephense.trace.server": "off",
     },
 }

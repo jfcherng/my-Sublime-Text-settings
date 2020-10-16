@@ -2,7 +2,6 @@
     "annotation_found_text": "→",
     "annotation_not_found_text": "Ｘ",
     "annotations_enabled": true,
-
     "scopes": {
         "source.js | source.jsx | source.ts | source.tsx": {
             "regexes": [
@@ -38,18 +37,12 @@
                 "scss",
                 "sass",
             ],
+            "vendor_dirs": [
+                "node_modules",
+            ],
             "aliases": {
                 "@assets": "assets",
             },
-        },
-        "source.less": {
-            "regexes": [
-                "^@import\\s+['\"](.+)['\"].*?;$",
-                "^@import\\s+url\\(['\"](.+)['\"]\\).*?;$",
-            ],
-            "extensions": [
-                "less",
-            ],
         },
         "source.css": {
             "regexes": [
@@ -78,28 +71,6 @@
                 "views",
             ],
         },
-        "source.stylus": {
-            "regexes": [
-                "^@import\\s+['\"](.+)['\"];?$",
-            ],
-            "extensions": [
-                "styl",
-                "stylus",
-            ],
-        },
-        "text.html.basic": {
-            "regexes": [
-                // jfcherng
-                ".*?<link\\s+rel=\"import\"\\s+href=['\"](.+)['\"]/?>",
-            ],
-            "extensions": [
-                "htm",
-                "html",
-            ],
-            "vendor_dirs": [
-                "node_modules",
-            ],
-        },
         "text.jinja": {
             "regexes": [
                 // jfcherng
@@ -113,6 +84,9 @@
                 "^{%\\s+(?:embed|extends|include|import|use)\\s+['\"](.+)['\"]",
                 "^{%\\s+from\\s+['\"](.+)['\"]",
                 "^{%\\s+.+?\\s+with\\s+['\"](.+)['\"]",
+            ],
+            "extensions": [
+                "twig"
             ],
             "lookup_paths": [
                 "templates",

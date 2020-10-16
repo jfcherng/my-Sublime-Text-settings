@@ -39,7 +39,7 @@
     "case_sensitive": false,
     "render_include_folder": true,
     "render_folder_depth": "auto",
-    "render_maxspaces": 50,
+    "render_maxspaces": 1,
     "render_header_format": "found %c files in %t seconds (%d)",
     "render_header_date": "%Y/%m/%d %H:%M:%S",
     "navigation_forward_skip": 10,
