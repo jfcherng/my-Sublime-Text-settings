@@ -518,10 +518,10 @@
         "command": "black_diff",
         "context": [{ "key": "selector", "operator": "equal", "operand": "source.python" }]
     },
-    // plugin: HTMLPrettify
+    // plugin: Indent XML
     {
         "keys": ["ctrl+alt+f"],
-        "command": "htmlprettify",
+        "command": "indent_xml",
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.xml" }]
     },
     // plugin: JsPrettier
