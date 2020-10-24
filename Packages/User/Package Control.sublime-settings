@@ -73,6 +73,7 @@
         "Phpcs",
         "PowerCursors",
         "PowerShell",
+        "PrivateClipboardManager",
         "ProjectManager",
         "Protobuf Syntax Hightlighting",
         "Pug",
