@@ -543,6 +543,34 @@
         "args": { "tool": "Fixer" },
         "context": [{ "key": "selector", "operator": "equal", "operand": "embedding.php | source.php" }]
     },
+    // plugin: Private Clipboard Manager
+    {
+        "keys": ["alt+p", "alt+c"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "copy" },
+    },
+    {
+        "keys": ["alt+p", "alt+x"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "cut" },
+    },
+    {
+        // choose which history to paste
+        "keys": ["alt+p", "alt+p"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "paste" },
+    },
+    {
+        // directly paste the latest history
+        "keys": ["alt+p", "alt+b"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "paste", "args": { "nth": -1 } },
+    },
+    {
+        "keys": ["alt+p", "alt+d"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "debug" },
+    },
     /**************************
      *    Chained  commands   *
      **************************/
