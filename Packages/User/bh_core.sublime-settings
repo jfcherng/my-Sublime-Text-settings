@@ -83,8 +83,40 @@
         ///////////////////////////////////////
         // shift positions of built-in rules //
         ///////////////////////////////////////
-        {"name": "py_single_quote", "position": 500},
-        {"name": "py_double_quote", "position": 501},
+        {
+            "position": 500,
+            "name": "py_single_quote",
+            "open": "(?:u|b|f)?r?((?:'')?')",
+            "close": "((?:'')?')",
+            "style": "single_quote",
+            "scopes": ["string", "meta.string", "comment.block.documentation"],
+            "language_filter": "allowlist",
+            "language_list": [
+                "Python",
+                "PythonImproved",
+                "MagicPython"
+            ],
+            "sub_bracket_search": "true",
+            "plugin_library": "bh_modules.pyquotes",
+            "enabled": true
+        },
+        {
+            "position": 501,
+            "name": "py_double_quote",
+            "open": "(?:u|b|f)?r?((?:\"\")?\")",
+            "close": "((?:\"\")?\")",
+            "style": "double_quote",
+            "scopes": ["string", "meta.string", "comment.block.documentation"],
+            "language_filter": "allowlist",
+            "language_list": [
+                "Python",
+                "PythonImproved",
+                "MagicPython"
+            ],
+            "sub_bracket_search": "true",
+            "plugin_library": "bh_modules.pyquotes",
+            "enabled": true,
+        },
         {"name": "single_quote", "position": 502},
         {"name": "double_quote", "position": 503},
         {"name": "jsregex", "position": 504},
