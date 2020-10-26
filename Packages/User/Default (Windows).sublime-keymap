@@ -134,6 +134,7 @@
     { "keys": ["ctrl+shift+t"], "command": "reopen_last_file" },
     { "keys": ["alt+shift+o", "alt+shift+s"], "command": "reveal_in_side_bar" },
     { "keys": ["alt+f2"], "command": "rename_file" },
+    { "keys": ["ctrl+w"], "command": "close_file" }, // won't close window if there is no tab
     // word wrap
     { "keys": ["alt+w"], "command": "toggle_setting", "args": { "setting": "word_wrap" } },
     // convert identations to (spaces|tabs)
