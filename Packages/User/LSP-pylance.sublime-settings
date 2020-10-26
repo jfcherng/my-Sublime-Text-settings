@@ -3,24 +3,30 @@
     // @see https://github.com/microsoft/pyright/blob/master/docs/settings.md
     // @see https://github.com/microsoft/pyright/blob/master/client/package.json
     "settings": {
+        // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
+        "python.analysis.diagnosticSeverityOverrides": {
+            "reportUnusedImport": "information",
+            "reportUnusedClass": "information",
+            "reportUnusedFunction": "information",
+            "reportUnusedVariable": "information",
+            "reportDuplicateImport ": "warning"
+        },
         // Additional import search resolution paths
         "python.analysis.extraPaths": [
+            // my custom stubs
+            "$packages/../stubs",
+            "$packages/../stubs/st-stubs",
+            // Package Control dependencies
+            "$packages/jieba/st3",
+            "$packages/lsp_utils/st3",
+            "$packages/pyyaml/st3",
+            "$packages/sublime_lib/st3",
+            // virtual env
+            "$folder/.venv/Lib/site-packages",
+            "$folder/venv/Lib/site-packages",
             // For Sublime Text plugin development
-            "$packages/../st-stubs",
             "$sublime_py_files_dir",
             "$packages",
         ],
-        // Allows a user to override the severity levels for individual diagnostics.
-        // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
-        "python.analysis.diagnosticSeverityOverrides": {
-            "reportDuplicateImport": "warning",
-            "reportImplicitStringConcatenation": "warning",
-            "reportImportCycles": "warning",
-            "reportUnboundVariable": "warning",
-            "reportUnusedClass": "information",
-            "reportUnusedFunction": "information",
-            "reportUnusedImport": "information",
-            "reportUnusedVariable": "information",
-        },
     },
 }
