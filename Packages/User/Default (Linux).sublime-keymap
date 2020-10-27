@@ -575,6 +575,12 @@
         "args": { "operation": "paste", "args": { "nth": -1 } },
     },
     {
+        // remove all items from the clipboard
+        "keys": ["alt+p", "alt+delete"],
+        "command": "private_clipboard_manager",
+        "args": { "operation": "clear" },
+    },
+    {
         "keys": ["alt+p", "alt+d"],
         "command": "private_clipboard_manager",
         "args": { "operation": "debug" },
@@ -635,7 +641,7 @@
                 // ...
                 ["new_file"],
                 ["paste"],
-                ["set_file_type", { "syntax": "Packages/Text/Plain text.tmLanguage" }],
+                ["set_file_type", { "syntax": "scope:text.plain" }],
                 ["secure_hash", { "secure_hash_type": "md5" }],
                 // select last 8 chars
                 ["move", { "by": "characters", "forward": false }],
