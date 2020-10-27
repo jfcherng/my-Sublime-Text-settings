@@ -167,7 +167,7 @@
         "bracket_contents_options": "underline",
         "brackets_foreground": "var(LightBlue300)",
         "brackets_options": "underline",
-        "caret": "var(--foreground)",
+        "caret": "var(--foreground)", // also controls boder color of block cursor
         "find_highlight": "var(YellowSaturated)",
         "find_highlight_foreground": "var(BlackLight)",
         "foreground": "var(--foreground)",
