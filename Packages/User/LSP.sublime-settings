@@ -108,7 +108,9 @@
     "show_symbol_action_links": true,
     "show_view_status": true,
     "log_debug": false,
-    // "log_server": ["panel"],
+    "log_server": [
+        "panel",
+    ],
     "log_stderr": true,
     "lsp_code_actions_on_save": {
         // "source.fixAll": true,
