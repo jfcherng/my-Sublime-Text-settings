@@ -135,7 +135,7 @@
         // PHP Angle
         {
             "name": "php_angle",
-            "open": "(<\\?)(?:php|=)?",
+            "open": "(<\\?(?:php|=)?)",
             "close": "(\\?>)",
             "style": "angle",
             "scope_exclude": ["string", "comment", "keyword.operator"],
@@ -191,22 +191,6 @@
         ///////////////////
         // add new rules //
         ///////////////////
-        // Angle
-        {
-            "name": "angle",
-            "open": "(?<!<)(<)(?=[^?%<]|$)",
-            "scope_exclude": [
-                "string",
-                "comment",
-                "keyword.operator",
-                "source.ruby.rails.embedded.html",
-                "source.ruby.embedded.html",
-                "storage.type.function.arrow.js",
-                "punctuation.accessor",
-                "punctuation.definition.arrow-function",
-                "meta.selector.css", // CSS in HTML (Twig)
-            ],
-        },
         // Python
         {
             "name": "python_double_curly_brackets",
