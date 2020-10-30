@@ -1,8 +1,7 @@
 {
-    // @see https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance#settings-and-customization
-    // @see https://github.com/microsoft/pyright/blob/master/docs/settings.md
-    // @see https://github.com/microsoft/pyright/blob/master/client/package.json
     "settings": {
+        // Add parentheses to function completions.
+        "python.analysis.completeFunctionParens": true,
         // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
         "python.analysis.diagnosticSeverityOverrides": {
             "reportUnusedImport": "information",

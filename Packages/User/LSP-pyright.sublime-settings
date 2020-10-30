@@ -1,7 +1,4 @@
 {
-    // @see https://github.com/microsoft/pyright/blob/master/docs/settings.md
-    // placeholder...
-    // placeholder...
     "settings": {
         // @see https://github.com/microsoft/pyright/blob/master/docs/configuration.md#type-check-diagnostics-settings
         "python.analysis.diagnosticSeverityOverrides": {
