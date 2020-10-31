@@ -54,3 +54,6 @@
 /Terminal/*
 !/Terminal/PS.ps1
 !/Terminal/Terminal.py
+
+# my custom things
+!/my_*/
