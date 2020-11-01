@@ -1,0 +1,132 @@
+{
+    "annotation_found_text": "→",
+    "annotation_not_found_text": "Ｘ",
+    "annotations_enabled": true,
+
+    "scopes": {
+        "source.js | source.jsx | source.ts | source.tsx": {
+            "regexes": [
+                "^import\\s+['\"](.+)['\"];?$",
+                ".*from\\s+['\"](.+)['\"];?$",
+                ".*require\\(['\"](.+?)['\"]\\)",
+                ".*import\\((?:\\/\\*.+?\\*\\/\\s+)?['\"](.+)['\"]\\)(?:[;\\.,])?",
+            ],
+            "extensions": [
+                "ts",
+                "js",
+                "tsx",
+                "jsx",
+                "vue",
+                "mjs",
+                "svelte",
+            ],
+            "vendor_dirs": [
+                "node_modules",
+            ],
+            "lookup_paths": [],
+            "aliases": {
+                "@assets": "assets",
+            },
+        },
+        "source.sass | source.scss": {
+            "regexes": [
+                "^@import\\s+['\"](.+)['\"].*?;$",
+                "^@import\\s+url\\(['\"](.+)['\"]\\).*?;$",
+                "^@import\\s+\\(?.*\\)?\\s*['\"](.+)['\"];?$",
+            ],
+            "extensions": [
+                "scss",
+                "sass",
+            ],
+            "aliases": {
+                "@assets": "assets",
+            },
+        },
+        "source.less": {
+            "regexes": [
+                "^@import\\s+['\"](.+)['\"].*?;$",
+                "^@import\\s+url\\(['\"](.+)['\"]\\).*?;$",
+            ],
+            "extensions": [
+                "less",
+            ],
+        },
+        "source.css": {
+            "regexes": [
+                "^@import\\s+['\"](.+)['\"].*?;$",
+                "^@import\\s+url\\(['\"](.+)['\"]\\).*?;$",
+            ],
+            "extensions": [
+                "css",
+            ],
+        },
+        "source.php": {
+            "regexes": [
+                // jfcherng
+                "\\b(?:include|require)(?:_once)?\\s*\\(?['\"](.+)['\"]\\)?;?$",
+                // Symfony render Twig templates in PHP
+                ".*['\"]([^'\"]+\\.twig(?:\\.html)?)['\"]",
+            ],
+            "extensions": [
+                "php",
+                "php5",
+                "php7",
+                "php8",
+            ],
+            "lookup_paths": [
+                "templates",
+                "views",
+            ],
+        },
+        "source.stylus": {
+            "regexes": [
+                "^@import\\s+['\"](.+)['\"];?$",
+            ],
+            "extensions": [
+                "styl",
+                "stylus",
+            ],
+        },
+        "text.html.basic": {
+            "regexes": [
+                // jfcherng
+                ".*?<link\\s+rel=\"import\"\\s+href=['\"](.+)['\"]/?>",
+            ],
+            "extensions": [
+                "htm",
+                "html",
+            ],
+            "vendor_dirs": [
+                "node_modules",
+            ],
+        },
+        "text.jinja": {
+            "regexes": [
+                // jfcherng
+                "^{%\\s+(?:extends|include|import)\\s+['\"](.+)['\"].*?%}$",
+                "^{%\\s+from\\s+['\"](.+)['\"]\\s+import.*?%}$",
+            ],
+        },
+        "text.html.twig": {
+            "regexes": [
+                // jfcherng
+                "^{%\\s+(?:embed|extends|include|import|use)\\s+['\"](.+)['\"]",
+                "^{%\\s+from\\s+['\"](.+)['\"]",
+                "^{%\\s+.+?\\s+with\\s+['\"](.+)['\"]",
+            ],
+            "lookup_paths": [
+                "templates",
+                "views",
+            ],
+        },
+        // jfcherng
+        "text.restructuredtext": {
+            "regexes": [
+                "^\\s*\\.\\. include::\\s+(.+)$",
+            ],
+            "extensions": [
+                "rst",
+            ],
+        },
+    },
+}
