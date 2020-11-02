@@ -8,8 +8,8 @@
     ],
     "initializationOptions": {
         "clearCache": false,
-        "storagePath": "E:/_Data/intelephense",
-        "globalStoragePath": "E:/_Data/intelephense",
+        "storagePath": "${temp_dir}/intelephense",
+        "globalStoragePath": "${temp_dir}/intelephense",
         // To use the licenceKey,
         // you can also write it to "YOUR_HOME_DIR/intelephense/licence.txt"
         // and comment out the following property
