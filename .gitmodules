@@ -1,7 +1,3 @@
-[submodule "st-stubs"]
-	path = stubs/st-stubs
-    url = git@github.com:jfcherng-sublime/ST-API-stubs.git
-[submodule "stubs/LSP"]
-	path = stubs/LSP
-	url = https://github.com/sublimelsp/LSP
-	branch = st4000-exploration
+[submodule "typings/LSP"]
+	path = typings/LSP
+	url = https://github.com/sublimelsp/LSP.git

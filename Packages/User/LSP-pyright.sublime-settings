@@ -10,17 +10,20 @@
         },
         // Additional import search resolution paths
         "python.analysis.extraPaths": [
+            // project's stubs
+            "$folder/stubs",
+            "$folder/typings",
+            // virtual env
+            "$folder/.venv/Lib/site-packages",
+            "$folder/venv/Lib/site-packages",
             // my custom stubs
             "$packages/../stubs",
-            "$packages/../stubs/st-stubs",
+            "$packages/../typings",
             // Package Control dependencies
             "$packages/jieba/st3",
             "$packages/lsp_utils/st3",
             "$packages/pyyaml/st3",
             "$packages/sublime_lib/st3",
-            // virtual env
-            "$folder/.venv/Lib/site-packages",
-            "$folder/venv/Lib/site-packages",
             // For Sublime Text plugin development
             "$sublime_py_files_dir",
             "$packages",
