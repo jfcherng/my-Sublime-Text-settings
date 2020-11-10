@@ -3,7 +3,9 @@
 /bracex/
 /bz2/
 /coloraide/
+/concurrentloghandler/
 /coverage/
+/debugtools/
 /jieba/
 /jsonschema/
 /lsp_utils/
@@ -12,10 +14,12 @@
 /natsort/
 /package_setting_context/
 /pathlib/
+/portalockerfile/
 /pygments/
 /pymdownx/
 /python-jinja2/
 /python-markdown/
+/python-pywin32/
 /python-toml/
 /PyV8/
 /pyyaml/
