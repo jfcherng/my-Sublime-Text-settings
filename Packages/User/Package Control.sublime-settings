@@ -95,8 +95,8 @@
     ],
     "repositories":
     [
-        "https://raw.githubusercontent.com/facelessuser/sublime-channel/master/repositories.json",
         "https://raw.githubusercontent.com/jfcherng-sublime/ST-my-package-control/master/repository.json",
-        "https://github.com/evandrocoan/AutoFileName.git",
+        "https://raw.githubusercontent.com/facelessuser/sublime-channel/master/repositories.json",
+        "https://github.com/ilearnio/AutoFileName.git",
     ],
 }
