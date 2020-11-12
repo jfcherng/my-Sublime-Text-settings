@@ -1369,6 +1369,10 @@ contexts:
           pop: 2 # branch successful matched
         - match: (?=")
           pop: 1
+        # workaround for greedy scope "$" as punctuation.definition.variable
+        # dangling "$" in regex means EOL, but not variable definition...
+        - match: \$+(?!{{identifier}})
+          scope: keyword.control.anchor.regexp
         - match: ''
           push: scope:source.regexp.php
           with_prototype:
@@ -1524,6 +1528,9 @@ contexts:
       captures:
         1: punctuation.definition.variable.php
       push: after-identifier
+    # resolves https://github.com/sublimehq/Packages/issues/2585
+    - match: \$+
+      scope: punctuation.definition.variable.php
 
   variables-no-item-access:
     - match: (\$)((_(COOKIE|FILES|GET|POST|REQUEST))|arg(v|c))\b
