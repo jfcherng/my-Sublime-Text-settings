@@ -1,0 +1,222 @@
+%YAML 1.2
+---
+# http://www.sublimetext.com/docs/syntax.html
+name: INI
+scope: source.ini
+
+file_extensions:
+  - cfg
+  - conf
+  - inf
+  - ini
+  - lng
+  - url
+  - .buckconfig
+  - .flowconfig
+  - .hgrc
+  # PHP framework ENV file
+  - .env
+
+variables:
+  separator: '[=:]'
+
+contexts:
+
+  main:
+    - include: comment
+    - include: section
+    - include: mapping
+
+  comment:
+    - match: ;
+      scope: punctuation.definition.comment.ini
+      push:
+        - meta_scope: comment.line.semicolon.ini
+        - match: \n
+          pop: true
+    - match: \#
+      scope: punctuation.definition.comment.ini
+      push:
+        - meta_scope: comment.line.number-sign.ini
+        - match: \n
+          pop: true
+
+  section:
+    - match: \[
+      scope: punctuation.definition.section.begin.ini
+      push:
+        - meta_scope: meta.section.ini
+        - match: \-?
+          scope: keyword.operator.arithmetic.ini
+          set: section-name
+
+  section-name:
+    - meta_content_scope: meta.section.ini entity.name.section.ini
+    - match: \]
+      scope: meta.section.ini punctuation.definition.section.end.ini
+      pop: true
+    - match: \.
+      scope: punctuation.separator.namespace.ini
+    - match: \\
+      scope: punctuation.separator.backslash.ini
+    - match: ':'
+      scope: punctuation.separator.colon.ini
+    - include: eol-pop
+
+  mapping:
+    - match: (?=\S)
+      push:
+        - meta_content_scope: meta.mapping.key.ini
+        - match: (?=\s*{{separator}})
+          set:
+            - mapping-value
+            - mapping-separator
+        - match: (\[)(\d+)(\])
+          captures:
+            1: punctuation.section.brackets.begin.ini
+            2: meta.number.integer.decimal.ini constant.numeric.value.ini
+            3: punctuation.section.brackets.end.ini
+        - match: \,
+          scope: punctuation.separator.sequence.ini
+        - include: string
+        - include: eol-pop
+
+  mapping-separator:
+    - match: '{{separator}}'
+      scope: punctuation.separator.mapping.key-value.ini
+      pop: true
+
+  mapping-value:
+    - meta_content_scope: meta.mapping.ini
+    - match: \-(?=\s*($|#))
+      scope: meta.mapping.value.ini keyword.operator.arithmetic.ini
+      pop: true
+    - match: (?=\S)
+      set:
+        - mapping-value-meta
+        - maybe-value-firstline
+    - match: \n
+      set:
+        - mapping-value-meta
+        - maybe-value-multiline
+
+  mapping-value-meta:
+    - meta_scope: meta.mapping.value.ini
+    - match: ''
+      pop: true
+
+  maybe-value-firstline:
+    - match: (,)\s*$\n?
+      captures:
+        1: punctuation.separator.sequence.ini
+      set: maybe-value-multiline
+    - include: constant
+    - include: number
+    - include: string
+    - include: eol-pop
+
+  maybe-value-multiline:
+    - include: comment
+    - match: ^(?=\S)
+      pop: true
+    - match: (?=.+{{separator}})
+      pop: true
+    - match: (,)\s*$\n?
+      captures:
+        1: punctuation.separator.sequence.ini
+    - include: constant
+    - include: number
+    - include: string
+
+  constant:
+    - match: \b(?i:true|false)\b
+      scope: constant.language.ini
+    - match: \bdword\b
+      scope: storage.type.dword.ini
+      set:
+        - match: ':'
+          scope: punctuation.separator.colon.ini
+          set:
+            - include: hex-number
+            - include: eol-pop
+            - match: \S
+              scope: invalid.illegal.ini
+        - include: eol-pop
+        - match: \S
+          scope: invalid.illegal.ini
+    - match: \b(hex\b(?:\([01234578ab]\))?)
+      scope: storage.type.hex.ini
+      set:
+        - match: ':'
+          scope: punctuation.separator.colon.ini
+          set:
+            - include: hex-number
+            - include: eol-pop
+            - match: \,
+              scope: punctuation.separator.sequence.ini
+            - match: (\\)\s*$
+              captures:
+                1: punctuation.separator.continuation.line.ini
+              push:
+                - include: comment
+                - match: (?=\S)
+                  pop: true
+            - match: ^\s+
+            - match: \S
+              scope: invalid.illegal.ini
+        - match: '[^()01234578ab\s]'
+          scope: invalid.illegal.ini
+
+  hex-number:
+    - match: \b\h+\b
+      scope: meta.number.integer.hexadecimal.ini constant.numeric.value.ini
+
+  number:
+    - match: '([-+])?\b(\d*(\.)\d+(?:(?:E|e)[-+]?\d+)?)(F|f)?\b'
+      scope: meta.number.float.decimal.ini
+      captures:
+        1: keyword.operator.arithmetic.ini
+        2: constant.numeric.value.ini
+        3: punctuation.separator.decimal.ini
+        4: constant.numeric.suffix.ini
+    - match: '([-+])?\b(\d+)\b'
+      scope: meta.number.integer.decimal.ini
+      captures:
+        1: keyword.operator.arithmetic.ini
+        2: constant.numeric.value.ini
+
+  string:
+    - match: \"
+      scope: punctuation.definition.string.begin.ini
+      push:
+        - meta_scope: string.quoted.double.ini
+        - include: character-escape
+        - match: \"
+          scope: punctuation.definition.string.end.ini
+          pop: true
+        - match: \n
+          pop: true
+    - match: \'
+      scope: punctuation.definition.string.begin.ini
+      push:
+        - meta_scope: string.quoted.single.ini
+        - include: character-escape
+        - match: \'
+          scope: punctuation.definition.string.end.ini
+          pop: true
+        - match: \n
+          pop: true
+    - match: (?=\S)
+      push:
+        - meta_content_scope: string.unquoted.ini
+        - include: character-escape
+        - match: (?=[\s=:,\[])
+          pop: true
+
+  character-escape:
+    - match: \\(?:[^*\s\w]|[abnrt0]|x\h{4})
+      scope: constant.character.escape.ini
+
+  eol-pop:
+    - match: $|(?=\s+#)
+      pop: true

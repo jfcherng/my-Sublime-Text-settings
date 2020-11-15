@@ -1,0 +1,2 @@
+INI source: https://github.com/jwortmann/ini-syntax/blob/master/INI.sublime-syntax
+issue: https://github.com/20Tauri/DoxyDoxygen/issues/150
