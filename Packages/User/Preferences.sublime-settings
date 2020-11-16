@@ -85,6 +85,8 @@
     "caret_extra_width": 2,
     "caret_style": "blink",
     "clear_selections": false, // https://github.com/sublimehq/sublime_text/issues/1022#issuecomment-530241903
+    "close_find_after_find_all": true,
+    "close_find_after_replace_all": true,
     "close_windows_when_empty": false,
     "color_scheme": "Packages/User/my_theme/wicked_rainbow.sublime-color-scheme",
     "dc_always_show_minimap_viewport": true,
