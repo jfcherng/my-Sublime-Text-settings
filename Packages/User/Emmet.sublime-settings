@@ -1,4 +1,8 @@
 {
+    "abbreviation_preview": "markup",
+    "popup_css": "*{ font-size: 1rem; }",
+
+    // no telemetry
     "uid": "thank-but-dont-track-me",
     "telemetry": false,
 }
