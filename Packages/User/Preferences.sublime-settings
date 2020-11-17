@@ -83,7 +83,7 @@
     "caret_extra_bottom": 2,
     "caret_extra_top": 2,
     "caret_extra_width": 2,
-    "caret_style": "blink",
+    "caret_style": "solid",
     "clear_selections": false, // https://github.com/sublimehq/sublime_text/issues/1022#issuecomment-530241903
     "close_find_after_find_all": true,
     "close_find_after_replace_all": true,
