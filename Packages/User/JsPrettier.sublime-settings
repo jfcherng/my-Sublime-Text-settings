@@ -230,7 +230,7 @@
     // - https://prettier.io/docs/en/api.html#prettierformatwithcursorsource-options
     // ----------------------------------------------------------------------
 
-    "disable_prettier_cursor_offset": false,
+    "disable_prettier_cursor_offset": true,
 
     // ----------------------------------------------------------------------
     // Additional CLI Arguments
