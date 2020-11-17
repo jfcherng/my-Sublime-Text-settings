@@ -6,41 +6,8 @@
     // Some tools, like PHP CODE SNIFFER, may require this option to work.
     "phpdoc_short_primitives": true,
 
-    "min_spaces_between_columns": [ 1, 1 ],
-    "preferred_tabs_sizes": [ 1, 2 ],
+    // "min_spaces_between_columns": [ 1, 1 ],
+    // "preferred_tabs_sizes": [ 1, 2 ],
 
-    // List of possible styles for comments (first match is better).
-    "preferred_comments_styles": [
-        [
-            "/**",
-            " *"
-        ],
-        [
-            ["/*", "-", "*//**"],   // <=> /*-------------------*//**
-            " *"
-        ],
-        [
-            ["//", "-"],            // <=> //------------------------
-            "///"
-        ],
-        // [
-        //     [ "//", "/", "" ],
-        //     [ "//", "/", " ", " ", "/", "//" ],
-        //     [ "", "/", "//" ]
-        // ],
-        [
-            "\"\"\"",            // Python docString
-            "",
-            "\"\"\""
-        ],
-        [
-            "##",
-            "##"
-        ],
-        [
-            ["#", "-"],             // <=> #-------------------------
-            "##"
-        ]
-    ],
     "group_tabs_sizes_by": "section",
 }
