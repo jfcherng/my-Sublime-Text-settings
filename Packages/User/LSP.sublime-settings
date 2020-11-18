@@ -14,8 +14,7 @@
         },
     },
     // other settings
-    "auto_show_diagnostics_panel": "never",
-    "auto_show_diagnostics_panel_level": 2,
+    "show_diagnostics_panel_on_save": 0,
     "diagnostics_gutter_marker": "sign",
     "diagnostics_highlight_style": "box",
     "disabled_capabilities": [
