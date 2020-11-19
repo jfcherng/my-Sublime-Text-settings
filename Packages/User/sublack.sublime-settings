@@ -5,7 +5,7 @@
 
       // line length
       // uses black default, if not modified
-      "black_line_length": 100,
+      "black_line_length": 120,
 
       // If --fast given, skip temporary sanity checks.
       "black_fast": false,
