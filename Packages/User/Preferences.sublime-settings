@@ -229,6 +229,9 @@
         "RestructuredText",
         "Vintage",
     ],
+    "ignored_snippets": [
+        "LiveReload/snippets/*",
+    ],
     "ignored_words":
     [
         "args",
