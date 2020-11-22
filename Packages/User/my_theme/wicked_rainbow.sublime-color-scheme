@@ -821,6 +821,14 @@
             "name": "NSIS Section",
             "scope": "entity.name.section.nsis",
         },
+        /////////
+        // INI //
+        /////////
+        {
+            "foreground": "var(Pink)",
+            "name": "INI punctuation: Assign",
+            "scope": "punctuation.separator.mapping.key-value.ini",
+        },
         //////////////////
         // ASS subitlte //
         //////////////////

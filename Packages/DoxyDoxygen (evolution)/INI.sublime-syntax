@@ -12,6 +12,7 @@ file_extensions:
   - lng
   - url
   - .buckconfig
+  - .flake8
   - .flowconfig
   - .hgrc
   # PHP framework ENV file
