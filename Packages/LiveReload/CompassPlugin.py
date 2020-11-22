@@ -1,6 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+from .server.Settings import read_sublime_settings
 import os
 import threading
 import subprocess
@@ -47,9 +48,7 @@ class CompassThread(threading.Thread):
     def __init__(self, dirname, on_compile):
         ##TODO: Proper handler for this
         try:
-            self.dirname = self.getLocalOverride.get("dirname") or dirname.replace(
-                "\\", "/"
-            )
+            self.dirname = self.getLocalOverride.get("dirname") or dirname.replace("\\", "/")
         except Exception as e:
             self.dirname = dirname.replace("\\", "/")
 
@@ -68,9 +67,7 @@ class CompassThread(threading.Thread):
     def check_for_compass_config(self):
         if os.path.isfile(os.path.join(self.dirname, "config.rb")):
             return True
-        dirname = os.path.abspath(os.path.join(self.dirname, os.pardir)).replace(
-            "\\", "/"
-        )
+        dirname = os.path.abspath(os.path.join(self.dirname, os.pardir)).replace("\\", "/")
         if self.dirname == dirname:
             return False
         else:
@@ -96,13 +93,11 @@ class CompassThread(threading.Thread):
     def run(self):
         dirname = self.dirname
         if not self.check_for_compass_config():
-            if json.load(
-                open(
-                    os.path.join(
-                        sublime.packages_path(),
-                        "LiveReload",
-                        "CompassPlugin.sublime-settings",
-                    )
+            if read_sublime_settings(
+                os.path.join(
+                    sublime.packages_path(),
+                    "LiveReload",
+                    "CompassPlugin.sublime-settings",
                 )
             )["create_configrb"]:
                 self.generate_conf_rb(dirname)
