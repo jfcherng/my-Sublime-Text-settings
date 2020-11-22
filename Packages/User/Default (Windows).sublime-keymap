@@ -525,6 +525,13 @@
         "command": "indent_xml",
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.xml" }]
     },
+    // plugin: MarkdownPreview
+    {
+        "keys": ["alt+m", "alt+p"],
+        "command": "markdown_preview",
+        "args": { "target": "browser", "parser": "markdown" },
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" }]
+    },
     // plugin: JsPrettier
     {
         "keys": ["ctrl+alt+f"],
@@ -608,18 +615,6 @@
                 ["power_cursor_exit"]
             ]
         }
-    },
-    // plugin: LiveReload + MarkdownPreview
-    {
-        "keys": ["alt+m", "alt+p"],
-        "command": "chain",
-        "args": {
-            "commands": [
-                ["live_reload_config_plugin", { "plugin": "SimpleRefreshDelay", "operation": "enable" }],
-                ["markdown_preview", { "target": "browser", "parser": "markdown" }]
-            ]
-        },
-        "context": [{ "key": "selector", "operator": "equal", "operand": "text.html.markdown" }]
     },
     // get an 8-char fingerprint of the current content
     {
