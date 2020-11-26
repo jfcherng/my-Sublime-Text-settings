@@ -560,15 +560,16 @@
             "scope": "meta.attribute.php",
         },
         {
+            "foreground": "var(--foreground)",
+            "name": "PHP - Attributes punctuations",
+            "font_style": "glow",
+            "scope": "punctuation.definition.attribute.begin.php, punctuation.definition.attribute.end.php",
+        },
+        {
             "font_style": "bold",
             "foreground": "var(Pink300)",
             "name": "PHP - PHPUnit annotations",
             "scope": "keyword.other.phpunit.php",
-        },
-        {
-            "foreground": "var(--foreground)",
-            "name": "PHP - Attributes punctuations",
-            "scope": "punctuation.definition.attribute.begin.php, punctuation.definition.attribute.end.php",
         },
         {
             "foreground": "var(--foreground)",
