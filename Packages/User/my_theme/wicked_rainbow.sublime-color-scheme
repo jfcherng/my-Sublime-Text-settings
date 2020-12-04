@@ -160,48 +160,81 @@
         "DarkOrangeBackground": "color(var(Orange) blend(var(--background) 15%))",
     },
     "globals": {
-        "active_guide": "color(var(White) alpha(0.3))",
+        ////////////
+        // Global //
+        ////////////
         "background": "var(--background)",
         "block_caret": "color(var(--foreground) blend(var(--background) 50%))",
         "block_caret_border": "transparent",
         "block_caret_corner_style": "square",
-        "bracket_contents_foreground": "var(LightBlue300)",
-        "bracket_contents_options": "underline",
-        "brackets_foreground": "var(LightBlue300)",
-        "brackets_options": "underline",
         "caret": "var(--foreground)",
-        "find_highlight": "var(YellowSaturated)",
-        "find_highlight_foreground": "var(BlackLight)",
         "foreground": "var(--foreground)",
-        "guide": "color(var(White) alpha(0.2))",
-        "gutter": "var(BlackLight)",
-        "gutter_foreground": "color(var(White) blend(var(Black) 40%))",
-        "gutter_foreground_highlight": "color(var(--foreground) blend(var(--background) 85%))",
-        "highlight": "var(--foreground)",
-        "implicit_selection_foreground": "true",
-        "inactive_selection": "color(var(White) alpha(0.2))",
-        "inactive_selection_border": "var(CyanSaturated)",
         "invisibles": "color(var(White) blend(var(Black) 25%))",
         "line_highlight": "color(color(var(White) blend(var(Black) 30%)) alpha(50%))",
+        /////////////
+        // Accents //
+        /////////////
+        "fold_marker": "var(Yellow)",
+        "minimap_border": "var(Grey)",
         "misspelling": "var(Pink300)",
         "scroll_highlight": "var(--foreground)",
         "scroll_selected_highlight": "var(Yellow)",
+        ///////////////
+        // Selection //
+        ///////////////
+        "implicit_selection_foreground": "true",
+        "inactive_selection": "color(var(White) alpha(0.2))",
+        "inactive_selection_border": "var(Cyan800)",
         "selection": "color(var(White) alpha(0.18))",
         "selection_border": "var(CyanSaturated)",
         "selection_corner_radius": "0",
         "selection_corner_style": "square",
-        // "selection_foreground": "var(--foreground)",
-        "shadow": "color(Black alpha(0.2))",
-        "shadow_width": "8",
-        "stack_guide": "color(var(White) alpha(0.2))",
+        "selection_foreground": "var(--foreground)",
+        //////////////
+        // Brackets //
+        //////////////
+        "bracket_contents_foreground": "var(LightBlue300)",
+        "bracket_contents_options": "underline",
+        "brackets_foreground": "var(LightBlue300)",
+        "brackets_options": "glow",
+        //////////
+        // Tags //
+        //////////
         "tags_foreground": "var(LightGreen300)",
-        "tags_options": "stippled_underline",
-        // incremental diff
+        "tags_options": "glow",
+        ////////////
+        // Guides //
+        ////////////
+        "guide": "color(var(White) alpha(0.2))",
+        "active_guide": "color(var(White) alpha(0.3))",
+        "stack_guide": "color(var(White) alpha(0.2))",
+        ////////////
+        // Gutter //
+        ////////////
+        "gutter": "var(BlackLight)",
+        "gutter_foreground": "color(var(White) blend(var(Black) 40%))",
+        "gutter_foreground_highlight": "color(var(--foreground) blend(var(--background) 85%))",
+        //////////
+        // Diff //
+        //////////
         "line_diff_width": "3",
         "line_diff_added": "var(Green700)",
         "line_diff_deleted": "var(Red700)",
         "line_diff_modified": "var(Yellow700)",
-        // phantom / popup / sheet
+        //////////
+        // Find //
+        //////////
+        "find_highlight": "var(YellowSaturated)",
+        "find_highlight_foreground": "var(BlackLight)",
+        "highlight": "var(--foreground)",
+        /////////////
+        // Shadows //
+        /////////////
+        "shadow": "color(Black alpha(0.2))",
+        "shadow_width": "8",
+        /////////
+        // CSS //
+        /////////
         "phantom_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: transparent; --purplish: #BF94E6; } a { color: var(--bluish); } #inline-error .error a { color: var(--foreground); background-color: color(var(--redish) blend(var(--background) 30%)); font-size: 1rem; font-weight: normal; } #inline-error .error-arrow { border-left-color: color(var(--redish) blend(var(--background) 30%)); } #inline-error .error { background-color: color(var(--redish) blend(var(--background) 30%)); }",
         "popup_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: color(var(--background) blend(#FFF 95%)); --purplish: #BF94E6; } a { color: var(--bluish); } html.light { background-color: color(var(--background) blend(#000 95%)); } #show-scope a { font-size: 1rem; } #show-scope { padding: 0.5rem; }",
         "sheet_css": "html { color: var(--foreground); --yellowish: #FFC966; --background: #262626; --bluish: #75ADE6; --foreground: #E8E8E8; --greenish: #A9D274; --redish: #FF6673; --orangish: #FC9569; background-color: transparent; --purplish: #BF94E6; } a { color: var(--bluish); } #inline-error .error a { color: var(--foreground); background-color: color(var(--redish) blend(var(--background) 30%)); font-size: 1rem; font-weight: normal; } #inline-error .error-arrow { border-left-color: color(var(--redish) blend(var(--background) 30%)); } #inline-error .error { background-color: color(var(--redish) blend(var(--background) 30%)); }",
@@ -236,27 +269,21 @@
             "scope": "meta.embedded",
         },
         {
-            "foreground": "var(--foreground)",
-            "name": "Reset Color",
-            "scope": "meta.reset.color",
-        },
-        {
             "foreground": "var(DeepPurple300)",
             "name": "Number",
             "scope": "constant.numeric",
         },
         {
             "foreground": "var(DeepPurple300)",
-            "name": "Built-in constant",
+            "name": "Built-in Constant",
             "scope": "constant.language",
         },
         {
             "foreground": "var(DeepPurple300)",
-            "name": "User-defined constant",
-            "scope": "constant.character, constant.other",
+            "name": "User-defined Constant",
+            "scope": "constant.character | constant.other",
         },
         {
-            "font_style": "bold",
             "name": "Variable",
             "scope": "variable",
         },
@@ -279,14 +306,15 @@
             "scope": "storage.type",
         },
         {
+            "font_style": "bold",
             "foreground": "var(--foreground)",
-            "name": "Class name",
+            "name": "Class Name",
             "scope": "entity.name.class",
         },
         {
             "font_style": "italic",
             "foreground": "var(--foreground)",
-            "name": "Inherited class",
+            "name": "Inherited Class Name",
             "scope": "entity.other.inherited-class",
         },
         {
@@ -298,48 +326,49 @@
         {
             "font_style": "italic",
             "foreground": "var(Orange)",
-            "name": "Function argument",
+            "name": "Function Argument",
             "scope": "variable.parameter",
+        },
+        {
+            "foreground": "var(Red200)",
+            "name": "Language Variables",
+            "scope": "variable.language",
         },
         {
             "font_style": "bold",
             "foreground": "var(Pink)",
-            "name": "Tag name",
+            "name": "Tag Name",
             "scope": "entity.name.tag",
         },
         {
             "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "Tag attribute",
+            "name": "Tag Attribute",
             "scope": "entity.other.attribute-name",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "Library function",
-            "scope": "support.function",
+            "name": "Library Function",
+            "scope": "support.function - entity.name",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Green)",
             "name": "Function Name",
-            "scope": "variable.function",
+            "scope": "variable.function - entity.name",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Blue)",
-            "name": "Library constant",
+            "name": "Library Constant",
             "scope": "support.constant",
         },
         {
             "font_style": "italic",
             "foreground": "var(Blue)",
-            "name": "Library class/type",
-            "scope": "support.type, support.class",
+            "name": "Library Class/Type",
+            "scope": "support.type | support.class",
         },
         {
-            "font_style": "bold",
-            "name": "Library variable",
+            "name": "Library Variable",
             "scope": "support.other.variable",
         },
         {
@@ -352,19 +381,8 @@
         {
             "background": "var(DeepPurple300)",
             "foreground": "var(--foreground)",
-            "name": "Invalid deprecated",
+            "name": "Invalid Deprecated",
             "scope": "invalid.deprecated",
-        },
-        {
-            "background": "var(Indigo900)",
-            "foreground": "var(Orange)",
-            "name": "meta.preprocessor",
-            "scope": "meta.preprocessor",
-        },
-        {
-            "foreground": "var(Amber200)",
-            "name": "entity.name.type.include",
-            "scope": "entity.name.type.include",
         },
         {
             "foreground": "var(Orange)",
@@ -374,180 +392,173 @@
         {
             "foreground": "var(Pink)",
             "name": "Access Operator",
-            "scope": "punctuation.accessor, punctuation.accessor",
+            "scope": "punctuation.accessor",
         },
-        /////////////////
-        // other langs //
-        /////////////////
         {
-            "font_style": "bold",
+            "background": "var(DarkOrangeBackground)",
+            "name": "Annotation / Attributes",
+            "scope": "meta.attribute.php | source.python meta.annotation",
+        },
+        ////////////
+        // Others //
+        ////////////
+        {
             "foreground": "var(Pink)",
-            "name": "JS - arrow function",
+            "name": "JS - Arrow Function",
             "scope": "storage.type.function.arrow.js",
         },
         {
-            "font_style": "bold",
             "foreground": "var(DeepPurple300)",
-            "name": "Tcl - variable",
+            "name": "Tcl - Variable",
             "scope": "variable.other.tcl",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "Python - function names",
+            "name": "Python - Function Names",
             "scope": "meta.function-call.generic.python",
         },
         {
-            "font_style": "bold italic",
+            "font_style": "italic",
             "foreground": "var(Orange)",
-            "name": "Perl - Variable in double quotes",
-            "scope": "string.quoted.double.perl variable.other.readwrite.global.perl",
-        },
-        {
-            "font_style": "bold italic",
-            "foreground": "var(Orange)",
-            "name": "SCSS - Variable in double quotes",
+            "name": "SCSS - Variable in Double Quotes",
             "scope": "variable.scss",
         },
         {
             "font_style": "bold",
             "foreground": "var(Orange)",
-            "name": "HTML - other tags",
+            "name": "HTML - Other Tags",
             "scope": "entity.name.tag.other.html",
         },
         {
             "font_style": "bold",
-            "foreground": "var(Pink)",
-            "name": "Sublime Settings - JSON key",
-            "scope": "meta.mapping.key.json string.quoted.double.json",
-        },
-        {
-            "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "Apache Conf - tag",
+            "name": "Apache Conf - Tag",
             "scope": "entity.tag.apacheconf",
         },
+        {
+            "foreground": "var(Pink)",
+            "name": "Sublime Settings - JSON Key",
+            "scope": "meta.mapping.key.json string.quoted.double.json",
+        },
         //////////////
-        // markdown //
+        // Markdown //
         //////////////
         {
-            "name": "Markdown - heading 1",
+            "name": "Markdown - Heading 1",
             "background": "color(var(Red) alpha(0.2))",
             "foreground": "var(Red)",
             "scope": "markup.heading.1",
         },
         {
-            "name": "Markdown - heading 2",
+            "name": "Markdown - Heading 2",
             "background": "color(var(Orange) alpha(0.2))",
             "foreground": "var(Orange)",
             "scope": "markup.heading.2",
         },
         {
-            "name": "Markdown - heading 3",
+            "name": "Markdown - Heading 3",
             "background": "color(var(Yellow) alpha(0.2))",
             "foreground": "var(Yellow)",
             "scope": "markup.heading.3",
         },
         {
-            "name": "Markdown - heading 4",
+            "name": "Markdown - Heading 4",
             "background": "color(var(Green) alpha(0.2))",
             "foreground": "var(Green)",
             "scope": "markup.heading.4",
         },
         {
-            "name": "Markdown - heading 5",
+            "name": "Markdown - Heading 5",
             "background": "color(var(Cyan) alpha(0.2))",
             "foreground": "var(Cyan)",
             "scope": "markup.heading.5",
         },
         {
-            "name": "Markdown - heading 6",
+            "name": "Markdown - Heading 6",
             "background": "color(var(Purple) alpha(0.2))",
             "foreground": "var(Purple)",
             "scope": "markup.heading.6",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Red)",
-            "name": "Markdown - list - punctuation",
-            "scope": "markup.list.numbered.bullet.markdown, punctuation.definition.list_item.markdown",
+            "name": "Markdown - List - Punctuation",
+            "scope": "markup.list.numbered.bullet.markdown | punctuation.definition.list_item.markdown",
         },
         {
             "foreground": "var(Amber100)",
-            "name": "Markdown - list - paragraph",
+            "name": "Markdown - List - Paragraph",
             "scope": "meta.paragraph.list.markdown",
         },
         {
             "foreground": "var(Blue)",
-            "name": "Markdown - link - description",
+            "name": "Markdown - Link - Description",
             "scope": "meta.link.inline.description.markdown",
         },
         {
             "foreground": "var(Teal300)",
-            "name": "Markdown - image - description",
+            "name": "Markdown - Image - Description",
             "scope": "meta.image.inline.description.markdown",
         },
         {
             "foreground": "var(Lime900)",
-            "name": "Markdown - link - herf",
-            "scope": "markup.underline.link.markdown, markup.underline.link.image.markdown, markup.underline.link.markdown-gfm",
+            "name": "Markdown - Link - href",
+            "scope": "markup.underline.link.markdown | markup.underline.link.image.markdown | markup.underline.link.markdown-gfm",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Grey500)",
-            "name": "Markdown - link/image - punctuation",
-            "scope": "punctuation.definition.image.begin.markdown, punctuation.definition.image.end.markdown, punctuation.definition.link.begin.markdown, punctuation.definition.link.end.markdown, punctuation.definition.metadata.begin.markdown, punctuation.definition.metadata.end.markdown",
+            "name": "Markdown - Link/Image - Punctuation",
+            "scope": "punctuation.definition.image.begin.markdown | punctuation.definition.image.end.markdown | punctuation.definition.link.begin.markdown | punctuation.definition.link.end.markdown | punctuation.definition.metadata.begin.markdown | punctuation.definition.metadata.end.markdown",
         },
         {
             "foreground": "var(Green)",
-            "name": "Markdown - inline",
+            "name": "Markdown - Inline",
             "scope": "markup.raw.inline.markdown",
         },
         {
             "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "Markdown - bold",
+            "name": "Markdown - Bold",
             "scope": "markup.bold.markdown",
         },
         {
             "font_style": "italic",
             "foreground": "var(Green)",
-            "name": "Markdown - italic",
+            "name": "Markdown - Italic",
             "scope": "markup.italic.markdown",
         },
         {
             "background": "color(var(White) alpha(0.02))",
             "foreground": "var(White) ",
-            "name": "Markdown - code-fence",
+            "name": "Markdown - Code-fence",
             "scope": "markup.raw.code-fence.markdown-gfm",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Red)",
-            "name": "Markdown - table separator",
-            "scope": "punctuation.separator.table-cell.markdown, punctuation.section.table-header.markdown",
+            "name": "Markdown - Table Separator",
+            "scope": "punctuation.separator.table-cell.markdown | punctuation.section.table-header.markdown",
         },
         /////////
-        // c++ //
+        // C++ //
         /////////
+        {
+            "background": "var(Indigo900)",
+            "foreground": "var(Orange)",
+            "name": "C/C++ - Preprocessor",
+            "scope": "meta.preprocessor",
+        },
         {
             "foreground": "var(Green)",
             "name": "C/C++ - Function/Method Name",
-            "scope": "variable.function.c, variable.function.c++, variable.function.member.c++",
-        },
-        {
-            "foreground": "var(--foreground)",
-            "name": "C/C++ - ()",
-            "scope": "punctuation.definition.parameters.c, punctuation.definition.parameters.c++",
+            "scope": "variable.function.c | variable.function.c++ | variable.function.member.c++",
         },
         {
             "font_style": "bold italic",
             "foreground": "var(Blue)",
-            "name": "C++ - typedef type",
+            "name": "C++ - Typedef Type",
             "scope": "entity.name.type.typedef.c++",
         },
         /////////
-        // php //
+        // PHP //
         /////////
         {
             "background": "var(DarkBlueBackground)",
@@ -555,35 +566,24 @@
             "scope": "source.php comment.block.documentation",
         },
         {
-            "background": "var(DarkOrangeBackground)",
-            "name": "PHP - Attributes",
-            "scope": "meta.attribute.php",
-        },
-        {
-            "foreground": "var(--foreground)",
-            "name": "PHP - Attributes punctuations",
-            "font_style": "glow",
-            "scope": "punctuation.definition.attribute.begin.php, punctuation.definition.attribute.end.php",
-        },
-        {
             "font_style": "bold",
             "foreground": "var(Pink300)",
-            "name": "PHP - PHPUnit annotations",
+            "name": "PHP - PHPUnit Annotations",
             "scope": "keyword.other.phpunit.php",
         },
         {
             "foreground": "var(--foreground)",
-            "name": "PHP - Spread operator",
+            "name": "PHP - Spread Operator",
             "scope": "keyword.operator.spread.php",
         },
         {
             "foreground": "var(Pink200)",
             "name": "PHP - Annotations",
-            "scope": "keyword.other.annotation.tag.php, keyword.other.annotation.object.php",
+            "scope": "keyword.other.annotation.tag.php | keyword.other.annotation.object.php",
         },
         {
             "foreground": "var(--foreground)",
-            "name": "PHP - Annotation punctuations",
+            "name": "PHP - Annotation Punctuations",
             "scope": "punctuation.section.group",
         },
         {
@@ -602,65 +602,55 @@
             "scope": "meta.function.return-type.php punctuation.separator.php",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Orange)",
-            "name": "PHP - Variable in double quotes",
+            "name": "PHP - Variable in Double Quotes",
             "scope": "(string.quoted.double.php | string.regexp.double-quoted.php | string.unquoted.heredoc.php | meta.embedded.sql | meta.embedded.css | meta.embedded.js | meta.embedded.html) & (variable.other.php | variable.language.php | variable.other.global.php | variable.other.property.php | variable.other.global.safer.php | variable.other.member.php)",
         },
         {
-            "font_style": "bold",
             "foreground": "var(--foreground)",
-            "name": "PHP - Definition Punctuation in double quotes or Heredoc",
-            "scope": "string.quoted.double.php punctuation.definition.expression.php, string.unquoted.heredoc.php punctuation.definition.expression.php",
+            "name": "PHP - Definition Punctuation in Double Quotes or Heredoc",
+            "scope": "string.quoted.double.php punctuation.definition.expression.php | string.unquoted.heredoc.php punctuation.definition.expression.php",
         },
         {
-            "font_style": "bold",
-            "name": "PHP - Internal Variables ($this, self, static)",
-            "scope": "variable.language.php",
-        },
-        {
-            "font_style": "bold italic",
+            "font_style": "italic",
             "foreground": "var(DeepPurple300)",
             "name": "PHP - Constants",
-            "scope": "constant.language.boolean.php, constant.language.null.php",
+            "scope": "constant.language.boolean.php | constant.language.null.php",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Blue)",
-            "name": "PHP - RegExp - modifier",
+            "name": "PHP - RegExp - Modifier",
             "scope": "meta.regex.modifier.php",
         },
         {
             "font_style": "bold",
             "foreground": "var(Green)",
-            "name": "PHP - RegExp - group names",
-            "scope": "entity.name.other.group.regexp, punctuation.definition.group.capture.begin.regexp, punctuation.definition.group.capture.end.regexp",
+            "name": "PHP - RegExp - Group Names",
+            "scope": "entity.name.other.group.regexp | punctuation.definition.group.capture.begin.regexp | punctuation.definition.group.capture.end.regexp",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Pink)",
-            "name": "PHP - RegExp - keyword punctuations",
-            "scope": "punctuation.definition.group.begin.regexp, punctuation.definition.group.end.regexp, punctuation.definition.character-class.begin.regexp, punctuation.definition.character-class.end.regexp",
+            "name": "PHP - RegExp - Keyword Punctuations",
+            "scope": "punctuation.definition.group.begin.regexp | punctuation.definition.group.end.regexp | punctuation.definition.character-class.begin.regexp | punctuation.definition.character-class.end.regexp",
         },
         ///////////
-        // shell //
+        // Shell //
         ///////////
         {
             "font_style": "bold",
             "foreground": "var(RedSaturated)",
             "name": "Shell - su/sudo",
-            "scope": "support.function.su.shell, support.function.sudo.shell",
+            "scope": "support.function.su.shell | support.function.sudo.shell",
         },
         {
             "foreground": "var(--foreground)",
-            "name": "Shell - variable assigned",
+            "name": "Shell - Variable Assigned",
             "scope": "meta.variable.shell variable.other.readwrite.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(DeepPurple300)",
-            "name": "Shell - variable",
-            "scope": "variable.other.normal.shell, variable.other.positional.shell, variable.other.bracket.shell, variable.other.special.shell, variable.other.loop.shell, variable.other.c-style.shell, variable.other.positional.shell, variable.other.readwrite.shell",
+            "name": "Shell - Variable",
+            "scope": "variable.other.normal.shell | variable.other.positional.shell | variable.other.bracket.shell | variable.other.special.shell | variable.other.loop.shell | variable.other.c-style.shell | variable.other.positional.shell | variable.other.readwrite.shell",
         },
         {
             "foreground": "var(Cyan500)",
@@ -668,84 +658,72 @@
             "scope": "constant.language.boolean.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(RedSaturated)",
-            "name": "Shell - privilege command",
+            "name": "Shell - Privilege Command",
             "scope": "support.function.privilege.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Blue400)",
-            "name": "Shell - built-in command",
-            "scope": "support.function.builtin.shell, meta.function-call.shell support.function",
+            "name": "Shell - Built-in Command",
+            "scope": "support.function.builtin.shell | meta.function-call.shell support.function",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Blue700)",
-            "name": "Shell - external command",
-            "scope": "support.function.external.shell, meta.function-call.shell variable.function",
+            "name": "Shell - External Command",
+            "scope": "support.function.external.shell | meta.function-call.shell variable.function",
         },
         {
-            "font_style": "bold",
             "foreground": "var(DeepPurple300)",
-            "name": "Shell - punctuation variable",
+            "name": "Shell - Punctuation Variable",
             "scope": "punctuation.definition.variable.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Amber200)",
-            "name": "Shell - punctuation definition",
+            "name": "Shell - Punctuation Definition",
             "scope": "punctuation.definition.string",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Pink)",
-            "name": "Shell - pipe-sign/parentheses in `case`",
-            "scope": "punctuation.separator.pipe-sign.shell, punctuation.definition.case-pattern.shell",
+            "name": "Shell - Pipe-sign/Parentheses in `case`",
+            "scope": "punctuation.separator.pipe-sign.shell | punctuation.definition.case-pattern.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Pink)",
             "name": "Shell - `;;` in `case`",
             "scope": "punctuation.terminator.case-clause.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Pink)",
             "name": "Shell - ${!varprefix＞*＜}",
             "scope": "variable.language.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(Pink)",
             "name": "Shell - ${foo/＞/＜bar/baz}",
             "scope": "variable.parameter.switch.shell",
         },
         {
-            "font_style": "bold italic",
-            "name": "Shell - command switch",
+            "font_style": "italic",
+            "name": "Shell - Command Switch",
             "scope": "support.command-switch.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(--foreground)",
-            "name": "Shell - meta",
+            "name": "Shell - Meta",
             "scope": "meta.group.expansion.parameter.shell",
         },
         {
-            "font_style": "bold",
             "foreground": "var(--foreground)",
-            "name": "Shell - test punctuation",
-            "scope": "support.function.test, support.function.double-brace",
+            "name": "Shell - `test` Punctuation",
+            "scope": "support.function.test | support.function.double-brace",
         },
         {
-            "font_style": "bold",
             "foreground": "var(DeepPurple300)",
-            "name": "Shell - variable punctuation",
-            "scope": "punctuation.definition.variable.shell, meta.group.expansion punctuation.section, meta.group.arithmetic.shell, meta.group.expansion.arithmetic.shell",
+            "name": "Shell - Variable Punctuation",
+            "scope": "punctuation.definition.variable.shell | meta.group.expansion punctuation.section | meta.group.arithmetic.shell | meta.group.expansion.arithmetic.shell",
         },
         ///////////////////
-        // diff (syntax) //
+        // Diff (syntax) //
         ///////////////////
         {
             "foreground": "var(--foreground)",
@@ -755,28 +733,27 @@
         {
             "foreground": "var(Blue)",
             "name": "diff.header",
-            "scope": "meta.diff, meta.diff.header",
+            "scope": "meta.diff | meta.diff.header",
         },
         {
             "foreground": "var(Red)",
             "name": "diff.deleted",
-            "scope": "markup.deleted, punctuation.definition.deleted.diff",
+            "scope": "markup.deleted | punctuation.definition.deleted.diff",
         },
         {
             "foreground": "var(Green)",
             "name": "diff.inserted",
-            "scope": "markup.inserted, punctuation.definition.inserted.diff",
+            "scope": "markup.inserted | punctuation.definition.inserted.diff",
         },
         {
             "foreground": "var(Yellow)",
             "name": "diff.changed",
-            "scope": "markup.changed, punctuation.definition.changed.diff",
+            "scope": "markup.changed | punctuation.definition.changed.diff",
         },
         {
             "background": "var(Indigo900)",
-            "font_style": "bold",
             "foreground": "var(Orange)",
-            "scope": "meta.diff.header.from-file, punctuation.definition.from-file, meta.diff.header.to-file, punctuation.definition.to-file",
+            "scope": "meta.diff.header.from-file | punctuation.definition.from-file | meta.diff.header.to-file | punctuation.definition.to-file",
         },
         {
             "foreground": "var(Grey700)",
@@ -787,34 +764,34 @@
             "scope": "punctuation.separator.mapping.pair.path.git.commit",
         },
         //////////////////////
-        // inline diff (ST) //
+        // Inline Diff (ST) //
         //////////////////////
         {
             "background": "color(var(--background) blend(var(Green) 80%))",
-            "name": "ST diff inserted",
+            "name": "ST Diff Inserted",
             "scope": "diff.inserted",
             "foreground_adjust": "l(- 10%)",
         },
         {
             "background": "color(var(--background) blend(var(Green) 50%))",
-            "name": "ST diff inserted char",
+            "name": "ST Diff Inserted Char",
             "scope": "diff.inserted.char",
             "foreground_adjust": "l(+ 10%)",
         },
         {
             "background": "color(var(--background) blend(var(Red) 80%))",
-            "name": "ST diff deleted",
+            "name": "ST Diff Deleted",
             "scope": "diff.deleted",
             "foreground_adjust": "l(- 10%)",
         },
         {
             "background": "color(var(--background) blend(var(Red) 50%))",
-            "name": "ST diff deleted char",
+            "name": "ST Diff Deleted Char",
             "scope": "diff.deleted.char",
             "foreground_adjust": "l(+ 10%)",
         },
         /////////////////
-        // NSIS script //
+        // NSIS Script //
         /////////////////
         {
             "foreground": "var(Teal)",
@@ -830,7 +807,7 @@
             "scope": "punctuation.separator.mapping.key-value.ini",
         },
         //////////////////
-        // ASS subitlte //
+        // ASS Subitlte //
         //////////////////
         {
             "background": "var(Brown800)",
@@ -840,20 +817,19 @@
         {
             "foreground": "var(Blue200)",
             "font_style": "italic",
-            "scope": "storage.type.comment.ass, storage.type.comment.template.ass, storage.type.comment.code.ass",
+            "scope": "storage.type.comment.ass | storage.type.comment.template.ass | storage.type.comment.code.ass",
         },
         {
             "foreground": "var(Orange600)",
             "font_style": "bold",
-            "scope": "entity.name.style.ass, variable.parameter.style.ass",
+            "scope": "entity.name.style.ass | variable.parameter.style.ass",
         },
         {
             "foreground": "var(PinkA100)",
-            "font_style": "bold",
             "scope": "string.unquoted.font.ass",
         },
         ////////////////////////
-        // brackethighlighter //
+        // BracketHighlighter //
         ////////////////////////
         {
             "background": "#FFFFFF",
