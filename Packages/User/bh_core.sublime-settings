@@ -48,6 +48,17 @@
             "enabled": true,
         },
         {
+            "name": "rst_link_explicit",
+            "open": "(`)",
+            "close": "(`__?)",
+            "style": "single_quote",
+            "scopes": ["meta.restructuredtext.link-explicit"],
+            "language_filter": "allowlist",
+            "language_list": ["reStructuredText", "reStructuredText Improved"],
+            "sub_bracket_search": "true",
+            "enabled": true,
+        },
+        {
             "name": "rst_substitution",
             "open": "(\\|)",
             "close": "(\\|)",
