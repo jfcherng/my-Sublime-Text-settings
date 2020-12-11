@@ -492,12 +492,12 @@
         {
             "foreground": "var(Blue)",
             "name": "Markdown - Link - Description",
-            "scope": "meta.link.inline.description.markdown",
+            "scope": "meta.link.inline.description.markdown | meta.link.reference.description.markdown",
         },
         {
             "foreground": "var(Teal300)",
             "name": "Markdown - Image - Description",
-            "scope": "meta.image.inline.description.markdown",
+            "scope": "meta.image.inline.description.markdown | meta.image.reference.description.markdown",
         },
         {
             "foreground": "var(Lime900)",
