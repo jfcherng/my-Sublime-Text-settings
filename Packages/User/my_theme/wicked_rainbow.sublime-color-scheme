@@ -394,11 +394,6 @@
             "name": "Access Operator",
             "scope": "punctuation.accessor",
         },
-        {
-            "background": "var(DarkOrangeBackground)",
-            "name": "Annotation / Attributes",
-            "scope": "meta.attribute.php | source.python meta.annotation",
-        },
         ////////////
         // Others //
         ////////////
@@ -416,6 +411,11 @@
             "foreground": "var(Green)",
             "name": "Python - Function Names",
             "scope": "meta.function-call.generic.python",
+        },
+        {
+            "foreground": "var(Pink)",
+            "name": "Python - Annotation Punctuation",
+            "scope": "punctuation.definition.annotation.python",
         },
         {
             "font_style": "italic",
@@ -602,9 +602,14 @@
             "scope": "meta.function.return-type.php punctuation.separator.php",
         },
         {
-            "foreground": "var(Orange)",
+            "foreground": "var(--foreground)",
             "name": "PHP - Variable in Double Quotes",
-            "scope": "(string.quoted.double.php | string.regexp.double-quoted.php | string.unquoted.heredoc.php | meta.embedded.sql | meta.embedded.css | meta.embedded.js | meta.embedded.html) & (variable.other.php | variable.language.php | variable.other.global.php | variable.other.property.php | variable.other.global.safer.php | variable.other.member.php)",
+            "scope": "(string.quoted.double.php | string.regexp.double-quoted.php | string.unquoted.heredoc.php | meta.embedded.sql | meta.embedded.css | meta.embedded.js | meta.embedded.html) & (variable.other)",
+        },
+        {
+            "foreground": "var(Red200)",
+            "name": "PHP - Special Variable in Double Quotes",
+            "scope": "(string.quoted.double.php | string.regexp.double-quoted.php | string.unquoted.heredoc.php | meta.embedded.sql | meta.embedded.css | meta.embedded.js | meta.embedded.html) & (variable.language.php)",
         },
         {
             "foreground": "var(--foreground)",
