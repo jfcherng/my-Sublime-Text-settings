@@ -4,6 +4,7 @@
 black[d]
 compdb
 compiledb
+jmespath
 markdown
 mypy
 pymdown-extensions
